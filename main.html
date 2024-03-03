@@ -5,40 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/vita.css">
     <title>VITA</title>
 </head>
 
+
+
 <body>
     <div class="container">
-        <header class="row bg-primary">
-            <div class="col-md-3 logo bg-danger">VITA</div>
-            <div class="col-md-6 logo bg-light">
-                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Volver </a></li>
-                        <li class="breadcrumb-item"><a href="#">Historia Clínica</a></li>
-                        <li class="breadcrumb-item"><a href="#">34009332</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Historial</li>
+        <header class="row">
+            <div class="col-md-2 logo"><img src="img/logo_vita.jpg"></div>
+            <div class="col-md-5 navegacion_breadcrumb bg-light h60">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb h60 cen_vert">
+                        <li class="breadcrumb-item"><a href="#" class="fa-solid fa-home gris"></a></li>
+                        <li class="breadcrumb-item"><a href="#" class="gris">Historia Clínica</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="gris">34009332</a></li>
+                        <li class="breadcrumb-item active gris_active" aria-current="page">Historial</li>
                     </ol>
                 </nav>
             </div>
-            <div class="col-md-3 logo bg-warning">CTA</div>
+            <div class="col-md-5 h60">
+                <div class="h100 cen_vert spbt">
+                    <div class="h100 cen_vert">
+                        <button type="button" class="btn fa-solid fa-grip"></button>
+                        <button type="button" class="btn position-relative fa fa-clipboard"></button>
+                        <button type="button" class="btn  position-relative fa fa-bell">
+                            <span
+                                class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">Nuevos alertas</span>
+                            </span>
+                        </button>
+
+                    </div>
+                    <div class="divider_vert"></div>
+                    <div class="h100 dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="img/perfil.jpg" class="perfil_circle" alt="" srcset="">Dr. Santiago Gastiarena
+                            Loredo
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="usermenu">
+                            <li><a class="dropdown-item active" href="#"><i class="fa-solid fa-user-doctor"></i>
+                                    Perfil</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-calendar-check"></i>
+                                    Acciones</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                    sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
-        <div class="row bg-secondary">
-            <div class="col-md-4">user</div>
-            <div class="col-md-5 bg-light">user</div>
-            <div class="col-md-3">cerrar</div>
-        </div>
+
+
+        <div class="divider-gradient"></div>
+        <nav class="cuerpo row bg-white user_bar">
+            <div class="col-md-4 cen_vert spbt">
+                <div class="perfil_user col-3">JS</div>
+                <div class="data_user col-9">
+                    <span class="paciente">Juan Pablo Salleras Grillo <i class="fa-solid fa-eye gris"></i> <i class="fa-solid fa-circle-info gris"></i></span>
+                    <div class="flex-wrap">
+                        <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span> <span>Cobertura: <strong>OSDE 310</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 bg-light">user</div>
+            <div class="col-md-2">cerrar</div>
+        </nav>
         <main class="row">
             <div class="col-md-4">menu</div>
-            <div class="col-md-8">apuntado</div>
+            <div class="col-md-8">
+            </div>
         </main>
     </div>
 
 
 
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

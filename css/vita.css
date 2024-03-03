@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    box-sizing: border-box !important;
+    padding: 0;
+}
+
+:root {
+    --bg_azul_insti: rgb(61, 76, 190);
+    --cuerpo: rgb(232, 232, 232);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.cen_vert {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.spbt {
+    display: flex;
+    justify-content: space-between !important;
+}
+.spa {
+    display: flex;
+    justify-content: space-around !important;
+}
+
+.h60 {
+    height: 50px !important;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+/* COLORES */
+
+.gris {
+    color: gray !important;
+}
+.cuerpo{background-color: var(--cuerpo)!important;}
+
+.rojo {
+    background-color: red;
+}
+
+.gris_active {
+    color: gray;
+    font-weight: 700;
+}
+
+.perfil_circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 4px;
+}
+
+.divider_vert {
+    background-color: var(--bg_azul_insti);
+    height: 100%;
+    flex: 0 0 2px;
+    margin-left: 4px;
+}
+
+.divider-gradient {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, var(--bg_azul_insti) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.user_bar {
+    height: 100px !important;
+    background-color: var(--bg_azul_insti);
+}
+
+.perfil_user {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--bg_azul_insti);
+    color: white;
+    font-size: 2em;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.data_user{display: flex; flex-direction: column;
+
+& span {
+    font-size: .85em;
+}}
+.paciente{font-size: 1.1em!important; font-weight:700; color:var(--bg_azul_insti);}
