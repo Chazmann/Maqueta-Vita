@@ -31,9 +31,9 @@
             <div class="col-md-5 h60">
                 <div class="h100 cen_vert spbt">
                     <div class="h100 cen_vert">
-                        <button type="button" class="btn fa-solid fa-grip"></button>
-                        <button type="button" class="btn position-relative fa fa-clipboard"></button>
-                        <button type="button" class="btn  position-relative fa fa-bell">
+                        <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Herramientas"></button>
+                        <button type="button" class="btn position-relative fa fa-clipboard"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Historial"></button>
+                        <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alertas">
                             <span
                                 class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">Nuevos alertas</span>
@@ -88,7 +88,7 @@
                     <h6>Alertas<button class="add" data-bs-toggle="modal" data-bs-target="#add_alert"><i
                                 class="fa-solid fa-add"></i>Agregar</button></h6>
                 </div>
-                <!-- Modal -->
+                <!-- ------MODAL GENERAR NUEVO ALERTA------------ -->
                 <div class="modal fade" id="add_alert" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
@@ -107,7 +107,7 @@
                                     <option value="Paracetamol">
                                     <option value="Alergia al polen">
                                     <option value="Celiaquía">
-                                    <option value="Fumador">
+                                    <option value="Alergia a medicamentos Bayer">
                                 </datalist>
                             </div>
                             <div class="modal-footer">
@@ -118,14 +118,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="row"></div>
+                <!-- ------FIN MODAL GENERAR NUEVO ALERTA------------ -->
+                <div class="d-flex">
+                    <span class="dig tag_alerta alert3">
+                        <i class="fa-solid fa-tablets"></i>
+                        Paracetamol 
+                        <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar"></a>
+                    </span> <span class="dig tag_alerta alert1">
+                        <i class="fa-solid fa-lungs-virus"></i>
+                       Neumonía 
+                       <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar"></a>
+                    </span>
+                </div>
             </div>
             <div class="col-md-2 row bg-white cen_vert">
                 <div class="col-12 cen_vert spbt botonera">
-                    <button type="button" class="azul btn fa-solid fa-user"></button>
-                    <button type="button" class="azul btn position-relative fa fa-file"></button>
-                    <button type="button" class="azul btn  position-relative fa fa-copy"></button>
-                    <button type="button" class="azul btn  position-relative fa fa-calendar"></button>
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip" data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip" data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip" data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip" data-bs-placement="top" title="Turnos"></button>
                 </div>
                 <button class="btn btn-light col-12"><i class="fa fa-close"></i> Cerrar HC</button>
             </div>
