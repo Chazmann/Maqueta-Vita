@@ -14,7 +14,7 @@
 
 
 <body class="cuerpo">
-    <div class="container">
+    <div class="col-md-12 offset-xl-1 col-xl-10 col-xl-10">
         <header class="row">
             <div class="col-md-2 logo"><img src="img/logo_vita.jpg"></div>
             <div class="col-md-5 navegacion_breadcrumb h60">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-md-2 row bg-white cen_vert">
-                <div class="col-12 cen_vert">
+                <div class="col-12 cen_vert spbt botonera">
                     <button type="button" class="azul btn fa-solid fa-user"></button>
                     <button type="button" class="azul btn position-relative fa fa-file"></button>
                     <button type="button" class="azul btn  position-relative fa fa-copy"></button>
@@ -113,35 +113,6 @@
 
 
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>   $('.chips').chips();
-        $('.chips-initial').chips({
-            data: [{
-                tag: 'Apple',
-            }, {
-                tag: 'Microsoft',
-            }, {
-                tag: 'Google',
-            }],
-        });
-        $('.chips-placeholder').chips({
-            placeholder: 'Enter a tag',
-            secondaryPlaceholder: '+Tag',
-        });
-        $('.chips-autocomplete').chips({
-            autocompleteOptions: {
-                data: {
-                    'Apple': null,
-                    'Microsoft': null,
-                    'Google': null
-                },
-                limit: Infinity,
-                minLength: 1
-            }
-        });
-    </script>
 </body>
 
 </html>
