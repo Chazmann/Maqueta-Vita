@@ -13,11 +13,11 @@
 
 
 
-<body>
+<body class="cuerpo">
     <div class="container">
         <header class="row">
             <div class="col-md-2 logo"><img src="img/logo_vita.jpg"></div>
-            <div class="col-md-5 navegacion_breadcrumb bg-light h60">
+            <div class="col-md-5 navegacion_breadcrumb h60">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
                     aria-label="breadcrumb">
                     <ol class="breadcrumb h60 cen_vert">
@@ -74,15 +74,33 @@
             <div class="col-md-4 cen_vert spbt">
                 <div class="perfil_user col-3">JS</div>
                 <div class="data_user col-9">
-                    <span class="paciente">Juan Pablo Salleras Grillo <i class="fa-solid fa-eye gris"></i> <i class="fa-solid fa-circle-info gris"></i></span>
+                    <span class="paciente">Juan Segundo Sombra Oscura <i class="fa-solid fa-eye gris"></i> <i
+                            class="fa-solid fa-circle-info gris"></i></span>
                     <div class="flex-wrap">
-                        <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span> <span>Cobertura: <strong>OSDE 310</strong></span>
+                        <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span>
+                        <span>Cobertura: <strong>OSDE 310</strong></span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6">user</div>
-            <div class="col-md-2">cerrar</div>
+            <div class="col-md-6">
+                <div class="chips chips-autocomplete">
+                    <div class="chip">
+                        <div class="chips">
+                            <input class="custom-class">
+                          </div>
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-2 row bg-white cen_vert">
+                <div class="col-12 cen_vert">
+                    <button type="button" class="azul btn fa-solid fa-user"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar"></button>
+                </div>
+                <button class="btn btn-light col-12"><i class="fa fa-close"></i> Cerrar HC</button>
+            </div>
         </nav>
         <main class="row">
             <div class="col-md-4">menu</div>
@@ -95,6 +113,35 @@
 
 
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>   $('.chips').chips();
+        $('.chips-initial').chips({
+            data: [{
+                tag: 'Apple',
+            }, {
+                tag: 'Microsoft',
+            }, {
+                tag: 'Google',
+            }],
+        });
+        $('.chips-placeholder').chips({
+            placeholder: 'Enter a tag',
+            secondaryPlaceholder: '+Tag',
+        });
+        $('.chips-autocomplete').chips({
+            autocompleteOptions: {
+                data: {
+                    'Apple': null,
+                    'Microsoft': null,
+                    'Google': null
+                },
+                limit: Infinity,
+                minLength: 1
+            }
+        });
+    </script>
 </body>
 
 </html>

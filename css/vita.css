@@ -6,7 +6,8 @@
 
 :root {
     --bg_azul_insti: rgb(61, 76, 190);
-    --cuerpo: rgb(241, 241, 241);
+    --cuerpo: rgba(246, 246, 246, 0.777);
+    
 }
 
 a {
@@ -50,6 +51,7 @@ header {
 .gris {
     color: gray !important;
 }
+.azul {color: var(--bg_azul_insti)!important}
 .cuerpo{background-color: var(--cuerpo)!important;}
 
 .rojo {
