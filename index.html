@@ -31,9 +31,13 @@
             <div class="col-md-5 h60">
                 <div class="h100 cen_vert spbt">
                     <div class="h100 cen_vert">
-                        <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Herramientas"></button>
-                        <button type="button" class="btn position-relative fa fa-clipboard"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Historial"></button>
-                        <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alertas">
+                        <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Herramientas"></button>
+                        <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Historial"></button>
+                        <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Alertas">
                             <span
                                 class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">Nuevos alertas</span>
@@ -122,30 +126,121 @@
                 <div class="d-flex">
                     <span class="dig tag_alerta alert3">
                         <i class="fa-solid fa-tablets"></i>
-                        Paracetamol 
-                        <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar"></a>
+                        Paracetamol
+                        <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Borrar"></a>
                     </span> <span class="dig tag_alerta alert1">
                         <i class="fa-solid fa-lungs-virus"></i>
-                       Neumonía 
-                       <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar"></a>
+                        Neumonía
+                        <a href="" class="fa-solid fa-close" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Borrar"></a>
                     </span>
                 </div>
             </div>
+            <!-- ------------BOTONERA DE ACCIONES------------ -->
             <div class="col-md-2 row bg-white cen_vert">
+
                 <div class="col-12 cen_vert spbt botonera">
-                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip" data-bs-placement="top" title="Paciente"></button>
-                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip" data-bs-placement="top" title="Archivos"></button>
-                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip" data-bs-placement="top" title="Documentos"></button>
-                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip" data-bs-placement="top" title="Turnos"></button>
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Turnos"></button>
                 </div>
                 <button class="btn btn-light col-12"><i class="fa fa-close"></i> Cerrar HC</button>
             </div>
+            <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
         </nav>
+
         <main class="row">
-            <div class="col-md-4">menu</div>
-            <div class="col-md-8">
+            <div class="col-md-12">
+                <div class="d-flex align-items-start">
+                    <!-- ----MENU VERTICAL----- -->
+                    <div class="nav flex-column nav-pills m-2 col-2" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link active bgazul" id="v-pills-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#v-pills-evolucion" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Evolución <i class="fa-solid fa-notes-medical"></i>
+                            <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false"></a>
+
+                            <i class=""></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Evolucion Link_1</a></li>
+                                <li><a class="dropdown-item" href="#">Evolucion Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Evolucion Link 3</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Evolucion Link apartado</a></li>
+                            </ul>
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Órdenes <i class="fa-regular fa-pen-to-square"></i>
+                            <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false"></a>
+
+                            <i class=""></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ordenes Link_1</a></li>
+                                <li><a class="dropdown-item" href="#">Ordenes Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Ordenes Link 3</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Link apartado</a></li>
+                            </ul>
+                        </button>
+                        <br>
+                        <button class="nav-link" id="v-pills-Historial-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-Historial" type="button" role="tab"
+                            aria-controls="v-pills-Historial" aria-selected="false">Historial <i
+                                class="fa-solid fa-book-medical"></i></button>
+                        <button class="nav-link" id="v-pills-Antecedentes-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-Antecedentes" type="button" role="tab"
+                            aria-controls="v-pills-Antecedentes" aria-selected="false">Antecedentes <i
+                                class="fa-regular fa-note-sticky"></i></button>
+                        <button class="nav-link" id="v-pills-medicacion-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-medicacion" type="button" role="tab"
+                            aria-controls="v-pills-medicacion" aria-selected="false">Medicación <i
+                                class="fa-solid fa-tablets"></i></button>
+
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-signos" type="button" role="tab"
+                            aria-controls="v-pills-signos" aria-selected="false">Signos vitales <i
+                                class="fa-solid fa-bolt"></i></button>
+                    </div>
+                    <!-- ----------contenido de las tabs------------ -->
+                    <div class="tab-content col-10 pd10 tab_body" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-evolucion" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab">EVOLUCION</div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab">ORDENES</div>
+                        <div class="tab-pane fade" id="v-pills-Historial" role="tabpanel"
+                            aria-labelledby="v-pills-Historial-tab">Historial </div>
+                        <div class="tab-pane fade" id="v-pills-Antecedentes" role="tabpanel"
+                            aria-labelledby="v-pills-Antecedentes-tab">Antecedentes <i
+                                class="fa-regular fa-note-sticky"></i></div>
+                        <div class="tab-pane fade" id="v-pills-medicacion" role="tabpanel"
+                            aria-labelledby="v-pills-medicacion-tab">Medicación </div>
+                            <div class="tab-pane fade" id="v-pills-signos" role="tabpanel"
+                            aria-labelledby="v-pills-signos-tab">Signos Vitales </div>
+                    </div>
+                </div>
             </div>
+
+
+
+
+
         </main>
+
+
+
     </div>
 
 

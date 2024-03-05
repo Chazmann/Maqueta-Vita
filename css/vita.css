@@ -2,11 +2,12 @@
         margin: 0;
         box-sizing: border-box !important;
         padding: 0;
+       
     }
 
     :root {
         --bg_azul_insti: rgb(61, 76, 190);
-        --cuerpo: rgba(246, 246, 246, 0.777);
+        --cuerpo: rgb(234, 234, 234);
         
     }
 
@@ -55,6 +56,7 @@
         color: gray !important;
     }
     .azul {color: var(--bg_azul_insti)!important}
+    .bgazul:focus {background-color: var(--bg_azul_insti)!important}
     .cuerpo{background-color: var(--cuerpo)!important;}
 
     .rojo {
@@ -127,6 +129,7 @@
     .alert3{
         background-color: rgba(255, 249, 72, 0.748); color: rgb(47, 47, 47);
     }
+    .tab_body{border: solid 2px var(--bg_azul_insti); background-color: white;}
 
    
 
