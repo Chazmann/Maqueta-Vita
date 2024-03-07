@@ -162,6 +162,10 @@
         }    
      }
    }
+   .fullbody{
+    min-height: 70vh!important;
+    border-radius: 14px 0 0 0;
+   }
 
     @media screen and (max-width:1368px) {
         
