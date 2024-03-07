@@ -159,32 +159,34 @@
             <div class="col-md-12">
                 <div class="d-flex align-items-start">
                     <!-- ----MENU VERTICAL----- -->
-                    <div class="nav flex-column nav-pills m-2 col-2" id="v-pills-tab" role="tablist"
+                    <div class="nav flex-column nav-pills m-2 col-2 menulateral" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
+
                         <button class="nav-link active bgazul" id="v-pills-home-tab" data-bs-toggle="tab"
                             data-bs-target="#v-pills-evolucion" type="button" role="tab" aria-controls="v-pills-home"
-                            aria-selected="true">Evolución <i class="fa-solid fa-notes-medical"></i>
-                            <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
-                                aria-expanded="false"></a>
-
-                            <i class=""></i>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Evolucion Link_1</a></li>
-                                <li><a class="dropdown-item" href="#">Evolucion Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Evolucion Link 3</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Evolucion Link apartado</a></li>
-                            </ul>
+                            aria-selected="true">Evolución
+                            <div>
+                                <i class="fa-solid fa-notes-medical"></i>
+                                <a class="dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-expanded="false"></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Evolucion Link_1</a></li>
+                                    <li><a class="dropdown-item" href="#">Evolucion Link 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Evolucion Link 3</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Evolucion Link apartado</a></li>
+                                </ul>
+                            </div>
                         </button>
                         <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                            aria-selected="false">Órdenes <i class="fa-regular fa-pen-to-square"></i>
+                            aria-selected="false">Órdenes 
+                            <div>
+                            <i class="fa-regular fa-pen-to-square"></i>
                             <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false"></a>
-
-                            <i class=""></i>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Ordenes Link_1</a></li>
                                 <li><a class="dropdown-item" href="#">Ordenes Link 2</a></li>
@@ -194,8 +196,9 @@
                                 </li>
                                 <li><a class="dropdown-item" href="#">Link apartado</a></li>
                             </ul>
+                        </div>
                         </button>
-                        <br>
+                       
                         <button class="nav-link" id="v-pills-Historial-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-Historial" type="button" role="tab"
                             aria-controls="v-pills-Historial" aria-selected="false">Historial <i
@@ -207,12 +210,28 @@
                         <button class="nav-link" id="v-pills-medicacion-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-medicacion" type="button" role="tab"
                             aria-controls="v-pills-medicacion" aria-selected="false">Medicación <i
-                                class="fa-solid fa-tablets"></i></button>
+                                class="fa-solid fa-pills"></i></button>
 
                         <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-signos" type="button" role="tab"
-                            aria-controls="v-pills-signos" aria-selected="false">Signos vitales <i
-                                class="fa-solid fa-bolt"></i></button>
+                            data-bs-target="#v-pills-signos" type="button" role="tab" aria-controls="v-pills-signos"
+                            aria-selected="false">Signos vitales <i class="fa-solid fa-heart-pulse"></i></button>
+
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-images" type="button" role="tab" aria-controls="v-pills-images"
+                            aria-selected="false">Imágenes <i class="fa-solid fa-file-prescription"></i></button>
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-lab" type="button" role="tab" aria-controls="v-pills-lab"
+                            aria-selected="false">Laboratorios <i class="fa-solid fa-microscope"></i></button>
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-vacc" type="button" role="tab" aria-controls="v-pills-vacc"
+                            aria-selected="false">Vacunas <i class="fa-solid fa-syringe"></i></button>
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-alert" type="button" role="tab" aria-controls="v-pills-alert"
+                            aria-selected="false">Alertas <i class="fa-solid fa-triangle-exclamation"></i></button>
+                        <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-infu" type="button" role="tab" aria-controls="v-pills-infu"
+                            aria-selected="false">Infusiones <i
+                                class="fa-solid fa-prescription-bottle-medical"></i></button>
                     </div>
                     <!-- ----------contenido de las tabs------------ -->
                     <div class="tab-content col-10 pd10 tab_body" id="v-pills-tabContent">
@@ -227,8 +246,21 @@
                                 class="fa-regular fa-note-sticky"></i></div>
                         <div class="tab-pane fade" id="v-pills-medicacion" role="tabpanel"
                             aria-labelledby="v-pills-medicacion-tab">Medicación </div>
-                            <div class="tab-pane fade" id="v-pills-signos" role="tabpanel"
+                        <div class="tab-pane fade" id="v-pills-signos" role="tabpanel"
                             aria-labelledby="v-pills-signos-tab">Signos Vitales </div>
+
+                        <div class="tab-pane fade" id="v-pills-images" role="tabpanel"
+                            aria-labelledby="v-pills-images-tab">Imágenes </div>
+
+                        <div class="tab-pane fade" id="v-pills-lab" role="tabpanel" aria-labelledby="v-pills-lab-tab">
+                            Laboratorio </div>
+
+                        <div class="tab-pane fade" id="v-pills-vacc" role="tabpanel"
+                            aria-labelledby="v-pills-vacc r-tab">Vacunas </div>
+                        <div class="tab-pane fade" id="v-pills-alert" role="tabpanel"
+                            aria-labelledby="v-pills-alert-tab">Alertas </div>
+                        <div class="tab-pane fade" id="v-pills-infu" role="tabpanel" aria-labelledby="v-pills-infu-tab">
+                            Infusiones </div>
                     </div>
                 </div>
             </div>

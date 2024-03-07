@@ -131,7 +131,37 @@
     }
     .tab_body{border: solid 2px var(--bg_azul_insti); background-color: white;}
 
-   
+   .menulateral{
+     & button{
+        display: flex!important;
+        align-items: center;
+        justify-content: space-between!important;
+        padding-right: 25px;         
+     }
+     & button:nth-child(1), & button:nth-child(2){
+        padding-right: 10px;       
+     }
+     & button:nth-child(1){
+        background-color: rgb(50, 58, 113);  color: white;  margin-bottom: 5px; 
+        border: solid 2px rgb(50, 58, 113);  
+     }
+     & button:nth-child(1):active{
+        border: solid 2px white;    
+     }
+     & button:nth-child(2){
+        background-color: white;  color: rgb(50, 58, 113);  margin-bottom: 5px; 
+        border: solid 2px rgb(50, 58, 113); 
+        & a{
+            color: rgb(50, 58, 113)!important;
+        } 
+     }
+     & button:nth-child(2):active, & button:nth-child(2):focus{
+        border: solid 2px white;  
+        & a{
+            color: white!important;
+        }    
+     }
+   }
 
     @media screen and (max-width:1368px) {
         
