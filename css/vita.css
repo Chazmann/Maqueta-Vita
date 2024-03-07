@@ -12,11 +12,31 @@
 
     }
 
+    .w50 {
+        width: 450% !important;
+        flex-basis: 45%;
+    }
+
+    .w20 {
+        width: 20% !important;
+        flex-basis: 20%;
+    }
+
+    .w30 {
+        width: 35% !important;
+        flex-basis: 35%;
+    }
+
+    .gp10 {
+        gap: 10px !important;
+    }
+
     .verde {
         background-color: rgba(255, 255, 255, 0) !important;
-        margin:auto!important;
+        margin: auto !important;
         box-sizing: border-box !important;
-        padding: 0 10px;    }
+        padding: 0 10px;
+    }
 
     a {
         text-decoration: none !important;
@@ -28,19 +48,53 @@
         align-items: center;
         height: 60px;
     }
-    .mbot{ position: sticky;
-        top:0;
+
+    .mbot {
+        position: sticky;
+        top: 0;
         background-color: var(--cuerpo);
-        z-index: 40000!important;
+        z-index: 40000 !important;
         height: 50px;
         box-shadow: 0px 15px 15px -13px rgba(0, 0, 0, 0.141);
-        width: 95vw!important;
-    margin: auto;        }
+        width: 95vw !important;
+        margin: auto;
+    }
+
+    .navStick {
+        position: sticky;
+        top: 50px;
+        transition: all 0.3s ease-in-out;
+        z-index: 3999;
+        box-shadow: 0px 10px 15px -13px rgba(0, 0, 0, 0.141);
+        box-sizing: border-box !important;
+
+    }
+
+    .bgalerta {
+        border-left: solid 1px gray !important;
+        border-right: solid 1px gray !important;
+        z-index: 3998;
+        padding: 14px !important;
+    }
+
+    .btn-gris {
+        background-color: rgb(200, 200, 200);
+    }
+
+    .btn-gris:active {
+        transform: translateY(1px);
+        background-color: rgb(158, 158, 158);
+        color: rgb(0, 0, 0);
+    }
+
+    .btn-gris:hover {
+        box-shadow: 0px 5px 15px -13px rgba(0, 0, 0, 0.378);
+    }
 
     .cen_vert {
         display: flex !important;
         align-items: center !important;
-        justify-content: center!important;
+        justify-content: center !important;
     }
 
     .spbt {
@@ -210,9 +264,10 @@
             padding-right: 10px;
         }
 
-      
 
-        & button:nth-child(2), & button:nth-child(1) {
+
+        & button:nth-child(2),
+        & button:nth-child(1) {
             background-color: white;
             color: rgb(50, 58, 113);
             margin-bottom: 5px;
@@ -234,17 +289,63 @@
     }
 
     .fullbody {
-        min-height: calc(65vh - 15px)!important;
+        min-height: calc(65vh - 15px) !important;
         border-radius: 14px 0 0 0;
         overflow-y: scroll;
-        flex: 1 1 calc(100% - 10px)!important;
+        flex: 1 1 calc(100% - 10px) !important;
     }
 
     .divider-white {
         height: 10px !important;
         width: 100% !important;
     }
+.hidescroll{
+    display: none!important;
+}
 
+.ovfsc{
+    overflow-y: scroll;
+}
+.stickmenu{
+        position: sticky!important;
+        top: 130px!important;
+        
+}
+
+    @keyframes collapsenav {
+        0% {
+            height: 200px;
+            background-color: red;
+        }
+        20% {
+            height: 50px;
+            background-color: aqua;
+            
+            top: 55px;
+        }
+        100% {
+            height: 50px;
+            background-color: bisque;
+            top: 55px;
+            
+        }}
+
+    .fila {
+        position: sticky;
+        width: 100%;
+        flex-basis: 100%;
+        height: 200px;
+        z-index: 4001;
+       
+          
+        animation-timeline: --nav;
+        animation-name: collapsenav;
+
+        animation: collapsenav auto linear forwards;
+        animation-timeline: scroll(root block);
+    }
+
+    /* animacion NAV */
     @media screen and (max-width:1368px) {
 
         .paciente {

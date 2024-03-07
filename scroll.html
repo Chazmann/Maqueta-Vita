@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/vita.css">
-    <title>VITA</title>
+    <title>VITA CON SCROLLTIMELINE</title>
 </head>
 
 
@@ -74,10 +74,11 @@
     <div class="col-md-12 offset-lg-1 col-lg-10 verde">
 
 
-
-
         <div class="divider-white"></div>
-        <nav class="cuerpo row user_bar navStick d-flex">
+        <div class="fila">d<br>
+        </div>
+       
+        <nav class="hidescroll cuerpo row user_bar navStick d-flex">
             <!-- ----DATOS PACIENTE----- -->
             <div class="w30 cen_vert spbt">
                 <div class="perfil_user col-3">JS</div>
@@ -131,11 +132,11 @@
                     <span class="dig tag_alerta alert3">
                         <i class="fa-solid fa-tablets"></i>
                         Paracetamol
-                       
+
                     </span> <span class="dig tag_alerta alert1">
                         <i class="fa-solid fa-lungs-virus"></i>
                         Neumonía
-                        
+
                     </span>
                 </div>
             </div>
@@ -155,12 +156,13 @@
             </div>
             <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
         </nav>
+
         <div class="divider-white"></div>
         <main class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 ">
                 <div class="d-flex align-items-start">
                     <!-- ----MENU VERTICAL----- -->
-                    <div class="nav flex-column nav-pills m-2 col-2 menulateral" id="v-pills-tab" role="tablist"
+                    <div class="nav flex-column nav-pills m-2 col-2 menulateral stickymenu" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
 
                         <button class="nav-link active dropend" id="v-pills-home-tab" data-bs-toggle="tab"
