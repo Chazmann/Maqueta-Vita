@@ -14,66 +14,68 @@
 
 
 <body class="cuerpo">
-    <div class="col-md-12 offset-lg-1 col-lg-10">
+    <header class="row mbot">
+        <div class="col-md-1 logo"><img src="img/logo_vita.jpg"></div>
+        <div class="col-md-4 navegacion_breadcrumb h60">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb h60 cen_vert">
+                    <li class="breadcrumb-item"><a href="#" class="fa-solid fa-home gris"></a></li>
+                    <li class="breadcrumb-item"><a href="#" class="gris">Historia Clínica</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="gris">34009332</a></li>
+                    <li class="breadcrumb-item active gris_active" aria-current="page">Historial</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="offset-2 col-md-5 h60">
+            <div class="h100 cen_vert spbt">
+                <div class="h100 cen_vert">
+                    <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Herramientas"></button>
+                    <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Historial"></button>
+                    <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Alertas">
+                        <span
+                            class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">Nuevos alertas</span>
+                        </span>
+                    </button>
 
-        <header class="row">
-            <div class="col-md-1 logo"><img src="img/logo_vita.jpg"></div>
-            <div class="col-md-4 navegacion_breadcrumb h60">
-                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
-                    aria-label="breadcrumb">
-                    <ol class="breadcrumb h60 cen_vert">
-                        <li class="breadcrumb-item"><a href="#" class="fa-solid fa-home gris"></a></li>
-                        <li class="breadcrumb-item"><a href="#" class="gris">Historia Clínica</a></li>
-                        <li class="breadcrumb-item"><a href="#" class="gris">34009332</a></li>
-                        <li class="breadcrumb-item active gris_active" aria-current="page">Historial</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="offset-2 col-md-5 h60">
-                <div class="h100 cen_vert spbt">
-                    <div class="h100 cen_vert">
-                        <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip"
-                            data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip"
-                            data-bs-placement="bottom" title="Herramientas"></button>
-                        <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
-                            data-bs-placement="bottom" title="Historial"></button>
-                        <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip"
-                            data-bs-placement="bottom" title="Alertas">
-                            <span
-                                class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
-                                <span class="visually-hidden">Nuevos alertas</span>
-                            </span>
-                        </button>
-
-                    </div>
-                    <div class="divider_vert"></div>
-                    <div class="h100 dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <img src="img/perfil.jpg" class="perfil_circle" alt="" srcset="">Dr. Santiago Gastiarena
-                            Loredo
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="usermenu">
-                            <li><a class="dropdown-item active" href="#"><i class="fa-solid fa-user-doctor"></i>
-                                    Perfil</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-calendar-check"></i>
-                                    Acciones</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
-                                    sesión</a></li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="divider_vert"></div>
+                <div class="h100 dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil.jpg" class="perfil_circle" alt="" srcset="">Dr. Santiago Gastiarena
+                        Loredo
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="usermenu">
+                        <li><a class="dropdown-item active" href="#"><i class="fa-solid fa-user-doctor"></i>
+                                Perfil</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-calendar-check"></i>
+                                Acciones</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                sesión</a></li>
+                    </ul>
                 </div>
             </div>
-        </header>
-
+        </div>
         <div class="divider-gradient"></div>
+    </header>
+    <div class="col-md-12 offset-lg-1 col-lg-10 verde">
+
+        
+
+       
         <div class="divider-white"></div>
         <nav class="cuerpo row bg-white user_bar">
             <div class="col-md-4 cen_vert spbt">
@@ -163,14 +165,14 @@
                     <div class="nav flex-column nav-pills m-2 col-2 menulateral" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
 
-                        <button class="nav-link active bgazul dropend" id="v-pills-home-tab" data-bs-toggle="tab"
+                        <button class="nav-link active dropend" id="v-pills-home-tab" data-bs-toggle="tab"
                             data-bs-target="#v-pills-evolucion" type="button" role="tab" aria-controls="v-pills-home"
                             aria-selected="true">Evolución
                             <div>
                                 <i class="fa-solid fa-notes-medical"></i>
-                                <a class="dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                                <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                     aria-expanded="false"></a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu shadow">
                                     <li><a class="dropdown-item" href="#">Evolucion Link_1</a></li>
                                     <li><a class="dropdown-item" href="#">Evolucion Link 2</a></li>
                                     <li><a class="dropdown-item" href="#">Evolucion Link 3</a></li>
@@ -188,7 +190,7 @@
                                 <i class="fa-regular fa-pen-to-square"></i>
                                 <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
                                     aria-expanded="false"></a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu shadow">
                                     <li><a class="dropdown-item" href="#">Ordenes Link_1</a></li>
                                     <li><a class="dropdown-item" href="#">Ordenes Link 2</a></li>
                                     <li><a class="dropdown-item" href="#">Ordenes Link 3</a></li>
