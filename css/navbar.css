@@ -1,0 +1,15 @@
+.filas {
+    position: sticky;
+    top: 53px;
+   height: auto;
+    display: flex;
+    top: 53px;
+    width: 100%;
+    flex-basis: 100%;
+    z-index: 1050 !important;
+    overflow: hidden;
+
+}
+
+.hidden{visibility: hidden;}
+.sticky{position: fixed; top:53px}
