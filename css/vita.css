@@ -256,7 +256,7 @@
             display: flex !important;
             align-items: center;
             justify-content: space-between !important;
-            padding-right: 20px;
+            padding-right: 35px;
         }
 
         & button:nth-child(1),
@@ -289,7 +289,7 @@
     }
 
     .fullbody {
-        min-height: calc(65vh - 15px) !important;
+        min-height: calc(87vh - 15px) !important;
         border-radius: 14px 0 0 0;
         overflow-y: scroll;
         flex: 1 1 calc(100% - 10px) !important;
@@ -299,36 +299,41 @@
         height: 10px !important;
         width: 100% !important;
     }
-.hidescroll{
-    display: none!important;
-}
 
-.ovfsc{
-    overflow-y: scroll;
-}
-.stickmenu{
-        position: sticky!important;
-        top: 130px!important;
-        
-}
+    .hidescroll {
+        display: none !important;
+    }
+
+    .ovfsc {
+        overflow-y: scroll;
+    }
+
+    .stickmenu {
+        position: sticky !important;
+        top: 130px !important;
+
+    }
 
     @keyframes collapsenav {
         0% {
             height: 200px;
             background-color: red;
         }
+
         20% {
             height: 50px;
             background-color: aqua;
-            
+
             top: 55px;
         }
+
         100% {
             height: 50px;
             background-color: bisque;
             top: 55px;
-            
-        }}
+
+        }
+    }
 
     .fila {
         position: sticky;
@@ -336,13 +341,48 @@
         flex-basis: 100%;
         height: 200px;
         z-index: 4001;
-       
-          
+
+
         animation-timeline: --nav;
         animation-name: collapsenav;
 
         animation: collapsenav auto linear forwards;
         animation-timeline: scroll(root block);
+    }
+
+    .nav-pills .nav-link:nth-child(1),
+    .nav-pills .nav-link:nth-child(2) {
+        border: solid 2px var(--bg_azul_insti);
+        border-radius: .25rem;
+        width: calc(100% - 2px);
+    }
+
+    .nav-pills .nav-link.active:nth-child(1),
+    .nav-pills .nav-link.active:nth-child(2),
+    .nav-pills .show>.nav-link:nth-child(1),
+    .nav-pills .show>.nav-link:nth-child(2) {
+        border: solid 2px var(--bg_azul_insti);
+        color: white;
+        background-color: var(--bg_azul_insti);
+    }
+
+    .nav-pills .nav-link {
+        background: none;
+        border: 0;
+        border-radius: 0.25rem 0 0 .25rem;
+        color: var(--bg_azul_insti);
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+
+        color: var(--bg_azul_insti);
+        background-color: white;
+        /* background-color: #0d6efd; */
+        border: solid 2px var(--bg_azul_insti);
+        border-right: solid 2px rgb(255, 255, 255);
+        width: calc(100% + 10px);
+        z-index: 5000;
     }
 
     /* animacion NAV */
