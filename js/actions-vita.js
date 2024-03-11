@@ -1,3 +1,6 @@
-const collapseMenu = document.getElementById("menuLateral");
+const body = document.querySelector("body"),
+    colapsar = body.querySelector(".menulateral");
 
-collapseMenu.addEventListener("click", clickCollapse)
+   colapsar.addEventListener("click", () => {
+    menulateral.classList.colapsar("close")
+   }) 

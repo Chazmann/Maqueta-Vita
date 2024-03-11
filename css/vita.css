@@ -53,7 +53,7 @@
         position: sticky;
         top: 0px;
         background-color: var(--cuerpo);
-        z-index: 1040!important;
+        z-index: 1040 !important;
         height: 50px;
         /* box-shadow: 0px 15px 15px -13px rgba(0, 0, 0, 0.141); */
         width: 95vw !important;
@@ -67,7 +67,7 @@
         position: sticky;
         top: 50px;
         transition: all 0.3s ease-in-out;
-        z-index: 1050!important;
+        z-index: 1050 !important;
         box-shadow: 0px 10px 15px -13px rgba(0, 0, 0, 0.141);
         box-sizing: border-box !important;
 
@@ -77,7 +77,7 @@
         border-top: none;
         border-left: solid 1px gray !important;
         border-right: solid 1px gray !important;
-        z-index: 1050!important;
+        z-index: 1050 !important;
         padding: 14px !important;
     }
 
@@ -256,6 +256,10 @@
     }
 
     .menulateral {
+        flex: 0 0 auto;
+        width: 6% !important;
+        transition: all 0.05s ease-in-out;
+
         & button {
             display: flex !important;
             align-items: center;
@@ -267,8 +271,6 @@
         & button:nth-child(2) {
             padding-right: 10px;
         }
-
-
 
         & button:nth-child(2),
         & button:nth-child(1) {
@@ -291,6 +293,22 @@
             }
         }
     }
+
+    .toggleTitle {
+        display: none !important;
+        transition: all 0.05s ease-in-out;
+        transition-delay: 2s;
+    }
+
+    .menulateral:hover {
+        width: 16.66% !important;
+        & span {
+            display: block !important;
+            transition-delay: 2s!important;
+        }
+
+    }
+
 
     .fullbody {
         min-height: calc(87vh - 15px) !important;
@@ -342,7 +360,7 @@
         width: 100%;
         flex-basis: 100%;
         height: 200px;
-        z-index: 1050!important;
+        z-index: 1050 !important;
 
         animation-timeline: --nav;
         animation-name: collapsenav;
@@ -362,9 +380,10 @@
     .nav-pills .nav-link.active:nth-child(2),
     .nav-pills .show>.nav-link:nth-child(1),
     .nav-pills .show>.nav-link:nth-child(2) {
-        border: solid 2px var(--bg_azul_insti);
+        border: solid 2px var(--bg_azul_insti) !important;
         color: white;
         background-color: var(--bg_azul_insti);
+
     }
 
     .nav-pills .nav-link.active a {
@@ -386,6 +405,7 @@
         border: 0;
         border-radius: 0.25rem 0 0 .25rem;
         color: var(--bg_azul_insti);
+        height: 40px;
     }
 
     .nav-pills .nav-link.active,
@@ -393,13 +413,17 @@
 
         color: var(--bg_azul_insti);
         background-color: white;
+        z-index: 50;
         /* background-color: #0d6efd; */
         border: solid 2px var(--bg_azul_insti);
-        border-right: solid 2px rgb(255, 255, 255);
+        border-right: solid 2px rgb(255, 255, 255) !important;
         width: calc(100% + 10px);
         font-weight: 700;
         box-shadow: 0 8px 15px -10px rgba(128, 128, 128, 0.74);
     }
+
+
+
     .modal-content {
         position: relative;
         display: flex;
@@ -411,20 +435,24 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 0.3rem;
         outline: 0;
-        z-index:1090!important;
-        backdrop-filter: blur(10px)!important;
+        z-index: 1090 !important;
+        backdrop-filter: blur(10px) !important;
         box-shadow: 0px 0px 2px 5000px rgba(0, 0, 0, 0.5);
-      }
-      .modal-backdrop {
+    }
+
+    .modal-backdrop {
 
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1040!important;
+        z-index: 1040 !important;
         width: 100vw;
         height: 100vh;
         background-color: #00000000;
-      }
+    }
+
+
+
 
     /* animacion NAV */
     @media screen and (max-width:1368px) {
