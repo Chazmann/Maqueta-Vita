@@ -5,13 +5,26 @@
 
     }
 
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        width: 97vw !important;
+        margin: 0 !important;
+        margin: auto!important;
+        padding: 0 10px !important;
+
+
+        box-sizing: border-box !important;
+    }
+
     :root {
         --bg_azul_insti: rgb(61, 76, 190);
         --cuerpo: rgb(234, 234, 234);
         --nav: red;
-
-
+        --ancho90: 100% !important;
     }
+
 
     .w50 {
         width: 450% !important;
@@ -32,13 +45,6 @@
         gap: 10px !important;
     }
 
-    .verde {
-        background-color: rgba(255, 255, 255, 0) !important;
-        margin: auto !important;
-        box-sizing: border-box !important;
-        padding: 0 10px;
-    }
-
     a {
         text-decoration: none !important;
         color: rgb(65, 65, 65);
@@ -54,36 +60,28 @@
         position: sticky;
         top: 0px;
         background-color: var(--cuerpo);
-        z-index: 1040 !important;
-        height: 50px;
-        /* box-shadow: 0px 15px 15px -13px rgba(0, 0, 0, 0.141); */
-        width: 95vw !important;
+        width: var(--ancho90);
+        flex: 0 0 var(--ancho90);
         margin: auto;
+        z-index: 1;
     }
 
-    /* .zindex{
-        z-index: 999999999999999!important;
-    } */
     .navStick {
-        position: sticky;
-        top: 53px !important;
+        position: relative;
+        width: var(--ancho90);
+
+        margin: auto;
         transition: all 0.3s ease-in-out;
-        z-index: 1050 !important;
+        padding: 10px !important;
         box-shadow: 0px 10px 15px -13px rgba(0, 0, 0, 0.141);
         box-sizing: border-box !important;
-
-    }
-
-    .menuStick {
-        position: sticky !important;
-        top: 352px !important;
+        display: flex;
     }
 
     .bgalerta {
         border-top: none;
         border-left: solid 1px gray !important;
         border-right: solid 1px gray !important;
-        z-index: 1050 !important;
         padding: 14px !important;
     }
 
@@ -100,6 +98,8 @@
     .btn-gris:hover {
         box-shadow: 0px 5px 15px -13px rgba(0, 0, 0, 0.378);
     }
+
+
 
     .cen_vert {
         display: flex !important;
@@ -133,6 +133,10 @@
         padding: 10px;
     }
 
+    .pl10 {
+        padding: 5px 10px 0 10px;
+    }
+
     /* COLORES */
 
     .gris {
@@ -152,9 +156,7 @@
         background-color: var(--cuerpo) !important;
     }
 
-    .rojo {
-        background-color: red;
-    }
+
 
     .gris_active {
         color: gray;
@@ -177,9 +179,12 @@
     }
 
     .divider-gradient {
+        position: fixed;
+        top: 50px;
+        z-index: 1;
         height: 3px;
-        width: 100%;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, var(--bg_azul_insti) 50%, rgba(255, 255, 255, 1) 100%);
+        width: 100% !important;
+        background: linear-gradient(90deg, var(--cuerpo) 0%, var(--bg_azul_insti) 50%, var(--cuerpo) 100%);
     }
 
     .user_bar {
@@ -198,9 +203,11 @@
         align-content: center;
         justify-content: center;
     }
-    #logo{
+
+    #logo {
         height: 70px;
     }
+
     .data_user {
         display: flex;
         flex-direction: column;
@@ -263,10 +270,21 @@
         background-color: white;
     }
 
+
+    .menuStick {
+        display: flex;
+        width: var(--ancho90);
+        flex: 1;
+        padding: 0 !important;
+        margin: auto;
+
+
+    }
+
+
     .menulateral {
-        flex: 0 0 auto;
-        width: 6% !important;
         transition: all 0.05s ease-in-out;
+        z-index: 1;
 
         & button {
             display: flex !important;
@@ -309,21 +327,41 @@
     }
 
     .menulateral:hover {
-        width: 16.66% !important;
+        flex: 0 0 200px !important;
+        width: 200px !important;
 
         & span {
             display: block !important;
 
         }
-
     }
 
 
     .fullbody {
-        min-height: calc(87vh - 15px) !important;
+        /* height: calc(75vh - 15px) !important; */
         border-radius: 14px 0 0 0;
-        overflow-y: scroll;
-        flex: 1 1 calc(100% - 10px) !important;
+        border: solid 2px var(--bg_azul_insti);
+        flex: 1;
+        display: flex;
+        gap: 20px !important;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .hijofullbody {
+        display: grid;
+        text-align: center;
+        place-content: center;
+        flex: 1 0 200px !important;
+        width: 100%;
+        height: 200px;
+        background-color: rgb(211, 211, 211);
+        font-size: 20pt;
+
+    }
+
+    .hijofullbody:last-child {
+        margin-bottom: 20px;
     }
 
     .divider-white {
@@ -339,11 +377,7 @@
         overflow-y: scroll;
     }
 
-    .stickmenu {
-        position: sticky !important;
-        top: 130px !important;
 
-    }
 
 
 
@@ -375,7 +409,6 @@
         top: 53px;
         width: 100%;
         flex-basis: 100%;
-        z-index: 1050 !important;
         overflow: hidden;
 
         animation-timeline: --nav;
@@ -387,9 +420,10 @@
 
     @keyframes ocultarDatos {
         0% {
-         display: block!important;
+            display: block !important;
 
         }
+
         20% {
             display: none !important;
             background-color: yellow;
@@ -400,7 +434,7 @@
         }
     }
 
-   .hidesc>span {
+    .hidesc>span {
         animation-timeline: --nakv;
         animation-name: ocultarDatos;
 
@@ -457,7 +491,6 @@
 
         color: var(--bg_azul_insti);
         background-color: white;
-        z-index: 50;
         /* background-color: #0d6efd; */
         border: solid 2px var(--bg_azul_insti);
         border-right: solid 2px rgb(255, 255, 255) !important;
@@ -468,32 +501,6 @@
 
 
 
-    .modal-content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        pointer-events: auto;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 0.3rem;
-        outline: 0;
-        z-index: 1090 !important;
-        backdrop-filter: blur(10px) !important;
-        box-shadow: 0px 0px 2px 5000px rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-backdrop {
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1040 !important;
-        width: 100vw;
-        height: 100vh;
-        background-color: #00000000;
-    }
 
 
 

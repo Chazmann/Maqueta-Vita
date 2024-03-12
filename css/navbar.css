@@ -1,15 +1,77 @@
 .filas {
     position: sticky;
     top: 53px;
-   height: auto;
+    height: auto;
     display: flex;
     top: 53px;
     width: 100%;
     flex-basis: 100%;
-    z-index: 1050 !important;
     overflow: hidden;
+    background-color: yellow;
 
 }
 
-.hidden{visibility: hidden;}
-.sticky{position: fixed; top:53px}
+.hidden {
+    visibility: hidden;
+}
+
+.sticky {
+    position: fixed;
+    top: 53px
+}
+
+
+.dflex {
+    display: flex !important;
+    justify-content: center !important;
+}
+.tab-pane~.active{flex-basis: 100%!important}
+
+.contenido {
+    flex: 1 1 600px
+}
+
+.tab-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+    flex: 1;
+    padding: 0 !important;
+}
+
+.content {
+    box-sizing: border-box !important;
+    height: 70vh !important;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll!important; */
+    flex-basis: 100%!important;
+     gap: 14px;
+    overflow-y: scroll;
+}
+
+
+/*CONTENEDOR SCROLLBAR*/
+.content::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+    border-radius: 5px;
+    }
+    
+    /* FONDO BARRA SCROLL*/
+    .content::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    }
+    
+    /* SELECTOR */
+    .content::-webkit-scrollbar-thumb {
+    background: var(--bg_azul_insti)
+    ;
+    border-radius: 5px;
+    }
+    
+    /* SELECTOR hover */
+    .content::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124);
+    ;
+    }
