@@ -24,7 +24,7 @@
         --nav: red;
         --ancho90: 100% !important;
     }
-
+.flex-end{display: flex; justify-content: flex-end;}
 
     .w50 {
         width: 45% !important;
