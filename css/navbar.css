@@ -48,6 +48,7 @@
     flex-basis: 100%!important;
      gap: 14px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
