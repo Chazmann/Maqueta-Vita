@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/vita.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <style>
+        article {
+            background-color: lightcyan;
+
+            & p {
+                padding: 0 !important;
+                background-color: beige;
+                line-height: 40pt;
+                font-size: 40pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav1" >
+                    <div class="w30 cen_vert spbt">
+                <div class="perfil_user col-3">JS</div>
+                <div class="data_user col-9">
+                    <span class="paciente">Juan Segundo Sombra Oscura <i class="fa-solid fa-eye gris"></i> <i
+                            class="fa-solid fa-circle-info gris"></i></span>
+                    <div class="flex-wrap dpnone">
+                        <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span>
+                        <span>Cobertura: <strong>OSDE 310</strong></span>
+                    </div>
+                </div>
+            </div>
+            <!-- ------ALERTAS-------- -->
+            <div class="w50 bgalerta border">
+                <div class="row">
+                    <h6>Alertas<button class="add" data-bs-toggle="modal" data-bs-target="#add_alert"><i
+                                class="fa-solid fa-add"></i>Agregar</button></h6>
+                </div>
+                <!-- ------MODAL GENERAR NUEVO ALERTA------------ -->
+
+                <div class="modal fade" id="add_alert" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Agregar alertas</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="alertas" class="form-label">Seleccione un nuevo alerta</label>
+                                <input class="form-control" list="alertasOpciones" id="alertas"
+                                    placeholder="Escriba para buscar...">
+                                <datalist id="alertasOpciones">
+                                    <option value="Diabetes">
+                                    <option value="Paracetamol">
+                                    <option value="Alergia al polen">
+                                    <option value="Celiaquía">
+                                    <option value="Alergia a medicamentos Bayer">
+                                </datalist>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------FIN MODAL GENERAR NUEVO ALERTA------------ -->
+                <div class="d-flex">
+                    <span class="dig tag_alerta alert3">
+                        <i class="fa-solid fa-tablets"></i>
+                        Paracetamol
+
+                    </span> <span class="dig tag_alerta alert1">
+                        <i class="fa-solid fa-lungs-virus"></i>
+                        Neumonía
+
+                    </span>
+                </div>
+            </div>
+            <!-- ------------BOTONERA DE ACCIONES------------ -->
+            <div class="w20 row cuerpo cen_vert p-1 ">
+                <div class="col-12 cen_vert spbt botonera">
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Turnos"></button>
+                </div>
+                <button class="btn btn-gris col-10"><i class="fa fa-close"></i> Cerrar HC</button>
+            </div>
+            <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
+            </div>
+    <div class="navStick nav2">
+        <div class="rows">
+            <!-- ----DATOS PACIENTE----- -->
+            <div class="w30 centrar-vert spbt">
+                <div class="perfil_user_ch">JS</div>
+                <div class="data_user_ch">
+                    <span class="paciente_ch">Juan Segundo Sombra Segundo Oscura <i class="fa-solid fa-eye gris"></i> <i
+                            class="fa-solid fa-circle-info gris"></i></span>
+                    <div class="flex-wrap dpnone">
+                        <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ------ALERTAS-------- -->
+            <div class="w50 bgalerta_ch border rows">
+            
+                    <h6 class="col-2">Alertas</h6>
+                   <div class="col-10">
+                        <span class="dig tag_alerta alert3">
+                            <i class="fa-solid fa-tablets"></i>
+                            Paracetamol
+
+                        </span> <span class="dig tag_alerta alert1">
+                            <i class="fa-solid fa-lungs-virus"></i>
+                            Neumonía
+                        </span>
+                   </div>
+                </div>
+           
+            <!-- ------------BOTONERA DE ACCIONES------------ -->
+            <div class="w20 cuerpo centrar-vert ">
+                <div class="botonera">
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Turnos"></button>
+                        <button class="btn btn-gris"><i class="fa fa-close"></i></button>
+                </div>
+                
+            </div>
+            <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
+        </div>
+    </div>
+    <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio, officiis beatae amet facilis
+            cumque eveniet commodi a qui non quos atque molestiae sapiente numquam possimus in debitis officia ullam.
+        </p>
+    </article>
+    <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio, officiis beatae amet facilis
+            cumque eveniet commodi a qui non quos atque molestiae sapiente numquam possimus in debitis officia ullam.
+        </p>
+    </article>
+
+
+    <script>
+
+        const ocultar = document.querySelector('.nav1');
+        setTimeout(function () {
+            ocultar.style.display = 'flex'
+        }, 300);
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                ocultar.style.display = 'none'
+            } else {
+                ocultar.style.display = 'flex'
+            }
+        });
+        const mostrar = document.querySelector('.nav2');
+        setTimeout(function () {
+           mostrar.style.display = 'none'
+        }, 300);
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                mostrar.style.display = 'block';
+                mostrar.style.marginBottom = '150px';
+                mostrar.style.transition = 'all 0.4s ease-in-out'
+            } else {
+                mostrar.style.display = 'none'
+                mostrar.style.transition = 'all 0.4s ease-in-out'
+            }
+        });
+    </script>
+</body>
+
+</html>

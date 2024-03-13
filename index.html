@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/vita.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/scroll.css">
     <title>VITA</title>
 </head>
 
@@ -75,15 +76,15 @@
         
     </header>
 <div class="divider-gradient"></div>
-    <nav class="navStick">
+    <div class="navStick navy1" id="navy">
         <!-- ----DATOS PACIENTE----- -->
-        <div class="w30 cen_vert spbt">
-            <div class="perfil_user col-3">JS</div>
-            <div class="data_user col-9">
-                <span class="paciente">Juan Segundo Sombra Oscura <i class="fa-solid fa-eye gris"></i> <i
+        <div class="w30 centrar-vert">
+            <div class="perfil_user">JS</div>
+            <div class="data_user">
+                <span class="paciente">Juan Segundo Sombra Goyenechea <i class="fa-solid fa-eye gris"></i> <i
                         class="fa-solid fa-circle-info gris"></i></span>
                 <div class="flex-wrap dpnone">
-                    <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span>
+                    <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span><br>
                     <span>Cobertura: <strong>OSDE 310</strong></span>
                 </div>
             </div>
@@ -136,7 +137,7 @@
             </div>
         </div>
         <!-- ------------BOTONERA DE ACCIONES------------ -->
-        <div class="w20 row cuerpo cen_vert p-1 ">
+        <div class="w20 row cen_vert p-1 ">
             <div class="col-12 cen_vert spbt botonera">
                 <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip" data-bs-placement="top"
                     title="Paciente"></button>
@@ -150,7 +151,55 @@
             <button class="btn btn-gris col-10"><i class="fa fa-close"></i> Cerrar HC</button>
         </div>
         <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
-    </nav>
+    </div>
+
+    <div class="navStick nav2">
+        <div class="rows">
+            <!-- ----DATOS PACIENTE----- -->
+            <div class="w30 centrar-vert spbt">
+                <div class="perfil_user_ch">JS</div>
+                <div class="data_user_ch">
+                    <span class="paciente_ch">Juan Segundo Sombra Segundo Oscura <i class="fa-solid fa-eye gris"></i> <i
+                            class="fa-solid fa-circle-info gris"></i></span>
+                    
+                </div>
+            </div>
+            <!-- ------ALERTAS-------- -->
+            <div class="w50 bgalerta_ch border rows">
+            
+                    <h6 class="col-2">Alertas</h6>
+                   <div class="col-10">
+                        <span class="dig tag_alerta alert3">
+                            <i class="fa-solid fa-tablets"></i>
+                            Paracetamol
+
+                        </span> <span class="dig tag_alerta alert1">
+                            <i class="fa-solid fa-lungs-virus"></i>
+                            Neumonía
+                        </span>
+                   </div>
+                </div>
+           
+            <!-- ------------BOTONERA DE ACCIONES------------ -->
+            <div class="w20 cuerpo centrar-vert ">
+                <div class="botonera">
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Turnos"></button>
+                        <button class="btn btn-gris"><i class="fa fa-close"></i></button>
+                </div>
+                
+            </div>
+            <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
+        </div>
+    </div>
+
+
 
 <div class="divider-white"></div>
     <main class="menuStick">
@@ -297,7 +346,7 @@
 
 
     <script src="js/bootstrap.bundle.js"></script>
-    <!-- <script src="js/actions-vita.js"></script> -->
+    <script src="js/actions-vita.js"></script>
 </body>
 
 </html>

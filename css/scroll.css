@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav1 {
+    width: 100%!important;
+    display: flex;
+    flex-direction: row!important;
+    gap: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav2 {
+    display:none;
+    position: sticky;
+    top: 53px!important;
+    padding: 5px!important;
+    align-items: flex-start !important;
+    height: 40px !important;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: var(--cuerpo);
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+
+}
+
+.perfil_user_ch {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--bg_azul_insti);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.data_user_ch {
+    padding-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        font-size: .75em;
+    }
+}
+
+.paciente_ch {
+    padding-top: 0 !important;
+    font-size: 1em !important;
+    font-weight: 700;
+    color: var(--bg_azul_insti);
+   
+}
+
+.rows {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bgalerta_ch {
+    padding: 0 10px;
+    border: none !important;
+    border-left: solid 1px gray !important;
+    border-right: solid 1px gray !important;
+}
+
+.centrar-vert {display: flex!important;
+    align-items: center!important;
+    justify-content: space-around!important;
+}
+
+.menulateral{
+    position: sticky!important;
+    top:120px!important
+}

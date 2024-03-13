@@ -27,18 +27,19 @@
 
 
     .w50 {
-        width: 450% !important;
-        flex-basis: 45%;
+        width: 45% !important;
+        flex: 1 0 45%;
     }
 
     .w20 {
         width: 20% !important;
         flex-basis: 20%;
+        flex: 1 0 20%;
     }
 
     .w30 {
         width: 35% !important;
-        flex-basis: 35%;
+        flex: 1 0 35%;
     }
 
     .gp10 {
@@ -67,12 +68,10 @@
     }
 
     .navStick {
-        position: relative;
         width: var(--ancho90);
-
         margin: auto;
         transition: all 0.3s ease-in-out;
-        padding: 10px !important;
+        padding:0  10px !important;
         box-shadow: 0px 10px 15px -13px rgba(0, 0, 0, 0.141);
         box-sizing: border-box !important;
         display: flex;
@@ -193,15 +192,14 @@
     }
 
     .perfil_user {
-        height: 70px;
-        width: 70px;
+        height: 60px!important;
+        width: 60px!important;
         border-radius: 50%;
         background-color: var(--bg_azul_insti);
         color: white;
         font-size: 2em;
-        display: grid;
-        align-content: center;
-        justify-content: center;
+        text-align: center;
+        line-height: 58px;
     }
 
     #logo {
@@ -272,11 +270,13 @@
 
 
     .menuStick {
+        z-index: 0;
+        position: relative;
         display: flex;
         width: var(--ancho90);
         flex: 1;
         padding: 0 !important;
-        margin: auto;
+       margin: auto;
 
 
     }
