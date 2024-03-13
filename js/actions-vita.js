@@ -4,7 +4,7 @@ setTimeout(function () {
 }, 300);
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 20) {
         ocultar.style.display = 'none'
     } else {
         ocultar.style.display = 'flex'
@@ -16,7 +16,7 @@ setTimeout(function () {
 }, 300);
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 20) {
         mostrar.style.display = 'block';
        
         
