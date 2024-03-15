@@ -22,8 +22,10 @@
 
 
 .dflex {
+    
     display: flex !important;
     justify-content: center !important;
+    box-sizing: border-box!important;
 }
 .tab-pane~.active{flex-basis: 100%!important}
 
@@ -40,7 +42,7 @@
 }
 
 .content {
-    box-sizing: border-box !important;
+    box-sizing: border-box!important;
     height: 70vh !important;
     display: flex;
     flex-direction: column;
