@@ -284,7 +284,7 @@
         flex: 1;
         padding: 0 !important;
         margin: auto;
-        transition: all .2s ease-in-out !important;
+        transition: all .1s ease-in-out !important;
 
 
     }
@@ -301,7 +301,7 @@
         flex: 0 0 40px !important;
         width: 50px!important;
         
-        transition: all 0.1s ease-in !important;
+        transition: all 0.15s ease-in !important;
         z-index: 1;
 
         & button {
@@ -342,11 +342,11 @@
     span.toggleTitle {
         width: 0%;
         overflow: hidden!important;
-        transition: all 0.1s ease-in !important;
+        transition: all 200ms ease-in !important;
          opacity: 0;
          text-align: left;
          padding-left: 5px;
-         transform: translateX(-200px);
+         transform: translateX(-40px);
 
     }
 
@@ -360,6 +360,7 @@
             opacity: 1;
             transform: translateX(0);
             margin-left: 5px!important;
+           
         }
     }
 
