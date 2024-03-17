@@ -568,12 +568,17 @@
     flex-direction: column;
     border-radius: 5px;
     box-shadow: 0 0 10px -7px black;
+  
 }
 .diagnos{
     flex: 1;
     text-align: left;
 }
-.cardEvo .spbt h5{
+.cardEvo .spbt:nth-child(1) h5{
+    font-size: 1.1em!important;
+    font-weight: 700!important;
+}
+.cardEvo .spbt:nth-child(3) h5{
     font-size: 1em!important;
     font-weight: 700!important;
 }
