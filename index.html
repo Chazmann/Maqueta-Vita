@@ -290,13 +290,14 @@
                         <!-- -------volcar contenido------- -->
                         <div class="content">
                             <div class="hijofullbody dflex gap-2">
-                                <div class="col-md-3  p-1">
+                                <div class="col-md-3 p-1">
                                     <!-- --------filtros---------- -->
                                     <div class="header text-start"><i class="fa-solid fa-calendar m-1"></i>Últimas Consultas</div>
                                     <div class="mainfiltros">
-                                        <input type="text" value="08/03/2024 - 18/03/2024"
+                                        <input value="08/03/2024 - 18/03/2024"
                                             name="Filtro[0].items[0].valor" class="form-control dateRange valid"
                                             id="Filtro_ 0item_0" autocomplete="off" aria-invalid="false">
+                                            <br>
                                     </div>
                                     <div class="accordion" id="filtros">
                                         <div class="accordion-item ">
@@ -363,8 +364,48 @@
                                               </div>
                                             </div>
                                           </div>
+
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="otrascosas">
+                                              <button class="accordion-button collapsed p-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                <i class="fa-solid fa-location m-1"></i> Locaciones
+                                              </button>
+                                            </h2>
+                                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="otrascosas" data-bs-parent="#accordionExample">
+                                              <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                      <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
+                                                    </label>
+                                                  </div>
+                                                  <hr class="m-1">
+                                                  <!-- --------zona checks----------- -->
+                                                  <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                      <i class="fa-solid fa-heart m-1"></i>Especialidades
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                      <i class="fa-solid fa-hospital m-1"></i>Ámbitos
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                      <i class="fa-solid fa-location m-1"></i>Ubicaciones
+                                                    </label>
+                                                  </div>
+
+                                              </div>
+                                            </div>
+                                          </div>
                                         
                                     </div>
+                                    
 
                                 </div>
 
