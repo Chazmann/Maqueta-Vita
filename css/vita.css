@@ -63,6 +63,8 @@
         display: flex;
         align-items: center;
         height: 60px;
+        padding: 0!important;
+        box-sizing: border-box;
     }
 
     .mbot {
@@ -72,6 +74,7 @@
         width: var(--ancho90);
         flex: 0 0 var(--ancho90);
         margin: auto;
+        margin-bottom: 0!important;
         z-index: 2;
     }
 
@@ -197,6 +200,7 @@
         height: 3px;
         width: 100% !important;
         background: linear-gradient(90deg, var(--cuerpo) 0%, var(--bg_azul_insti) 50%, var(--cuerpo) 100%);
+        margin-top: 0!important;
     }
 
     .user_bar {
