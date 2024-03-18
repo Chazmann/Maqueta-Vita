@@ -21,7 +21,7 @@ body {
 .nav2 {
     display:none;
     position: sticky;
-    top: 53px!important;
+    top: 0px!important;
     padding: 5px!important;
     align-items: flex-start !important;
     height: 45px !important;
@@ -31,6 +31,7 @@ body {
     background-color: var(--cuerpo);
     transition: all 0.2s ease-in-out;
     z-index: 1;
+    box-shadow: 0 4px 8px -9px black;
 
 }
 
