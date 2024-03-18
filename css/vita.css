@@ -277,7 +277,7 @@
     }
 
     .tab_body {
-        border: solid 2px var(--bg_azul_insti);
+        /* border: solid 2px var(--bg_azul_insti); */
         background-color: white;
     }
 
@@ -375,12 +375,13 @@
     .fullbody {
         /* height: calc(75vh - 15px) !important; */
         border-radius: 14px 0 0 0;
-        border: solid 2px var(--bg_azul_insti);
+        /* border: solid 2px var(--bg_azul_insti); */
         flex: 1;
         display: flex;
         gap: 20px !important;
         background-color: #fff;
         overflow: hidden;
+        z-index: 1;
     }
 
     .hijofullbody {
@@ -527,9 +528,10 @@
 
         color: var(--bg_azul_insti);
         background-color: white;
+        border: 0;
         /* background-color: #0d6efd; */
-        border: solid 2px var(--bg_azul_insti);
-        border-right: solid 2px rgb(255, 255, 255) !important;
+        /* border: solid 2px var(--bg_azul_insti);
+        border-right: solid 2px rgb(255, 255, 255) !important; */
         width: calc(100% + 10px);
         font-weight: 700;
         box-shadow: 0 8px 15px -10px rgba(128, 128, 128, 0.74);
