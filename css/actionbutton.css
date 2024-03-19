@@ -108,6 +108,7 @@
     max-height: 300px;
     overflow-x: hidden;
     padding: 5px;
+    border-radius: 10px;
     
 }
 .grilla .dropdown-item{
