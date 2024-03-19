@@ -9,7 +9,7 @@
     right: 30px;
     opacity: .7;
   }
-  .fab-container:hover {
+  .fab-container:hover{
     height: 100%;
     opacity: 1;
   }
@@ -37,7 +37,7 @@
     z-index: 2;
     box-shadow: 0 0 15px white!important;
   }
-  .fab-container .fab::before {
+  .fab-container .fab::before, .sign-container .sign::before  {
     content: " ";
     position: absolute;
     bottom: 0;
@@ -48,7 +48,7 @@
     border-radius: 0 0 10px 0;
     z-index: -1;
   }
-  .fab-container .fab .fab-content {
+  .fab-container .fab .fab-content, .sign-container .sign .fab-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +79,39 @@
   .fab-container .sub-button .material-icons {
     color: white;
     padding-top: 6px;
+  }
+
+  .sign-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+    position: absolute;
+    bottom: 30px;
+    right: 90px;
+    
+ 
+  }
+  .sign-container .sign {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    background-color: none;
+    z-index: 2;
+    
+   
+  }
+  
+  .sign-container .sign .fab-content{
+    opacity: .7;
+    border-radius: 0 50% 50% 0!important;
+  }
+  .sign-container .sign:first-child .fab-content{
+    opacity: .7;
+    border-radius: 50% 0 0 50%!important;
+  }
+  .sign-container .sign:hover .fab-content{
+    opacity: 1;
   }
 
 
