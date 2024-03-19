@@ -103,15 +103,16 @@
   }
   
   .sign-container .sign .fab-content{
-    opacity: .7;
+    transition: all .15s ease-in;
+    opacity: .8;
     border-radius: 0 50% 50% 0!important;
   }
   .sign-container .sign:first-child .fab-content{
-    opacity: .7;
-    border-radius: 50% 0 0 50%!important;
+    Border-radius: 50% 0 0 50%!important;
   }
   .sign-container .sign:hover .fab-content{
     opacity: 1;
+    transform: scale(1.1);
   }
 
 
