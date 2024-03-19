@@ -124,6 +124,7 @@
   .sign-container .sign:hover .fab-content{
     opacity: 1;
     transform: scale(1.1);
+    box-shadow: 0 0 200px 100px rgba(41, 41, 41, 0.383);
   }
 
 
