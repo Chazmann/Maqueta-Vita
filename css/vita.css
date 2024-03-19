@@ -592,6 +592,27 @@
 .br_ok{border-left: solid 5px var(--bg_azul_insti);}
 .br_danger{border-left: solid 5px rgb(214, 104, 104);}
 
+
+
+.menuAppDropdown {
+   
+    width: auto!important;
+    overflow-y: scroll!important;
+    max-height: 300px!important;
+    flex-direction: column;
+    box-sizing: border-box!important;
+    padding: 5px;
+   
+}
+.grilla{
+    box-sizing: border-box!important;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(60px, auto);
+    place-items: center;
+    
+}
     @media screen and (max-width:1600px) {
 
         .pingas {

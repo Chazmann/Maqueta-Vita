@@ -34,9 +34,42 @@
         <div class="offset-2 col-md-5 h60 flex-end">
             <div class="h100 cen_vert ">
                 <div class="h100 cen_vert">
-                    <button type="button" class="btn fa-solid fa-grip" data-bs-toggle="tooltip"
-                        data-bs-placement="bottom" title="Historial" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Herramientas"></button>
+                    <!-- --------dropdown app---------- -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-grip" id="menuApps"
+                            data-bs-toggle="dropdown"> </button>
+                        <div class="dropdown-menu menuAppDropdown" aria-labelledby="menuApps">
+                           <div class="grilla">
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-users-viewfinder fs-4" href="#"></a>Pacientes</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-book-medical fs-4" href="#"></a>Historia Clínica</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-clock fs-4" href="#"></a>Sala de Espera</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-circle-nodes fs-4" href="#"></a>Flujo de Atenciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-bed-pulse fs-4" href="#"></a>Internaciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-notes-medical fs-4" href="#"></a>Plantillas</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-laptop-medical fs-4" href="#"></a>Recetas Web</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-user-nurse fs-4" href="#"></a>Enfermería</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-pager fs-4" href="#"></a>Procedimientos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-calendar-plus fs-4" href="#"></a>Consulta Turnos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-hand-holding-medical fs-4" href="#"></a>Cirugías</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-person-chalkboard fs-4" href="#"></a>Talleres</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-clipboard-question fs-4" href="#"></a>Asistente de Informes</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-list-check fs-4" href="#"></a>Auditorias de atenciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-signature fs-4" href="#"></a>Firma Digital</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-search fs-4" href="#"></a>Búsquedas</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-calendar-days fs-4" href="#"></a>Turnos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-circle-info fs-4" href="#"></a>Protocolos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a class="fa-solid fa-hospital fs-4" href="#"></a>Mapa<br>Htal de día</div>
+
+                            </div>                        
+                                
+                           
+                        </div>
+                    </div>
+
+
+
+                    <!-- --------dropdown app---------- -->
+
                     <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
                         data-bs-placement="bottom" title="Historial"></button>
                     <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip"
@@ -448,10 +481,15 @@
                                         <div class="spbt">
                                             <h5>Evolución General</h5>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-lungs-virus p-2"></button></div>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-lungs-virus p-2"></button>
+                                            </div>
                                         </div>
                                     </article>
                                     <article class="cardEvo br_ok xspbt">
@@ -463,12 +501,18 @@
                                         <div class="spbt">
                                             <h5>Evolución General</h5>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-vial-circle-check p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-kit-medical p-2"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-mask-face p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-vial-circle-check p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-kit-medical p-2"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-mask-face p-2"></button>
                                             </div>
                                         </div>
                                     </article>
@@ -481,10 +525,21 @@
                                         <div class="spbt">
                                             <h5>Evolución General</h5>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-arrow-right p-2" data-bs-toggle="tooltip" data-bs-placement="top" title="ver diagnóstico"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Placas"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-ban-smoking p-2" data-bs-toggle="tooltip" data-bs-placement="top" title="No fumar"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-mask-ventilator p-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Usar mascarilla"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="ver diagnóstico"></button>
+                                                <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Placas"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-ban-smoking p-2"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="No fumar"></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-dark fa-solid fa-mask-ventilator p-2"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Usar mascarilla"></button>
                                             </div>
                                         </div>
                                     </article>
@@ -597,25 +652,28 @@
 
     </main>
 
-    
+
     <div class="fab-container position-fixed end-0 bottom-0 m-4">
         <div class="fab shadow">
-          <div class="fab-content">
-            <span class="fa-solid fa-plus text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left" title="Generar nueva acción"></span>
-          </div>
+            <div class="fab-content">
+                <span class="fa-solid fa-plus text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Generar nueva acción"></span>
+            </div>
         </div>
         <div class="sub-button shadow">
-          <a href="google.com" target="_blank">
-            <span class="fa-solid fa-file-circle-plus text-white fs-5 shadow" data-bs-toggle="tooltip" data-bs-placement="left" title="NUEVA ORDEN" ></span>
-          </a>
+            <a href="google.com" target="_blank">
+                <span class="fa-solid fa-file-circle-plus text-white fs-5 shadow" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA ORDEN"></span>
+            </a>
         </div>
         <div class="sub-button shadow">
-          <a href="google.com" target="_blank">
-            <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left" title="NUEVA RECETA"></span>
-          </a>
+            <a href="google.com" target="_blank">
+                <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA RECETA"></span>
+            </a>
         </div>
-        
-      </div>
+
+    </div>
     <div class="futer">
         <H4>MARKEY</H4>
     </div>
