@@ -594,25 +594,7 @@
 
 
 
-.menuAppDropdown {
-   
-    width: auto!important;
-    overflow-y: scroll!important;
-    max-height: 300px!important;
-    flex-direction: column;
-    box-sizing: border-box!important;
-    padding: 5px;
-   
-}
-.grilla{
-    box-sizing: border-box!important;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 0px!important;
-    grid-auto-rows: minmax(60px, auto);
-    place-items: center;
-    
-}
+
     @media screen and (max-width:1600px) {
 
         .pingas {

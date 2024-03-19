@@ -80,3 +80,53 @@
     color: white;
     padding-top: 6px;
   }
+
+
+
+  .menuAppDropdown {
+   border-radius: 14px;
+    width: auto!important;
+    overflow-y: scroll!important;
+    max-height: 300px!important;
+    flex-direction: column;
+    box-sizing: border-box!important;
+    padding: 5px;
+   
+}
+.grilla{
+    box-sizing: border-box!important;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px!important;
+    grid-auto-rows: minmax(60px, auto);
+    place-items: center;
+    
+}
+
+
+/*CONTENEDOR SCROLLBAR*/
+.menuAppDropdown::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+    border-radius: 5px;
+    }
+    
+    /* FONDO BARRA SCROLL*/
+    .menuAppDropdown::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    }
+    
+    /* SELECTOR */
+    .menuAppDropdown::-webkit-scrollbar-thumb {
+    background: var(--bg_azul_insti)
+    ;
+    border-radius: 5px;
+    }
+    
+    /* SELECTOR hover */
+    .menuAppDropdown::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124);
+    ;
+    }
+
+
