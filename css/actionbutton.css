@@ -93,6 +93,7 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.096);
     backdrop-filter: blur(15px);
+    box-shadow: 0 0 1500px 1500px rgba(0, 0, 0, 0.359)!important;
    
 }
 .grilla{
@@ -106,6 +107,7 @@
     overflow-y: scroll;
     max-height: 300px;
     overflow-x: hidden;
+    padding: 5px;
     
 }
 .grilla .dropdown-item{
