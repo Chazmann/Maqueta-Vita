@@ -67,8 +67,8 @@
     justify-content: center;
     bottom: 10px;
     right: 10px;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background-color: var(--bg_azul_insti);
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -90,7 +90,7 @@
     max-height: 300px auto!important;
     flex-direction: column;
     box-sizing: border-box!important;
-    padding: 10px;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.096);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 1500px 1500px rgba(0, 0, 0, 0.359)!important;
