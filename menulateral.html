@@ -36,6 +36,46 @@
         <div class="d-flex h60 flex-end ">
             <div class="h100 cen_vert azulinsti ">
                 <div class="h100 cen_vert">
+                    <!-- --------dropdown notificaciones---------- -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-note-sticky" id="menuApps"
+                            data-bs-toggle="dropdown"> <span
+                                class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">Nuevos alertas</span>
+                            </span></button>
+                        <div class="dropdown-menu notif" aria-labelledby="menuApps">
+                            <div class="w-100 bg-white">
+                                <div class="text-start d-flex flex-column p-2 w-100 dropdown-item-text">
+                                    <span class="fs-6 text-body fw-bolder">Borradores</span>
+                                    <span class="">Existen 2 borradores de 4 disponibles</span>
+                                </div>
+                                <div class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                    <div class="d-flex flex-row gap-2">
+                                        <div class="fa-solid fa-circle-check fs-1"></div>
+                                        <div>
+                                            <h6>José María Muñoz</h6>
+                                            <h6>Evolución ambulatoria</h6>
+                                        </div>
+                                    </div>
+                                    <a class="btn link-info p-3">IR</a>
+
+                                </div>
+                                <div class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                    <div class="d-flex flex-row gap-2">
+                                        <div class="fa-solid fa-circle-check fs-1"></div>
+                                        <div>
+                                            <h6>Tamara Oliveira</h6>
+                                            <h6>Extracción muela</h6>
+                                        </div>
+                                    </div>
+                                    <a class="btn link-info p-3 ">IR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------FIN dropdown notificaciones---------- -->
+
+
                     <!-- --------dropdown app---------- -->
                     <div class="dropdown">
                         <button type="button" class="btn dropdown-toggle fa-solid fa-grip" id="menuApps"
@@ -253,7 +293,7 @@
 
 
 
-    
+
     <main class="menuStick wrapper">
         <div class="dflex">
             <!-- ----MENU VERTICAL----- -->
@@ -271,33 +311,34 @@
                     <div class="sidebar-logo">
                         <a href="#"> QA-Austral</a>
                     </div>
-                    
+
                 </div>
-                    <ul class="sidebar-nav nav-pills gap-1 d-flex flex-column">
-                        <li class="sidebar-item nav-item">
-                            <a href="#" class="sidebar-link">
-                                <i class="fa-solid fa-notes-medical"></i>
-                                <span>Evolución</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item nav-pills">
-                            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                                data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                                <i class="fa-solid fa-notes-medical"></i>
-                                <span>Evolución</span>
-                            </a>
-                            <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link"><i class="fa-solid fa-notes-medical"></i>Historial Evolución</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link"><i class="fa-solid fa-add"></i>Nueva Evolución</a>
-                                </li>
-                            </ul>
-                        </li>
+                <ul class="sidebar-nav nav-pills gap-1 d-flex flex-column">
+                    <li class="sidebar-item nav-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-notes-medical"></i>
+                            <span>Evolución</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item nav-pills">
+                        <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                            data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                            <i class="fa-solid fa-notes-medical"></i>
+                            <span>Evolución</span>
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link"><i class="fa-solid fa-notes-medical"></i>Historial
+                                    Evolución</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link"><i class="fa-solid fa-add"></i>Nueva Evolución</a>
+                            </li>
+                        </ul>
+                    </li>
 
 
-                    </ul>
+                </ul>
 
             </aside>
 
