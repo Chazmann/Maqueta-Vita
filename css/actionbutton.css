@@ -1,0 +1,194 @@
+.fab-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: .7;
+  }
+  .fab-container:hover{
+    height: 100%;
+    opacity: 1;
+  }
+  .fab-container:hover .sub-button:nth-child(2) {
+    transform: translateY(-65px);
+  }
+  .fab-container:hover .sub-button:nth-child(3) {
+    transform: translateY(-120px);
+  }
+  .fab-container:hover .sub-button:nth-child(4) {
+    transform: translateY(-190px);
+  }
+  .fab-container:hover .sub-button:nth-child(5) {
+    transform: translateY(-250px);
+  }
+  .fab-container:hover .sub-button:nth-child(6) {
+    transform: translateY(-320px);
+  }
+  .fab-container .fab {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    background-color: var(--bg_azul_insti);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 15px white!important;
+  }
+  .fab-container .fab::before, .sign-container .sign::before  {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background-color: inherit;
+    border-radius: 0 0 10px 0;
+    z-index: -1;
+  }
+  .fab-container .fab .fab-content, .sign-container .sign .fab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .fab-container .fab .fab-content .material-icons {
+    color: white;
+    font-size: 48px;
+  }
+  .fab-container .sub-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 7px;
+    right: 7px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--bg_azul_insti);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .fab-container .sub-button:hover {
+    cursor: pointer;
+  }
+  .fab-container .sub-button .material-icons {
+    color: white;
+    padding-top: 6px;
+  }
+
+  .sign-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+    position: absolute;
+    bottom: 30px;
+    right: 90px;   
+ 
+  }
+  .sign-container .sign {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    background-color: none;
+    z-index: 2;
+    
+   
+  }
+  
+  .sign-container .sign .fab-content{
+    transition: all .15s ease-in;
+    opacity: .8;
+    border-radius: 0 50% 50% 0!important;
+    
+  }
+  .sign-container .sign:first-child .fab-content{
+    Border-radius: 50% 0 0 50%!important;
+  }
+
+  .sign-container .sign:first-child:hover .fab-content{
+    background-color: rgb(88, 149, 94)!important;
+    cursor: pointer;
+  }
+  .sign-container .sign:last-child:hover .fab-content{
+    background-color: rgb(239, 82, 82)!important;
+    cursor: pointer;
+  }
+  .sign-container .sign:hover .fab-content{
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 200px 100px rgba(41, 41, 41, 0.383);
+  }
+
+
+
+  .menuAppDropdown {
+   border-radius: 14px;
+    width: auto!important;
+    overflow: visible;
+    max-height: 300px auto!important;
+    flex-direction: column;
+    box-sizing: border-box!important;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.096);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 1500px 1500px rgba(0, 0, 0, 0.359)!important;
+   
+}
+.grilla{
+    background-color: rgba(255, 255, 255, 0.729);
+    box-sizing: border-box!important;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0px!important;
+    grid-auto-rows: minmax(60px, auto);
+    place-items: center;
+    overflow-y: scroll;
+    max-height: 300px;
+    overflow-x: hidden;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.grilla .dropdown-item{
+    border-radius: 7px;
+    padding: 6px;
+}
+.grilla .dropdown-item:hover{
+    background-color: rgba(255, 255, 255, 0.352)!important;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/*CONTENEDOR SCROLLBAR*/
+.grilla::-webkit-scrollbar {
+    right: -5px!important;
+    height: 10px;
+    width: 5px;
+    border-radius: 5px;
+    }
+    
+    /* FONDO BARRA SCROLL*/
+    .grilla::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    }
+    
+    /* SELECTOR */
+    .grilla::-webkit-scrollbar-thumb {
+    background: rgb(81, 81, 81);
+    border-radius: 5px;
+    }
+    
+    /* SELECTOR hover */
+    .grilla::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124);
+    ;
+    }
+
+
