@@ -76,15 +76,36 @@ body {
     flex: 1 1 auto;
 }
 
-/* a.sidebar-link {
+a.sidebar-link:hover {
     padding: .5rem 1.3rem;
-    color:var(--bg_azul_insti);
+    background-color:var(--bg_azul_insti)!important;
     display: block;
     font-size: 0.9rem;
     white-space: nowrap;
-    border-left: 3px solid transparent;
-    background-color: gold;
-} */
+    color: white!important;
+}
+
+/* ----- SUB SIDEBARLINK-----DROPDOWN------ */
+.sub a.sidebar-link {
+    padding: .5rem 1.3rem;
+    background-color:var(--cuerpo)!important;
+    color: var(--bg_azul_insti)!important;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border:none!important;
+}
+
+.sub a.sidebar-link:hover {
+    padding: .5rem 1.3rem;
+    background-color:rgb(163, 163, 163)!important;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: white!important;
+}
+/* --------FIN------SUB SIDEBARLINK----------- */
+
 
 a.sidebar-link:nth-child(1), a.sidebar-link:nth-child(2) {
     padding: .5rem 1.3rem;
@@ -102,25 +123,30 @@ a.sidebar-link:nth-child(1), a.sidebar-link:nth-child(2) {
     margin-right: .75rem;
 }
 
-a.sidebar-link:hover {
-    background-color: rgba(255, 255, 255, .075);
-    border-left: 3px solid #3b7ddd;
-}
+/* a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);   
+} */
 
 .sidebar-item {
     position: relative;
 }
-
+/* ------contenedor dropdown HOVER sidebar colapsado------ */
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
     position: absolute;
     top: 0;
-    left: 70px;
-    background-color: #0e2238;
+    left: 60px;
+    /* background-color: #0e2238; */
     padding: 0;
     min-width: 15rem;
     display: none;
-}
+    box-shadow: 0 0 10px -3px black;   
 
+    & .sidebar-link{
+        border-radius: 0;
+    }
+    }
+
+    /* ------contenedor dropdown sidebar colapsado------ */
 #sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
     display: block;
     max-height: 15em;
@@ -128,6 +154,7 @@ a.sidebar-link:hover {
     opacity: 1;
 }
 
+/* ------flechita dropdown-------- */
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
     border: solid;
     border-width: 0 .075rem .075rem 0;
@@ -139,8 +166,9 @@ a.sidebar-link:hover {
     top: 1.4rem;
     transform: rotate(-135deg);
     transition: all .2s ease-out;
+    
 }
-
+/* ------flechita dropdown rotada-------- */
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(45deg);
     transition: all .2s ease-out;
