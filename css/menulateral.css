@@ -106,8 +106,20 @@ a.sidebar-link:hover {
 }
 /* --------FIN------SUB SIDEBARLINK----------- */
 
+.sidebar-item a.sidebar-link {
+    padding: .5rem 1.3rem;
+    color:var(--bg_azul_insti);
+    display: block;
+    border: none;
+    border-radius: .25rem;
+    width: calc(100% - 2px);
+    white-space: nowrap;
+}
+.sidebar-item a.sidebar-link.active {
+    background-color: white!important;
+}
 
-a.sidebar-link:nth-child(1), a.sidebar-link:nth-child(2) {
+.sidebar-item:nth-child(1) a.sidebar-link, .sidebar-item:nth-child(2) a.sidebar-link {
     padding: .5rem 1.3rem;
     color:var(--bg_azul_insti);
     background-color: white;
@@ -135,11 +147,11 @@ a.sidebar-link:nth-child(1), a.sidebar-link:nth-child(2) {
     position: absolute;
     top: 0;
     left: 60px;
-    /* background-color: #0e2238; */
+    background-color: none!important;
     padding: 0;
     min-width: 15rem;
     display: none;
-    box-shadow: 0 0 10px -3px black;   
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.757);   
 
     & .sidebar-link{
         border-radius: 0;
