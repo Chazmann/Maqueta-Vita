@@ -316,8 +316,9 @@
                 </div>
 
             </div>
-            <ul class="nav sidebar-nav nav-pills gap-1 d-flex flex-column">
-                <li class="sidebar-item" id="v-pills-profile-tab" data-bs-toggle="pill"
+            <ul class="nav sidebar-nav nav-pills gap-1 d-flex flex-column nav-stacked" id="side">
+
+                <li class="sidebar-item actaiv" id="v-pills-profile-tab" data-bs-toggle="pill"
                     data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
                     aria-selected="false">
                     <a href="#" class="sidebar-link">
@@ -325,15 +326,16 @@
                         <span>Órdenes</span>
                     </a>
                 </li>
-                <li class="sidebar-item" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-evolucion"
-                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                    <a href="#" class="sidebar-link collapsed has-dropdown">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
                         <i class="fa-solid fa-notes-medical"></i>
                         <span>Evolución</span>
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sub">
-                            <a href="#" class="sidebar-link child"><i class="fa-solid fa-notes-medical"></i>Historial
+                            <a href="#" class="sidebar-link child"><i
+                                    class="fa-solid fa-notes-medical"></i>Historial
                                 Evolución</a>
                         </li>
                         <li class="sub">
@@ -724,6 +726,25 @@
 
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/actions-vita.js"></script>
+
+    <script>
+
+       
+let sidebarContainer = document.getElementById("side");
+console.log(sidebarContainer.click)
+// Get all buttons with class="btn" inside the container
+let btns = sidebarContainer.getElementsByClassName("sidebar-item");
+console.log(btns.length)
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("actaiv");
+    current[0].className = current[0].className.replace(" actaiv", "");
+    this.className += " actaiv";
+  });
+}
+    </script>
 </body>
 
 </html>

@@ -1,8 +1,18 @@
-.nav {
-    border: none!important;
-    background-color: none!important;
-}
+   .nav-pills .nav-link:nth-child(1),
+    .nav-pills .nav-link:nth-child(2) {
+        border: solid 2px var(--bg_azul_insti);
+        border-radius: .25rem;
+        width: calc(100% - 2px);
+    }
 
+    .nav-pills .nav-link.active:nth-child(1),
+    .nav-pills .nav-link.active:nth-child(2),
+    .nav-pills .show>.nav-link:nth-child(1),
+    .nav-pills .show>.nav-link:nth-child(2) {
+        border: solid 2px var(--bg_azul_insti);
+        color: white;
+        background-color: var(--bg_azul_insti);
+    }
 
 .nav-pills .nav-link.active a {
     color: white !important;
@@ -28,8 +38,8 @@
     /* height: 40px; */
 
 }
+/* .sidebar-nav .sidebar-item.active, */
 
-.sidebar-nav .sidebar-item.active,
 .nav-pills .show>.nav-link {
 
     color: var(--bg_azul_insti);
@@ -41,4 +51,9 @@
     width: none!important;
     font-weight: 700;
     box-shadow: 0 8px 15px -10px rgba(128, 128, 128, 0.74);
+}
+
+.actaiv{
+    background-color: white;
+    color: var(--bg_azul_insti);
 }

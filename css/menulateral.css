@@ -67,7 +67,7 @@ body {
 }
 
 #sidebar:not(.expand) .sidebar-logo,
-#sidebar:not(.expand) a.sidebar-link span, #sidebar:not(.expand) .nav-link span {
+#sidebar:not(.expand) a.sidebar-link span  {
     display: none;
 }
 
@@ -115,7 +115,7 @@ a.sidebar-link:hover {
     width: calc(100% - 2px);
     white-space: nowrap;
 }
-.sidebar-item a.sidebar-link.active {
+.sidebar-item a.sidebar-link.actaiv {
     background-color: white!important;
 }
 
@@ -185,3 +185,6 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+
+
+
