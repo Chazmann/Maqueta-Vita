@@ -88,7 +88,7 @@
     }
     & button:hover {
         color: rgb(255, 255, 255);
-        background-color: var(--bg_azul_insti)!important;
+        background-color: rgb(161, 161, 161)!important;
 
         & a{ color: white!important;}
         }
