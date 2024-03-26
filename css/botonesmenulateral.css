@@ -120,7 +120,11 @@
 
 
 #menulate:not(.expand) .toggleTitle, #menulate:not(.expand) .dropdown-toggle{
-    display: none;
+       display: none;
+}
+
+.arrow{
+    transition: all .3s ease-in-out ;
 }
 
 #menulate .dropdown-toggle{
@@ -147,5 +151,8 @@
      right:-15px!important;
      top:7px!important;
   
+    }
+    .arrow{
+         transform: rotate(180deg);
     }
 }
