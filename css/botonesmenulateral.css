@@ -1,9 +1,16 @@
-.nav-pills .dif{
+:root {
+    --bg_azul_insti: rgb(61, 76, 190);
+
+}
+
+
+
+.nav-pills .dif {
     border: solid 2px var(--bg_azul_insti);
     border-radius: .25rem;
     width: calc(100% - 2px);
     color: var(--bg_azul_insti);
-    background-color: white!important;
+    background-color: white !important;
 }
 
 .nav-pills .nav-link.active a {
@@ -54,8 +61,8 @@
     color: var(--bg_azul_insti);
 }
 
-.nav-pills .nav-link.active.dif, .nav-pills .show>.nav-link.dif
-{
+.nav-pills .nav-link.active.dif,
+.nav-pills .show>.nav-link.dif {
     border: solid 2px var(--bg_azul_insti);
     color: white !important;
     background-color: var(--bg_azul_insti) !important;
@@ -81,17 +88,21 @@
         /* padding: 5px;
         padding-left: .9rem; */
         gap: 7px;
-        height: 30px!important;
+        height: 30px !important;
     }
+
     & button:nth-child(1):hover {
-    color: gray;
+        color: gray;
     }
+
     & button:hover {
         color: rgb(255, 255, 255);
-        background-color: rgb(161, 161, 161)!important;
+        background-color: rgb(161, 161, 161) !important;
 
-        & a{ color: white!important;}
+        & a {
+            color: white !important;
         }
+    }
 
     & button:nth-child(1) {
         border: none;
@@ -125,20 +136,25 @@
     } */
 }
 
-
-#menulate:not(.expand) .toggleTitle, #menulate:not(.expand) .dropdown-toggle{
-       display: none;
+#menulate {
+    transition: all .1s ease-in !important;
 }
 
-.arrow{
-    transition: all .3s ease-in-out ;
+#menulate:not(.expand) .toggleTitle,
+#menulate:not(.expand) .dropdown-toggle {
+    display: none;
 }
 
-#menulate .dropdown-toggle{
+.arrow {
+    transition: all .3s ease-in-out;
+}
+
+#menulate .dropdown-toggle {
     position: absolute;
-    right: 5px!important;
-    top:10px!important;
+    right: 5px !important;
+    top: 10px !important;
 }
+
 .sidebar-logo {
     display: none;
 }
@@ -147,19 +163,87 @@
 #menulate.expand {
     flex: 0 0 auto !important;
     width: 160px !important;
-    transition: all 0.15s ease-in !important;
+
 
     & .toogleTitle,
     & .sidebar-logo {
         display: block;
     }
+
     & .nav-link.active.dif .dropdown-toggle {
         position: absolute;
-     right:-15px!important;
-     top:7px!important;
-  
+        right: -15px !important;
+        top: 7px !important;
+
     }
-    .arrow{
-         transform: rotate(180deg);
+
+    .arrow {
+        transform: rotate(180deg);
     }
+}
+
+#sidebar {
+    width: 60px;
+    min-width: 60px;
+    z-index: 1000;
+    transition: all .15s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#sidebar.expand {
+    width: 180px;
+    min-width: 160px;
+
+    .toggleTitle {
+        display: block;
+    }
+}
+
+
+.dualbuttongroup {
+    display: flex;
+    gap: 2px;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    justify-content: center;
+    align-items: center;
+
+
+    .btn_dual {
+        border: 0;
+        margin: 0 !important;
+        background-color: var(--bg_azul_insti);
+        color: white;
+        padding-left: 5px !important;
+        height: 40px !important;
+        width: 100% !important;
+        text-align: center;
+        display: flex;
+       gap: 5px;
+        align-items: center;
+    }
+    .btn_dual.evo_active{
+        background-color: red;
+    }
+}
+
+& button:hover {
+    background-color: gray !important;
+    color: white !important
+}
+
+.toggleTitle {
+    display: none;
+    text-align: center;
+}
+
+
+.toggle-btn {
+    display: flex;
 }
