@@ -200,5 +200,7 @@
     .toggleTitle {
         display: block;
     }
+    .btn_hide{
+        display: none;
+    }
 }
-

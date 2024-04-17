@@ -1,4 +1,7 @@
-
+*
+{
+    transition: all .2s ease-in-out!important;
+}
 .dualbuttongroup {
     display: flex;
     gap: 2px;
@@ -9,6 +12,7 @@
     padding-left: 0 !important;
     justify-content: center;
     align-items: center;
+    border-radius: 8px 0 0 8px;
 
 
     .btn_dual {
@@ -16,7 +20,7 @@
         margin: 0 !important;
         background-color: var(--bg_azul_insti);
         color: white;
-        padding-left: 5px !important;
+        padding-left: 8px !important;
         height: 40px !important;
         width: 100% !important;
         text-align: center;
@@ -26,6 +30,9 @@
     }
     .btn_dual.evo_active{
         background-color: red;
+    }
+   .paddingSolo{
+        padding-left: 24px!important;
     }
 }
 
@@ -42,4 +49,7 @@
 
 .toggle-btn {
     display: flex;
+}
+.btn_hide{
+    display: none!important;
 }
