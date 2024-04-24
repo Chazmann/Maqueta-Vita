@@ -84,10 +84,11 @@
         display: flex !important;
         flex-wrap: wrap !important;
         flex-direction: row !important;
-        justify-content: start;
+        justify-content: flex-start;
+        align-items: flex-start!important;
 
         .itemEspera{
-            flex: 0 0 300px;
+            flex: 0 1 calc(33.33% - 9px)!important;
         }
         
     }
