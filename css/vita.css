@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Staatliches&display=swap');
+
+    
+    
+    
     * {
         margin: 0;
         box-sizing: border-box !important;
@@ -6,19 +12,51 @@
 
 
     }
+   
+        
+    .staat-font {
+    
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0,
+            "wdth" 100,
+            "GRAD" 0,
+            "XOPQ" 96,
+            "XTRA" 468,
+            "YOPQ" 79,
+            "YTAS" 750,
+            "YTDE" -203,
+            "YTFI" 738,
+            "YTLC" 514,
+            "YTUC" 712;
+    }
+    
+    :root {
+        --staat: "Staatliches", sans-serif !important;
+        --roboto-F: "Roboto Flex", sans-serif !important;
+        --header-gradient: linear-gradient(90deg, #50b860 60%, rgb(94, 94, 248) 100%) !important;
+    }
+
+
+
 
     body {
         display: flex;
         flex-direction: column;
         align-items: center !important;
-        width: 100vw !important;
-        margin: 0 !important;
+        width: 99.7% !important;
+        margin: 0!important;
         margin: auto !important;
-        padding: 0 !important;
-
-
-
-
+        padding: 0!important;
         box-sizing: border-box !important;
     }
 
@@ -314,7 +352,7 @@
         /* height: calc(75vh - 15px) !important; */
         border-radius: 14px 0 0 0;
         /* border: solid 2px var(--bg_azul_insti); */
-        flex: 1;
+        flex: 1 1 100%;
         display: flex;
         gap: 20px !important;
         background-color: #fff;
@@ -457,6 +495,31 @@
         text-shadow: #35353559;
 
     }
+
+    /* ----TAMAÑO ENCABEZADOS------------------- */
+
+    h1.title{
+        font-size: 30pt!important;
+    }
+    h2.sub{
+        font-size: 24pt!important;
+    }
+
+    h3.sub{
+        font-size: 20pt!important;
+    }
+    h4.sub{
+        font-size: 16pt!important;
+    }
+
+    h5.sub{
+        font-size: 14pt!important;
+    }
+    h6.sub{
+        font-size: 10pt!important;
+    }
+
+
 
 
 

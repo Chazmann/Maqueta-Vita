@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/actionbutton.css">
     <link rel="stylesheet" href="css/botonesmenulateral.css">
+    <link rel="stylesheet" href="css/salaEspera.css">
     <title>VITA</title>
 </head>
 
@@ -88,7 +89,7 @@
                                         class="fa-solid fa-users-viewfinder fs-4" href="#"></a>Pacientes</div>
                                 <div class="dropdown-item text-center d-flex flex-column"><a
                                         class="fa-solid fa-book-medical fs-4" href="#"></a>Historia Clínica</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
                                         class="fa-solid fa-clock fs-4" href="#"></a>Sala de Espera</div>
                                 <div class="dropdown-item text-center d-flex flex-column"><a
                                         class="fa-solid fa-circle-nodes fs-4" href="#"></a>Flujo de Atenciones</div>
@@ -297,17 +298,16 @@
 
     <div class="divider-white"></div>
     <main class="menuStick">
-        <div class="dflex">
+        <div class="d-flex col-12">
             <!-- ----MENU VERTICAL----- -->
-            <div class="nav flex-column nav-pills menulateral" id="menulate" role="tablist"
-                aria-orientation="vertical">
+            <div class="nav flex-column nav-pills menulateral" id="menulate" role="tablist" aria-orientation="vertical">
                 <div class="d-flex p-1">
-                    <button type="button" onclick="expand()" >
+                    <button type="button" onclick="expand()">
                         <i class="fa-solid fa-angles-right fs-5 arrow"></i>
                         <span class="toggleTitle">Contraer</span>
                     </button>
-                    
-    
+
+
                 </div>
                 <br>
 
@@ -329,7 +329,7 @@
                             <li><a class="dropdown-item" href="#">Evolucion Link apartado</a></li>
                         </ul>
                     </div>
-                    
+
                 </button>
                 <button class="nav-link dif position-relative" id="v-pills-profile-tab" data-bs-toggle="pill"
                     data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
@@ -387,292 +387,289 @@
                 </button>
             </div>
             <!-- ----------contenido de las tabs------------ -->
-            <div class="tab-content tab fullbody text-start" id="v-pills-tabContent">
+            <div class="tab-content tab fullbody text-start " id="v-pills-tabContent">
 
                 <div class="tab-pane fade show active text-start" id="v-pills-evolucion" role="tabpanel"
                     aria-labelledby="v-pills-home-tab  ">
-                    <h5 class="pl10">Evolución</h>
-                        <!-- -------volcar contenido------- -->
-                        <div class="content">
-                            <div class="hijofullbody dflex gap-2">
-                                <!-- --------filtros---------- -->
-                                <div class="col-md-3 p-1">
 
-                                    <div class="header text-start"><i class="fa-solid fa-calendar m-1"></i>Últimas
-                                        Consultas</div>
-                                    <div class="mainfiltros">
-                                        <input value="08/03/2024 - 18/03/2024" name="Filtro[0].items[0].valor"
-                                            class="form-control dateRange valid" id="Filtro_ 0item_0" autocomplete="off"
-                                            aria-invalid="false">
-                                        <br>
-                                    </div>
-                                    <div class="accordion" id="filtros">
-                                        <div class="accordion-item ">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button p-1" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#misAtenciones"
-                                                    aria-expanded="true" aria-controls="misAtenciones">
-                                                    <i class="fa-solid fa-user m-1"></i> Mis Atenciones
-                                                </button>
-                                            </h2>
-                                            <div id="misAtenciones" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body p-2">
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault1">
-                                                        <label class="form-check-label " for="flexRadioDefault1">
-                                                            Sólo mis atenciones
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="radio"
-                                                            name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                                        <label class="form-check-label" for="flexRadioDefault2">
-                                                            Todas
-                                                        </label>
-                                                    </div>
+                    <h4 class="sub offset-2 pl10"><i class="fa-solid fa-terminal"></i>
+                        Evolución</h4>
+
+
+
+                    <!-- -------volcar contenido------- -->
+                    <div class="content ">
+                        <div class="hijofullbody dflex gap-2">
+                            <!-- --------filtros---------- -->
+                            <div class="col-md-2 p-1 ">
+
+                                <div class="header text-start"><i class="fa-solid fa-calendar m-1"></i>Últimas
+                                    Consultas</div>
+                                <div class="mainfiltros">
+                                    <input value="08/03/2024 - 18/03/2024" name="Filtro[0].items[0].valor"
+                                        class="form-control dateRange valid" id="Filtro_ 0item_0" autocomplete="off"
+                                        aria-invalid="false">
+                                    <br>
+                                </div>
+                                <div class="accordion" id="filtros">
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button p-1" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#misAtenciones" aria-expanded="true"
+                                                aria-controls="misAtenciones">
+                                                <i class="fa-solid fa-user m-1"></i> Mis Atenciones
+                                            </button>
+                                        </h2>
+                                        <div id="misAtenciones" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <label class="form-check-label " for="flexRadioDefault1">
+                                                        Sólo mis atenciones
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Todas
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="misFiltros">
-                                                <button class="accordion-button collapsed p-1" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    <i class="fa-solid fa-filter m-1"></i> Mis Filtros
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="misFiltros" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body p-2">
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
-                                                        </label>
-                                                    </div>
-                                                    <hr class="m-1">
-                                                    <!-- --------zona checks----------- -->
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-heart m-1"></i>Especialidades
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-hospital m-1"></i>Ámbitos
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-location m-1"></i>Ubicaciones
-                                                        </label>
-                                                    </div>
-
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="misFiltros">
+                                            <button class="accordion-button collapsed p-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="fa-solid fa-filter m-1"></i> Mis Filtros
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="misFiltros" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
+                                                    </label>
                                                 </div>
+                                                <hr class="m-1">
+                                                <!-- --------zona checks----------- -->
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-heart m-1"></i>Especialidades
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-hospital m-1"></i>Ámbitos
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-location m-1"></i>Ubicaciones
+                                                    </label>
+                                                </div>
+
                                             </div>
                                         </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="otrascosas">
-                                                <button class="accordion-button collapsed p-1" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                                    aria-expanded="false" aria-controls="collapse3">
-                                                    <i class="fa-solid fa-location m-1"></i> Locaciones
-                                                </button>
-                                            </h2>
-                                            <div id="collapse3" class="accordion-collapse collapse"
-                                                aria-labelledby="otrascosas" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body p-2">
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
-                                                        </label>
-                                                    </div>
-                                                    <hr class="m-1">
-                                                    <!-- --------zona checks----------- -->
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-heart m-1"></i>Especialidades
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-hospital m-1"></i>Ámbitos
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check text-start">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="flexCheckDefault">
-                                                        <label class="form-check-label d-flex gap-1"
-                                                            for="flexCheckDefault">
-                                                            <i class="fa-solid fa-location m-1"></i>Ubicaciones
-                                                        </label>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
 
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="otrascosas">
+                                            <button class="accordion-button collapsed p-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                aria-expanded="false" aria-controls="collapse3">
+                                                <i class="fa-solid fa-location m-1"></i> Locaciones
+                                            </button>
+                                        </h2>
+                                        <div id="collapse3" class="accordion-collapse collapse"
+                                            aria-labelledby="otrascosas" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
+                                                    </label>
+                                                </div>
+                                                <hr class="m-1">
+                                                <!-- --------zona checks----------- -->
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-heart m-1"></i>Especialidades
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-hospital m-1"></i>Ámbitos
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-location m-1"></i>Ubicaciones
+                                                    </label>
+                                                </div>
 
-                                </div>
-                                <!-- --------CARDS---------- -->
-                                <div class="col-md-3 bg-light d-flex flex-column gap-2">
-                                    <article class="cardEvo br_alert xspbt">
-                                        <div class="spbt">
-                                            <h5>Clínica Médica</h5>
-                                            <h6>08/03/2024</h6>
-                                        </div>
-                                        <span class="diagnos">Lumbalgia</span>
-                                        <div class="spbt">
-                                            <h5>Evolución General</h5>
-                                            <div class="btn-group">
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-lungs-virus p-2"></button>
                                             </div>
                                         </div>
-                                    </article>
-                                    <article class="cardEvo br_ok xspbt">
-                                        <div class="spbt">
-                                            <h5>Hemodinamia</h5>
-                                            <h6>08/03/2024</h6>
-                                        </div>
-                                        <span class="diagnos">Neumonía</span>
-                                        <div class="spbt">
-                                            <h5>Evolución General</h5>
-                                            <div class="btn-group">
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-vial-circle-check p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-kit-medical p-2"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-mask-face p-2"></button>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="cardEvo br_danger xspbt">
-                                        <div class="spbt">
-                                            <h5>Clínica Médica</h5>
-                                            <h6>08/03/2024</h6>
-                                        </div>
-                                        <span class="diagnos">Lumbalgia (botones con tooltip)</span>
-                                        <div class="spbt">
-                                            <h5>Evolución General</h5>
-                                            <div class="btn-group">
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-arrow-right p-2"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="ver diagnóstico"></button>
-                                                <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Placas"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-ban-smoking p-2"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="No fumar"></button>
-                                                <button type="button"
-                                                    class="btn btn-outline-dark fa-solid fa-mask-ventilator p-2"
-                                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Usar mascarilla"></button>
-                                            </div>
-                                        </div>
-                                    </article>
-
-
-                                </div>
-                                <div class="col-md-6 bg-info p-2 position-relative">
-                                    <div class="anulado"></div>
-                                    <div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque in
-                                        laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla vero
-                                        blanditiis, reiciendis sit saepe a ad. Fuga.
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                            in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                            vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
                                     </div>
+
                                 </div>
+
 
                             </div>
-                            <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                                autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
-                                optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
-                            <div class="hijofullbody">3</div>
-                            <div class="hijofullbody">4</div>
-                            <div class="hijofullbody">5</div>
-                            <div class="hijofullbody">6</div>
+                            <!-- --------CARDS---------- -->
+                            <div class="col-md-3 bg-light d-flex flex-column gap-2">
+                                <article class="cardEvo br_alert xspbt">
+                                    <div class="spbt">
+                                        <h5>Clínica Médica</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Lumbalgia</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-lungs-virus p-2"></button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardEvo br_ok xspbt">
+                                    <div class="spbt">
+                                        <h5>Hemodinamia</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Neumonía</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-vial-circle-check p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-kit-medical p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-mask-face p-2"></button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardEvo br_danger xspbt">
+                                    <div class="spbt">
+                                        <h5>Clínica Médica</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Lumbalgia (botones con tooltip)</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="ver diagnóstico"></button>
+                                            <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Placas"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-ban-smoking p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="No fumar"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-mask-ventilator p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Usar mascarilla"></button>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                            </div>
+                            <div class="col-md-7 bg-info p-2 position-relative">
+                                <div class="anulado"></div>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque in
+                                    laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla vero
+                                    blanditiis, reiciendis sit saepe a ad. Fuga.
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                </div>
+                            </div>
+
                         </div>
+                        <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                            autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
+                            optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
+                        <div class="hijofullbody">3</div>
+                        <div class="hijofullbody">4</div>
+                        <div class="hijofullbody">5</div>
+                        <div class="hijofullbody">6</div>
+                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
@@ -799,13 +796,67 @@
 
 
     </div>
-    <div class="futer">
+    <!-- ----------------SALA ESPERA---------------------- -->
+
+
+    <aside class="salaEspera" id="sala_Espera">
+        <div class="se_title">
+            <i class="fa-solid fa-arrow-left" onclick="expand_salaEsp()"></i><span>Sala de
+                Espera</span><button class="btn-close" onclick="close_salaEsp()"></button>
+        </div>
+        <section class="filtrosEspera">
+            <article class="itemFiltro">
+
+            </article>
+
+        </section>
+        <section class="cardsEspera">
+            <article class="itemEspera urgente"></article>
+            <article class="itemEspera normal"></article>
+        </section>
+
+
+    </aside>
+
+
+
+    </aside>
+    <footer class="futer">
         <H4>MARKEY</H4>
-    </div>
+    </footer>
 
 
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/actions-vita.js"></script>
+
+
+    <script>
+        const salaEspera = document.getElementById('sala_Espera')
+        console.log(salaEspera)
+
+        function salaEsp() {
+            salaEspera.style.right = 0
+            salaEspera.style.opacity = 1
+            salaEspera.style.boxShadow = '-100px 0 1000px 100px rgba(255, 255, 255, 0.637)'
+
+        }
+        function close_salaEsp() {
+            salaEspera.style.right = '-25%'
+            salaEspera.style.opacity = 0
+            salaEspera.style.boxShadow = 'none'
+        }
+        function expand_salaEsp() {
+            salaEspera.classList.toggle('expand_salaEsp')
+
+        }
+        function contraer_salaEsp() {
+            salaEspera.style.width = '25%'
+
+        }
+
+
+
+    </script>
 </body>
 
 </html>

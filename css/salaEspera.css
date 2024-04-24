@@ -1,0 +1,99 @@
+.salaEspera {
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    box-shadow: -100px 0 1000px 100px rgba(255, 255, 255, 0.637);
+    overflow-y: scroll;
+    border: solid 2px var(--bg_azul_insti);
+    background-color: white;
+    position: fixed;
+    right: -25%;
+    top: 0px;
+    z-index: 1000;
+    border-radius: 14px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        color: red;
+    }
+}
+
+.se_title {
+    font-family: var(--roboto-F);
+    width: 100%;
+    padding: 4px 10px;
+    background-color: var(--bg_azul_insti);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn-close {
+        background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill-color='white' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+    }
+
+    i{
+        transition: all .3s ease-in-out;
+        border: none!important;
+        background-color: none!important;
+        cursor: pointer;
+        color: white!important;
+    }
+}
+
+.cardsEspera {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 10px;
+    gap: 10px;
+
+    .itemEspera {
+        height: 150px;
+        width: 100%;
+        background-color: azure;
+        border-radius: 5px;
+        border: solid 3px;
+    }
+
+    .urgente {
+        box-shadow: 0 0 8px -3px rgba(168, 30, 30, 0.712);
+        border-color: red;
+    }
+
+    .normal {
+        border-color: rgb(13, 168, 73);
+    }
+}
+
+
+
+.expand_salaEsp {
+    width: 100%!important;
+   
+
+    .cardsEspera {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        justify-content: start;
+
+        .itemEspera{
+            flex: 0 0 300px;
+        }
+        
+    }
+
+}
+
+.salaEspera.expand_salaEsp .se_title i{
+    transform: rotate(180deg);
+}
