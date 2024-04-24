@@ -841,24 +841,24 @@
         console.log(salaEspera)
 
         function salaEsp() {
+            salaEspera.classList.remove('expand_salaEsp')
+            salaEspera.style.width = '25%!important'
             salaEspera.style.right = 0
             salaEspera.style.opacity = 1
             salaEspera.style.boxShadow = '-100px 0 1000px 100px rgba(255, 255, 255, 0.637)'
 
         }
         function close_salaEsp() {
-            salaEspera.style.right = '-25%'
+            salaEspera.style.right = '-100%'
             salaEspera.style.opacity = 0
             salaEspera.style.boxShadow = 'none'
+            
         }
         function expand_salaEsp() {
             salaEspera.classList.toggle('expand_salaEsp')
 
         }
-        function contraer_salaEsp() {
-            salaEspera.style.width = '25%'
-
-        }
+       
 
 
 
