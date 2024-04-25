@@ -114,6 +114,10 @@
             justify-content: space-between;
             align-items: center;
         }
+        .datosTurno{
+            display: flex;
+            flex-direction: column;
+        }
 
         .pacienteCardEsp {
             /* line-height: 20px; */
@@ -148,14 +152,31 @@
 
 
     .cardsEspera {
-        display: flex !important;
+        /* display: flex !important;
         flex-wrap: wrap !important;
         flex-direction: row !important;
-        align-content: flex-start;
+        align-content: flex-start; */
 
         .itemEspera {
-            flex: 0 0 calc(25% - 15px) !important;
+             flex: 0 0 auto !important;
+
+            .datosTurno{
+                flex-direction: row;
+                gap: 20px;
+
+                .fila{
+                    justify-content: flex-start;
+                    gap: 20px;
+                }
+            }
         }
+        /* 
+        flex.wrap activado
+        
+        .itemEspera {
+            flex: 0 0 calc(25% - 10px) !important;
+           
+       } */
 
     }
 
@@ -165,5 +186,5 @@
     transform: rotate(180deg);
 }
 .salaEspera.expand_salaEsp .itemFiltro {
-    flex: 0 0 calc(25% - 8px);
+    flex: 0 0 calc(12.5% - 10px);
 }
