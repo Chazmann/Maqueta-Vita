@@ -1,0 +1,1106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.9">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/vita.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/actionbutton.css">
+    <link rel="stylesheet" href="css/botonesmenulateral.css">
+    <link rel="stylesheet" href="css/salaEspera_antes de ser fila.css">
+    <title>VITA</title>
+</head>
+
+
+
+<body class="cuerpo">
+    <header class="mbot justify-content-between azulinsti">
+        <div class="d-flex align-items-center gap-2">
+            <div class="logo m-1"><img src="img/logo_white.png" height="40"></div>
+            <div class=" navegacion_breadcrumb h60">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='white'/%3E%3C/svg%3E&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb h60 cen_vert">
+                        <li class="breadcrumb-item"><a href="#" class="fa-solid fa-home text-white"></a></li>
+                        <li class="breadcrumb-item"><a href="#" class="text-white">Historia Clínica</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="text-white">34009332</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Historial</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="d-flex h60 flex-end ">
+            <div class="h100 cen_vert azulinsti ">
+                <div class="h100 cen_vert">
+                    <!-- --------dropdown notificaciones---------- -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-pen-to-square" id="menuApps"
+                            data-bs-toggle="dropdown"> <span
+                                class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">Nuevos alertas</span>
+                            </span></button>
+                        <div class="dropdown-menu p-0 notif shadow" aria-labelledby="menuApps">
+                            <div class="w-100 bg-white">
+                                <div class="text-start d-flex flex-column p-2 w-100 dropdown-item-text">
+                                    <span class="fs-6 text-body fw-bolder">Borradores</span>
+                                    <span class="">Existen 2 borradores de 4 disponibles</span>
+                                </div>
+                                <div
+                                    class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                    <div class="d-flex flex-row gap-2">
+                                        <div class="fa-solid fa-circle-user fs-1"></div>
+                                        <div>
+                                            <h6 class="fw-bold">José María Muñoz</h6>
+                                            <h6>Evolución ambulatoria</h6>
+                                        </div>
+                                    </div>
+                                    <a class="btn link-info p-3">IR</a>
+
+                                </div>
+                                <div
+                                    class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                    <div class="d-flex flex-row gap-2">
+                                        <div class="fa-solid fa-circle-user fs-1"></div>
+                                        <div>
+                                            <h6 class="fw-bold">Tamara Oliveira</h6>
+                                            <h6>Extracción muela</h6>
+                                        </div>
+                                    </div>
+                                    <a class="btn link-info p-3 ">IR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------FIN dropdown notificaciones---------- -->
+
+
+                    <!-- --------dropdown app---------- -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-grip" id="menuApps"
+                            data-bs-toggle="dropdown"> </button>
+                        <div class="dropdown-menu menuAppDropdown shadow" aria-labelledby="menuApps">
+                            <div class="grilla">
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-users-viewfinder fs-4" href="#"></a>Pacientes</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-book-medical fs-4" href="#"></a>Historia Clínica</div>
+                                <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
+                                        class="fa-solid fa-clock fs-4" href="#"></a>Sala de Espera</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-circle-nodes fs-4" href="#"></a>Flujo de Atenciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-bed-pulse fs-4" href="#"></a>Internaciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-notes-medical fs-4" href="#"></a>Plantillas</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-laptop-medical fs-4" href="#"></a>Recetas Web</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-user-nurse fs-4" href="#"></a>Enfermería</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-pager fs-4" href="#"></a>Procedimientos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-calendar-plus fs-4" href="#"></a>Consulta Turnos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-hand-holding-medical fs-4" href="#"></a>Cirugías</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-person-chalkboard fs-4" href="#"></a>Talleres</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-clipboard-question fs-4" href="#"></a>Asistente de Informes
+                                </div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-list-check fs-4" href="#"></a>Auditorias de atenciones</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-signature fs-4" href="#"></a>Firma Digital</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-search fs-4" href="#"></a>Búsquedas</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-calendar-days fs-4" href="#"></a>Turnos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-circle-info fs-4" href="#"></a>Protocolos</div>
+                                <div class="dropdown-item text-center d-flex flex-column"><a
+                                        class="fa-solid fa-hospital fs-4" href="#"></a>Mapa<br>Htal de día</div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- --------dropdown app---------- -->
+
+                    <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Historial"></button>
+                    <button type="button" class="btn  position-relative fa fa-bell" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Alertas">
+                        <span
+                            class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">Nuevos alertas</span>
+                        </span>
+                    </button>
+
+                </div>
+                <div class="divider_vert"></div>
+                <div class="h100 dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="img/perfil.jpg" class="perfil_circle" alt="" srcset="">Dr. Santiago Gastiarena
+                        Loredo
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="usermenu">
+                        <li><a class="dropdown-item active" href="#"><i class="fa-solid fa-user-doctor"></i>
+                                Perfil</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-calendar-check"></i>
+                                Acciones</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar
+                                sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="divider-gradient"></div>
+    <div class="navStick navy1" id="navy">
+        <!-- ----DATOS PACIENTE----- -->
+        <div class="w30 centrar-vert">
+            <div class="perfil_user">JS</div>
+            <div class="data_user">
+                <span class="paciente">Juan Segundo Sombra Goyenechea <i class="fa-solid fa-eye gris"></i> <i
+                        class="fa-solid fa-circle-info gris"></i></span>
+                <div class="flex-wrap dpnone">
+                    <span>Edad: <strong>34 años</strong></span> <span>N° Afiliado: <strong>9833121</strong></span><br>
+                    <span>Cobertura: <strong>OSDE 310</strong></span>
+                </div>
+            </div>
+        </div>
+        <!-- ------ALERTAS-------- -->
+        <div class="w50 bgalerta border">
+            <div class="row">
+                <h6>Alertas<button class="add" data-bs-toggle="modal" data-bs-target="#add_alert"><i
+                            class="fa-solid fa-add"></i>Agregar</button></h6>
+            </div>
+            <!-- ------MODAL GENERAR NUEVO ALERTA------------ -->
+
+            <div class="modal fade" id="add_alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar alertas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="alertas" class="form-label">Seleccione un nuevo alerta</label>
+                            <input class="form-control" list="alertasOpciones" id="alertas"
+                                placeholder="Escriba para buscar...">
+                            <datalist id="alertasOpciones">
+                                <option value="Diabetes">
+                                <option value="Paracetamol">
+                                <option value="Alergia al polen">
+                                <option value="Celiaquía">
+                                <option value="Alergia a medicamentos Bayer">
+                            </datalist>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-outline-dark">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------FIN MODAL GENERAR NUEVO ALERTA------------ -->
+            <div class="d-flex">
+                <span class="dig tag_alerta alert3">
+                    <i class="fa-solid fa-tablets"></i>
+                    Paracetamol
+
+                </span> <span class="dig tag_alerta alert1">
+                    <i class="fa-solid fa-lungs-virus"></i>
+                    Neumonía
+
+                </span>
+            </div>
+        </div>
+        <!-- ------------BOTONERA DE ACCIONES------------ -->
+        <div class="w20 row cen_vert p-1 ">
+            <div class="col-12 cen_vert spbt botonera">
+                <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Paciente"></button>
+                <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Archivos"></button>
+                <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Documentos"></button>
+                <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Turnos"></button>
+            </div>
+            <button class="btn btn-gris col-10"><i class="fa fa-close"></i> Cerrar HC</button>
+        </div>
+        <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
+    </div>
+
+    <div class="navStick nav2">
+        <div class="rows">
+            <!-- ----DATOS PACIENTE----- -->
+            <div class="w30 centrar-vert spbt">
+                <div class="perfil_user_ch">JS</div>
+                <div class="data_user_ch">
+                    <span class="paciente_ch">Juan Segundo Sombra Segundo Oscura <i class="fa-solid fa-eye gris"></i> <i
+                            class="fa-solid fa-circle-info gris"></i></span>
+
+                </div>
+            </div>
+            <!-- ------ALERTAS-------- -->
+            <div class="w50 bgalerta_ch border rows">
+
+                <h6 class="col-2">Alertas</h6>
+                <div class="col-10">
+                    <span class="dig tag_alerta alert3">
+                        <i class="fa-solid fa-tablets"></i>
+                        Paracetamol
+
+                    </span> <span class="dig tag_alerta alert1">
+                        <i class="fa-solid fa-lungs-virus"></i>
+                        Neumonía
+                    </span>
+                </div>
+            </div>
+
+            <!-- ------------BOTONERA DE ACCIONES------------ -->
+            <div class="w20 cuerpo centrar-vert ">
+                <div class="botonera">
+                    <button type="button" class="azul btn fa-solid fa-user" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Paciente"></button>
+                    <button type="button" class="azul btn position-relative fa fa-file" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Archivos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-copy" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Documentos"></button>
+                    <button type="button" class="azul btn  position-relative fa fa-calendar" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Turnos"></button>
+                    <button class="btn btn-gris"><i class="fa fa-close"></i></button>
+                </div>
+
+            </div>
+            <!-- ------------FIN BOTONERA DE ACCIONES------------ -->
+        </div>
+    </div>
+
+
+
+    <div class="divider-white"></div>
+    <main class="menuStick">
+        <div class="d-flex col-12">
+            <!-- ----MENU VERTICAL----- -->
+            <div class="nav flex-column nav-pills menulateral" id="menulate" role="tablist" aria-orientation="vertical">
+                <div class="d-flex p-1">
+                    <button type="button" onclick="expand()">
+                        <i class="fa-solid fa-angles-right fs-5 arrow"></i>
+                        <span class="toggleTitle">Contraer</span>
+                    </button>
+
+
+                </div>
+                <br>
+
+                <button class="nav-link active dif position-relative" id="v-pills-home-tab" data-bs-toggle="tab"
+                    data-bs-target="#v-pills-evolucion" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true"><i class="fa-solid fa-notes-medical"></i>
+                    <span class="toggleTitle">Evolución</span>
+
+                    <div>
+                        <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false"></a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="#">Evolucion Link_1</a></li>
+                            <li><a class="dropdown-item" href="#">Evolucion Link 2</a></li>
+                            <li><a class="dropdown-item" href="#">Evolucion Link 3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Evolucion Link apartado</a></li>
+                        </ul>
+                    </div>
+
+                </button>
+                <button class="nav-link dif position-relative" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false"> <i class="fa-regular fa-pen-to-square"></i>
+                    <span class="toggleTitle">Órdenes</span>
+                    <div>
+
+                        <a class=" dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false"></a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="#">Ordenes Link_1</a></li>
+                            <li><a class="dropdown-item" href="#">Ordenes Link 2</a></li>
+                            <li><a class="dropdown-item" href="#">Ordenes Link 3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Link apartado</a></li>
+                        </ul>
+                    </div>
+                </button>
+
+                <button class="nav-link" id="v-pills-Historial-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-Historial" type="button" role="tab" aria-controls="v-pills-Historial"
+                    aria-selected="false"><i class="fa-solid fa-book-medical"></i>
+                    <span class="toggleTitle">Historial</span>
+                </button>
+
+
+                <button class="nav-link" id="v-pills-Antecedentes-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-Antecedentes" type="button" role="tab" aria-controls="v-pills-Antecedentes"
+                    aria-selected="false">
+                    <i class="fa-regular fa-note-sticky"></i><span class="toggleTitle">Antecedentes</span> </button>
+                <button class="nav-link" id="v-pills-medicacion-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-medicacion" type="button" role="tab" aria-controls="v-pills-medicacion"
+                    aria-selected="false"><i class="fa-solid fa-pills"></i><span class="toggleTitle">Medicación</span>
+                </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-signos"
+                    type="button" role="tab" aria-controls="v-pills-signos" aria-selected="false"><i
+                        class="fa-solid fa-heart-pulse"></i><span class="toggleTitle">Signos vitales</span> </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-images"
+                    type="button" role="tab" aria-controls="v-pills-images" aria-selected="false"><i
+                        class="fa-solid fa-file-prescription"></i><span class="toggleTitle">Imágenes</span> </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lab"
+                    type="button" role="tab" aria-controls="v-pills-lab" aria-selected="false"><i
+                        class="fa-solid fa-microscope"></i><span class="toggleTitle">Laboratorios</span> </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vacc"
+                    type="button" role="tab" aria-controls="v-pills-vacc" aria-selected="false"><i
+                        class="fa-solid fa-syringe"></i><span class="toggleTitle">Vacunas</span> </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-alert"
+                    type="button" role="tab" aria-controls="v-pills-alert" aria-selected="false"><i
+                        class="fa-solid fa-triangle-exclamation"></i><span class="toggleTitle">Alertas</span> </button>
+                <button class="nav-link" id="v-pills-signos-tab" data-bs-toggle="pill" data-bs-target="#v-pills-infu"
+                    type="button" role="tab" aria-controls="v-pills-infu" aria-selected="false"><i
+                        class="fa-solid fa-prescription-bottle-medical"></i><span class="toggleTitle">Infusiones</span>
+                </button>
+            </div>
+            <!-- ----------contenido de las tabs------------ -->
+            <div class="tab-content tab fullbody text-start " id="v-pills-tabContent">
+
+                <div class="tab-pane fade show active text-start" id="v-pills-evolucion" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab  ">
+
+                    <h4 class="sub offset-2 pl10"><i class="fa-solid fa-terminal"></i>
+                        Evolución</h4>
+
+
+
+                    <!-- -------volcar contenido------- -->
+                    <div class="content ">
+                        <div class="hijofullbody dflex gap-2">
+                            <!-- --------filtros---------- -->
+                            <div class="col-md-2 p-1 ">
+
+                                <div class="header text-start"><i class="fa-solid fa-calendar m-1"></i>Últimas
+                                    Consultas</div>
+                                <div class="mainfiltros">
+                                    <input value="08/03/2024 - 18/03/2024" name="Filtro[0].items[0].valor"
+                                        class="form-control dateRange valid" id="Filtro_ 0item_0" autocomplete="off"
+                                        aria-invalid="false">
+                                    <br>
+                                </div>
+                                <div class="accordion" id="filtros">
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button p-1" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#misAtenciones" aria-expanded="true"
+                                                aria-controls="misAtenciones">
+                                                <i class="fa-solid fa-user m-1"></i> Mis Atenciones
+                                            </button>
+                                        </h2>
+                                        <div id="misAtenciones" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <label class="form-check-label " for="flexRadioDefault1">
+                                                        Sólo mis atenciones
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Todas
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="misFiltros">
+                                            <button class="accordion-button collapsed p-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="fa-solid fa-filter m-1"></i> Mis Filtros
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="misFiltros" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
+                                                    </label>
+                                                </div>
+                                                <hr class="m-1">
+                                                <!-- --------zona checks----------- -->
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-heart m-1"></i>Especialidades
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-hospital m-1"></i>Ámbitos
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-location m-1"></i>Ubicaciones
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="otrascosas">
+                                            <button class="accordion-button collapsed p-1" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                aria-expanded="false" aria-controls="collapse3">
+                                                <i class="fa-solid fa-location m-1"></i> Locaciones
+                                            </button>
+                                        </h2>
+                                        <div id="collapse3" class="accordion-collapse collapse"
+                                            aria-labelledby="otrascosas" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body p-2">
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-trash m-1"></i>Borrar Filtros
+                                                    </label>
+                                                </div>
+                                                <hr class="m-1">
+                                                <!-- --------zona checks----------- -->
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-heart m-1"></i>Especialidades
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-hospital m-1"></i>Ámbitos
+                                                    </label>
+                                                </div>
+                                                <div class="form-check text-start">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label d-flex gap-1" for="flexCheckDefault">
+                                                        <i class="fa-solid fa-location m-1"></i>Ubicaciones
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!-- --------CARDS---------- -->
+                            <div class="col-md-3 bg-light d-flex flex-column gap-2">
+                                <article class="cardEvo br_alert xspbt">
+                                    <div class="spbt">
+                                        <h5>Clínica Médica</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Lumbalgia</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-lungs-virus p-2"></button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardEvo br_ok xspbt">
+                                    <div class="spbt">
+                                        <h5>Hemodinamia</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Neumonía</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-vial-circle-check p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-x-ray p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-receipt p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-kit-medical p-2"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-mask-face p-2"></button>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardEvo br_danger xspbt">
+                                    <div class="spbt">
+                                        <h5>Clínica Médica</h5>
+                                        <h6>08/03/2024</h6>
+                                    </div>
+                                    <span class="diagnos">Lumbalgia (botones con tooltip)</span>
+                                    <div class="spbt">
+                                        <h5>Evolución General</h5>
+                                        <div class="btn-group">
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-arrow-right p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="ver diagnóstico"></button>
+                                            <button type="button" class="btn btn-outline-dark fa-solid fa-x-ray p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Placas"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-ban-smoking p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="No fumar"></button>
+                                            <button type="button"
+                                                class="btn btn-outline-dark fa-solid fa-mask-ventilator p-2"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Usar mascarilla"></button>
+                                        </div>
+                                    </div>
+                                </article>
+
+
+                            </div>
+                            <div class="col-md-7 bg-info p-2 position-relative">
+                                <div class="anulado"></div>
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque in
+                                    laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla vero
+                                    blanditiis, reiciendis sit saepe a ad. Fuga.
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
+                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
+                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                            autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
+                            optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
+                        <div class="hijofullbody">3</div>
+                        <div class="hijofullbody">4</div>
+                        <div class="hijofullbody">5</div>
+                        <div class="hijofullbody">6</div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <h5 class="pl10">Órdenes</h5>
+                    <!-- -------volcar contenido------- -->
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-3 text-center">1</div>
+                            <div class="col-md-3 text-center bg-dark text-white">2</div>
+                            <div class="col-md-3 text-center">3</div>
+                            <div class="col-md-3 text-center bg-info">4</div>
+                        </div>
+                        <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                            autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
+                            optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
+                        <div class="hijofullbody">3</div>
+                        <div class="hijofullbody">4</div>
+                        <div class="hijofullbody">5</div>
+                        <div class="hijofullbody">6</div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Historial" role="tabpanel"
+                    aria-labelledby="v-pills-Historial-tab">
+                    <h5 class="pl10">Historial</h5>
+                    <!-- -------volcar contenido------- -->
+                    <div class="content">
+                        <div class="hijofullbody fa-2"> Commodi, deleniti ipsum dolor sit amet consectetur adipisicing
+                            elit. Incidunt
+                            velit consectetur assumenda sint dignissimos perspiciatis iste aut ad voluptatum,
+                            blanditiis, dolorum accusantium magnam fuga quibusdam vel amet? Commodi, deleniti at?</div>
+                        <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                            autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
+                            optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
+                        <div class="hijofullbody">3</div>
+                        <div class="hijofullbody">4</div>
+                        <div class="hijofullbody">5</div>
+                        <div class="hijofullbody">6</div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Antecedentes" role="tabpanel"
+                    aria-labelledby="v-pills-Antecedentes-tab">
+
+
+                    <h5 class="pl10">Antecedentes <i class="fa-regular fa-note-sticky"></i></h5>
+                    <!-- -------volcar contenido------- -->
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-3 text-center">1</div>
+                            <div class="col-md-3 text-center bg-dark text-white">2</div>
+                            <div class="col-md-3 text-center">3</div>
+                            <div class="col-md-3 text-center bg-info">4</div>
+                        </div>
+                        <div class="hijofullbody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                            autem odit perferendis molestiae tenetur. Ab, doloribus eius? Quia est recusandae dolore
+                            optio illo autem ullam? Blanditiis veritatis dicta modi enim!</div>
+                        <div class="hijofullbody">3</div>
+                        <div class="hijofullbody">4</div>
+                        <div class="hijofullbody">5</div>
+                        <div class="hijofullbody">6</div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-medicacion" role="tabpanel"
+                    aria-labelledby="v-pills-medicacion-tab">Medicación </div>
+                <div class="tab-pane fade" id="v-pills-signos" role="tabpanel" aria-labelledby="v-pills-signos-tab">
+                    Signos Vitales </div>
+
+                <div class="tab-pane fade" id="v-pills-images" role="tabpanel" aria-labelledby="v-pills-images-tab">
+                    Imágenes </div>
+
+                <div class="tab-pane fade" id="v-pills-lab" role="tabpanel" aria-labelledby="v-pills-lab-tab">
+                    Laboratorio </div>
+
+                <div class="tab-pane fade" id="v-pills-vacc" role="tabpanel" aria-labelledby="v-pills-vacc r-tab">
+                    Vacunas </div>
+                <div class="tab-pane fade" id="v-pills-alert" role="tabpanel" aria-labelledby="v-pills-alert-tab">
+                    Alertas </div>
+                <div class="tab-pane fade" id="v-pills-infu" role="tabpanel" aria-labelledby="v-pills-infu-tab">
+                    Infusiones </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <div class="fab-container position-fixed end-0 bottom-0 m-4">
+        <div class="fab shadow">
+            <div class="fab-content">
+                <span class="fa-solid fa-plus text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Generar nueva acción"></span>
+            </div>
+        </div>
+        <div class="sub-button shadow">
+            <a href="google.com" target="_blank">
+                <span class="fa-solid fa-file-circle-plus text-white fs-5 shadow" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA ORDEN"></span>
+            </a>
+        </div>
+        <div class="sub-button shadow">
+            <a href="google.com" target="_blank">
+                <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA RECETA"></span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="sign-container m-4 position-absolute m-auto text-center">
+        <div class="sign">
+            <div class="fab-content bg-secondary">
+                <span class="fa-solid fa-signature text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Firmar"></span>
+            </div>
+        </div>
+        <div class="sign">
+            <div class="fab-content bg-secondary">
+                <span class="fa-solid fa-cancel text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Cancelar"></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- ----------------SALA ESPERA---------------------- -->
+
+
+    <aside class="salaEspera" id="sala_Espera">
+        <div class="se_title">
+            <i class="fa-solid fa-arrow-left" onclick="expand_salaEsp()"></i><span>Sala de
+                Espera</span><button class="btn-close" onclick="close_salaEsp()"></button>
+        </div>
+        <section class="filtrosEspera">
+            <article class="itemFiltro pend">
+                Pendientes
+                <span class="countFiltros">23</span>
+            </article>
+            <article class="itemFiltro atend">
+                Atendidos
+                <span class="countFiltros">17</span>
+            </article>
+            <article class="itemFiltro consul">
+                En consultorio
+                <span class="countFiltros">1</span>
+            </article>
+            <article class="itemFiltro espera">
+                En espera
+                <span class="countFiltros">2</span>
+            </article>
+            <article class="itemFiltro sinresp">
+                No responden
+                <span class="countFiltros">0</span>
+            </article>
+            <article class="itemFiltro hist">
+                Históricos
+                <span class="countFiltros">0</span>
+            </article>
+            <article class="itemFiltro total">
+                Total
+                <span class="countFiltros">43</span>
+            </article>
+            <article class="itemFiltro total">
+                Refrescar
+                <i class="fa-solid fa-refresh"></i>
+               
+            </article>
+
+        </section>
+        <section class="cardsEspera">
+
+            <article class="itemEspera normal">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Ignacio Kruegler</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>PREMEDIC PMO</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>En Sala</span>
+                </div>
+
+
+            </article>
+            <article class="itemEspera urgente">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Juan Pablo Salleras</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 19:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>20 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>GALENO 220</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>Ausente</span>
+                </div>
+            </article>
+            <article class="itemEspera urgente">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Leandro Chazarreta</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>IOMA</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>Ausente</span>
+                </div>
+            </article>
+            <article class="itemEspera normal">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Agustina Dias Pires</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>SWISS MEDICAL</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>En Sala</span>
+                </div>
+            </article>
+            <article class="itemEspera normal">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Matias Báez</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>OSDE PLAT</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>En Sala</span>
+                </div>
+
+
+            </article>
+            <article class="itemEspera urgente">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Juan Pablo Salleras</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 19:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>20 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>GALENO 220</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>Ausente</span>
+                </div>
+            </article>
+            <article class="itemEspera normal">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Leandro Chazarreta</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>IOMA</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>Ausente</span>
+                </div>
+            </article>
+            <article class="itemEspera normal">
+                <div class="fila">
+                    <div class="pacienteCardEsp">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Florencia Dias Pires</span>
+                    </div>
+                    <i class="fa-solid fa-info-circle"></i>
+                </div>
+                <hr>
+                <div class="fila">
+                    <strong>Horario</strong>
+                    <span>25/01 - 18:00</span>
+                </div>
+                <div class="fila">
+                    <strong>Espera</strong>
+                    <span>0 min.</span>
+                </div>
+                <div class="fila">
+                    <strong>Cobertura</strong>
+                    <span>SWISS MEDICAL</span>
+                </div>
+                <div class="fila">
+                    <strong>Estado</strong>
+                    <span>En Sala</span>
+                </div>
+            </article>
+
+
+
+        </section>
+
+
+    </aside>
+
+
+
+    </aside>
+    <footer class="futer">
+        <H4>MARKEY</H4>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/actions-vita.js"></script>
+
+
+    <script>
+        const salaEspera = document.getElementById('sala_Espera')
+        console.log(salaEspera)
+
+        function salaEsp() {
+            salaEspera.classList.remove('expand_salaEsp')
+            salaEspera.style.width = '25%!important'
+            salaEspera.style.right = 0
+            salaEspera.style.opacity = 1
+
+        }
+        function close_salaEsp() {
+            salaEspera.style.right = '-100%'
+            salaEspera.style.opacity = 0
+
+
+        }
+        function expand_salaEsp() {
+            salaEspera.classList.toggle('expand_salaEsp')
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
