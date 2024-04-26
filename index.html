@@ -37,7 +37,7 @@
         <div class="d-flex h60 flex-end ">
             <div class="h100 cen_vert azulinsti ">
                 <div class="h100 cen_vert">
-                    <!-- --------dropdown notificaciones---------- -->
+                    <!-- --------dropdown borradores---------- -->
                     <div class="dropdown">
                         <button type="button" class="btn dropdown-toggle fa-solid fa-pen-to-square" id="menuApps"
                             data-bs-toggle="dropdown"> <span
@@ -76,6 +76,127 @@
                             </div>
                         </div>
                     </div>
+                    <!-- --------FIN dropdown borradores---------- -->
+
+
+                    <!-- data-bs-toggle="dropdown" -->
+
+
+                    <!-- --------dropdown notificaciones---------- -->
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-bell" id="noti_Fica" onclick="mostrarNotif()"
+                            > <span
+                                class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">Nuevos alertas</span>
+                            </span></button>
+                        <div class="dropdown-menu p-0 notif shadow mostrar" aria-labelledby="noti_Fica" id="notiBox">
+                            <div class="w-100 bg-white">
+                                <div class="text-start d-flex flex-column p-2 w-100 dropdown-item-text">
+                                    <div class="d-flex justify-content-between align-items-center"><span class="fs-6 text-body fw-bolder">Notificaciones</span>
+                                    <button class="btn-close" onclick="mostrarNotif()"></button></div>
+                                                                </div>
+                                <!-- -------------seccion tabs----------- -->
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link active col-4" id="nav-home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                            aria-selected="true">Todos</button>
+                                        <button class="nav-link col-4"  id="nav-profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-profile" type="button" role="tab"
+                                            aria-controls="nav-profile" aria-selected="false">Turnos</button>
+                                        <button class="nav-link col-4" id="nav-contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-contact" type="button" role="tab"
+                                            aria-controls="nav-contact" aria-selected="false">Privados</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                        aria-labelledby="nav-home-tab">
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">José María Muñoz</h6>
+                                                    <h6>Evolución ambulatoria</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3">IR</a>
+
+                                        </article>
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">Tamara Oliveira</h6>
+                                                    <h6>Extracción muela</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3 ">IR</a>
+                                        </article>
+                                    </div>
+                                    <!-- -------contenido TURNOS------- -->
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                        aria-labelledby="nav-profile-tab">
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">Leandro Chaz</h6>
+                                                    <h6>Evolución ambulatoria</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3">IR</a>
+
+                                        </article>
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">Agustina Amarilla</h6>
+                                                    <h6>Extracción muela</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3 ">IR</a>
+                                        </article>
+                                    </div>
+                                    <!-- --------CONTENIDO PRIVADOS-------- -->
+                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                        aria-labelledby="nav-contact-tab">
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">Alvaro Alsogaray</h6>
+                                                    <h6>Evolución ambulatoria</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3">IR</a>
+
+                                        </article>
+                                        <article
+                                            class="dropdown-item d-flex flex-row gap-2 justify-content-between align-items-center">
+                                            <div class="d-flex flex-row gap-2">
+                                                <div class="fa-solid fa-circle-user fs-1"></div>
+                                                <div>
+                                                    <h6 class="fw-bold">Mario Benedetti</h6>
+                                                    <h6>Extracción muela</h6>
+                                                </div>
+                                            </div>
+                                            <a class="btn link-info p-3 ">IR</a>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <!-- ----fin seccion tabs --------------- -->
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- --------FIN dropdown notificaciones---------- -->
 
 
@@ -1066,9 +1187,9 @@
             <div class="input-group">
                 <span class="input-group-text">Procedimiento</span>
                 <input type="text" class="form-control" placeholder="Buscar...">
-                <button class="input-group-text fa-solid fa-search" ></button>
+                <button class="input-group-text fa-solid fa-search"></button>
                 <button class="input-group-text fa-solid fa-notes-medical"></button>
-              </div>
+            </div>
         </form>
         <section class="cardsEspera">
 
@@ -1317,33 +1438,40 @@
 
 
     <script>
-        const salaEspera = document.getElementById('sala_Espera')
-        console.log(salaEspera)
+        const noTif = document.getElementById('noti_Fica')
+        const noti_Box = document.getElementById('notiBox')
+      
+        noti_Box.classList.toggle('mostrar')
 
+        function mostrarNotif() {
+            noti_Box.classList.toggle('mostrar')
+         }
+      
+        
+
+
+
+
+        const salaEspera = document.getElementById('sala_Espera')
+      
+        
+        console.log(salaEspera)
         //Abrir SalaEspera
         function salaEsp() {
             salaEspera.classList.remove('expand_salaEsp')
             salaEspera.style.width = '25%!important'
             salaEspera.style.right = 0
             salaEspera.style.opacity = 1
-
         }
         //Cerrar SalaEspera
         function close_salaEsp() {
             salaEspera.style.right = '-100%'
             salaEspera.style.opacity = 0
-
-
         }
         //abrir o cerrar ventana SalaEspera
         function expand_salaEsp() {
             salaEspera.classList.toggle('expand_salaEsp')
-
         }
-
-
-
-
     </script>
 </body>
 

@@ -198,3 +198,11 @@
 .salaEspera.expand_salaEsp .itemFiltro {
     flex: 0 0 calc(12.5% - 10px);
 }
+
+
+/* #notiBox {
+    display: block;
+} */
+.mostrar{
+    display: block!important;
+}
