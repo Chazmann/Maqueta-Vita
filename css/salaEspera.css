@@ -17,15 +17,16 @@
 
 }
 .filtrosEspera{
-    height: auto;
+    height: 170px;
     padding: 10px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 10px;
+     gap: 10px;
     /* box-shadow: 0 2px 15px -5px rgba(99, 99, 99, 0.568); */
+    
     
     .itemFiltro{
         display: flex;
@@ -60,6 +61,7 @@
 
 
 .se_title {
+    height: 40px;
     position: sticky;
     top: 0;
     font-family: var(--roboto-F);
@@ -85,7 +87,7 @@
 }
 
 .cardsEspera {
-    height: 58%;
+    height: calc(100% - 262px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -159,14 +161,23 @@
 .expand_salaEsp {
     width: 100% !important;
 
+    .filtrosEspera {
+        height: 50px; 
+       }
+
+    .se_title i {
+        transform: rotate(180deg);
+    }
+    .itemFiltro {
+        flex: 0 0 calc(12.5% - 10px);
+    }
+
 
     .cardsEspera {
-        height: 78% ;
-        /* display: flex !important;
-        flex-wrap: wrap !important;
-        flex-direction: row !important;
-        align-content: flex-start; */
-
+        height: calc(100% - 150px);
+        width: 99%;
+        overflow-y: scroll!important;
+     
         .itemEspera {
              flex: 0 0 auto !important;
 
@@ -192,17 +203,7 @@
 
 }
 
-.salaEspera.expand_salaEsp .se_title i {
-    transform: rotate(180deg);
-}
-.salaEspera.expand_salaEsp .itemFiltro {
-    flex: 0 0 calc(12.5% - 10px);
-}
-
-
-/* #notiBox {
-    display: block;
-} */
 .mostrar{
     display: block!important;
 }
+
