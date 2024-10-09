@@ -1,0 +1,137 @@
+.dgrid_ {
+    display: grid;
+    place-items: center;
+}
+
+.shadow-icon {
+    color: black;
+    filter: drop-shadow(solid 0 0 10px black);
+}
+
+.filmina {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(86, 206, 129, 0.74)
+}
+
+.bg-cover {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: url(~/Images/1_residencia.png);
+}
+
+.icon-user {
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    border: solid 2px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: .5em;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-bet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-scroll {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    max-height: 12.9em;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 5px -3px gray;
+}
+
+.opacity-low {
+    opacity: 0.4 !important;
+}
+
+.vis_hidden {
+    opacity: 0;
+}
+
+.carousel-control-next-icon, carousel-control-prev-icon {
+    filter: drop-shadow( 0 0 10px black);
+}
+
+.carousel-indicators [data-bs-target] {
+    position: relative;
+    width: 40px;
+    height: 6px;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 0 5px #33666666;
+}
+
+    .carousel-indicators [data-bs-target] span {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--secondary);
+        border-radius: inherit;
+    }
+
+
+#addFavoritos .form-check-input {
+    transform: scale(1.2)
+}
+
+#addFavoritos .form-check-label {
+    transform: scale(1.2);
+    display:flex;
+    text-wrap:nowrap;
+}
+
+#addFavoritos .form-check {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+#addFavoritos .form-check-label .ic_acce {
+    flex: 0 0 2em !important;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    flex-direction:row;
+}
+
+#addFavoritos .form-switch {
+    padding-left: 1em;
+}
+.btn-dashed, .btn-dashed:hover {
+    border: dashed 2px gray;
+}
+
+.grillalanding .fa-duotone, .grillalanding .fa-light {
+    font-size: 1.8em !important;
+    transition: all .3s ease-in-out
+}
+
+    .grillalanding .fa-duotone:hover, .grillalanding .fa-light:hover {
+        transform: scale(1.2);
+    }
+

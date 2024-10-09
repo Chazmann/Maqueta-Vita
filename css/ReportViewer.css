@@ -1,0 +1,12 @@
+﻿
+
+iframe {
+    border-width:0px!important;
+    width:100%;
+    min-height:1300px;
+    min-width:1300px
+}
+
+div {
+    width:100%!important
+}

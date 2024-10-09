@@ -29,7 +29,9 @@
     <script>
 
         
-            if (screen.width < 1600) {
+           
+  setInterval(() => {
+    if (screen.width < 1600) {
                 document.querySelector("body").innerHTML = `LA RESOLUCION ES MENOR A 1600PX  <br> La resolución de tu pantalla es:  ${screen.width}  x  ${screen.height}`
                 window.addEventListener('load', function () {
                     document.body.style.transform = 'scale(0.8)'; /* Reduce la escala de la página al 80% */
@@ -37,13 +39,13 @@
             }
             else {
                 let bady = document.querySelector("body")
-                bady.innerHTML = `EL ANCHO DE LA VENTANA ES 1920PX <br> La resolución de tu pantalla es:  ${screen.width}  x  ${screen.height}`
+                bady.innerHTML = `EL ANCHO DE LA VENTANA ES 1920px <br> La resolución de tu pantalla es:  ${screen.width}  x  ${screen.height}`
                 bady.style.color = "yellow"
 
             }   
-  
-
-
+  }, 1000);
+        
+        
 
 
     </script>

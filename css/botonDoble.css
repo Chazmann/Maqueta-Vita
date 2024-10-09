@@ -1,0 +1,32 @@
+
+.dualbuttongroup {
+    display: flex;
+    gap: 2px;
+    height: 39px;
+    width: 100%;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+    position:relative;
+    margin-bottom:5px;
+  
+}
+
+.tooggle-dobleBoton {
+    border-left: 1px solid #ffffff !important;
+    cursor: pointer;
+}
+
+
+.tooggle-dobleBoton {
+    border-left: 1px solid #ffffff !important;
+    cursor: pointer;
+}
+
+.nav-link nav-hover :hover {
+    background-color: #ff6a00 !important;
+}
+
+

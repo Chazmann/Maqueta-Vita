@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=.9">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/fawesome-all.css">
     <link rel="stylesheet" href="css/vita.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/scroll.css">
@@ -21,6 +20,74 @@
 <body class="cuerpo">
     <header class="mbot justify-content-between azulinsti">
         <div class="d-flex align-items-center gap-2">
+             <!-- --------dropdown app---------- -->
+             <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle fa-solid fa-bars" id="menuApps"
+                    data-bs-toggle="dropdown"> </button>
+                <div class="dropdown-menu menuAppDropdown shadow" aria-labelledby="menuApps">
+                    <div class="grilla">
+
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-book-medical fs-4  text-primary"
+                                href="#"></a>
+                                Historia Clínica</div>
+
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-laptop-medical fs-4 text-success"
+                                href="#"></a>
+                                Recetas Web</div>
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-info-circle fs-4 text-secondary"
+                                href="#"></a>
+                                Información
+                        </div>
+                        <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
+                                class="fa-duotone fa-solid  fa-chalkboard-teacher fs-4 text-danger"
+                                href="#"></a>
+                                Sala de Espera</div>
+
+                      
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-calendar-days fs-4 text-danger"
+                                href="#"></a>
+                                Consulta Turnos</div>
+                                
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-calendar-xmark fs-4 text-danger"
+                                href="#"></a>
+                                Bloqueos</div>
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid fa-calendar fs-4 text-danger"
+                                href="#"></a>
+                                Calendario</div>
+                        
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-calendar-check fs-4 text-danger"
+                                href="#"></a>
+                                Dar Turnos
+                        </div><br>
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-circle-nodes fs-4 text-warning"
+                                href="#"></a>
+                                Flujo de <br>
+                            Atenciones</div>
+                        <div class="dropdown-item text-center d-flex flex-column "><a
+                                class="fa-duotone fa-solid  fa-hospitals fs-4 text-warning"
+                                href="#"></a>
+                                Protocolos <br>Hospital de Día
+                        </div>
+                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                class="fa-duotone fa-solid  fa-hospital fs-4  text-warning"
+                                href="#"></a>
+                                Mapa<br>Htal de día</div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- --------dropdown app---------- -->
             <div class="logo m-1"><img src="img/logo_white.png" height="40"></div>
             <div class=" navegacion_breadcrumb h60">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='white'/%3E%3C/svg%3E&#34;);"
@@ -84,24 +151,26 @@
 
                     <!-- --------dropdown notificaciones---------- -->
                     <div class="dropdown">
-                        <button type="button" class="btn dropdown-toggle fa-solid fa-bell" id="noti_Fica" onclick="mostrarNotif()"
-                            > <span
+                        <button type="button" class="btn dropdown-toggle fa-solid fa-bell" id="noti_Fica"
+                            onclick="mostrarNotif()"> <span
                                 class="position-absolute top-0 start-9 translate-middle p-1 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden">Nuevos alertas</span>
                             </span></button>
                         <div class="dropdown-menu p-0 notif shadow mostrar" aria-labelledby="noti_Fica" id="notiBox">
                             <div class="w-100 bg-white">
                                 <div class="text-start d-flex flex-column p-2 w-100 dropdown-item-text">
-                                    <div class="d-flex justify-content-between align-items-center"><span class="fs-6 text-body fw-bolder">Notificaciones</span>
-                                    <button class="btn-close" onclick="mostrarNotif()"></button></div>
-                                                                </div>
+                                    <div class="d-flex justify-content-between align-items-center"><span
+                                            class="fs-6 text-body fw-bolder">Notificaciones</span>
+                                        <button class="btn-close" onclick="mostrarNotif()"></button>
+                                    </div>
+                                </div>
                                 <!-- -------------seccion tabs----------- -->
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <button class="nav-link active col-4" id="nav-home-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                             aria-selected="true">Todos</button>
-                                        <button class="nav-link col-4"  id="nav-profile-tab" data-bs-toggle="tab"
+                                        <button class="nav-link col-4" id="nav-profile-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-profile" type="button" role="tab"
                                             aria-controls="nav-profile" aria-selected="false">Turnos</button>
                                         <button class="nav-link col-4" id="nav-contact-tab" data-bs-toggle="tab"
@@ -200,59 +269,7 @@
                     <!-- --------FIN dropdown notificaciones---------- -->
 
 
-                    <!-- --------dropdown app---------- -->
-                    <div class="dropdown">
-                        <button type="button" class="btn dropdown-toggle fa-solid fa-grip" id="menuApps"
-                            data-bs-toggle="dropdown"> </button>
-                        <div class="dropdown-menu menuAppDropdown shadow" aria-labelledby="menuApps">
-                            <div class="grilla">
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-users-viewfinder fs-4" href="#"></a>Pacientes</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-book-medical fs-4" href="#"></a>Historia Clínica</div>
-                                <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
-                                        class="fa-solid fa-clock fs-4" href="#"></a>Sala de Espera</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-circle-nodes fs-4" href="#"></a>Flujo de Atenciones</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-bed-pulse fs-4" href="#"></a>Internaciones</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-notes-medical fs-4" href="#"></a>Plantillas</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-laptop-medical fs-4" href="#"></a>Recetas Web</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-user-nurse fs-4" href="#"></a>Enfermería</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-pager fs-4" href="#"></a>Procedimientos</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-calendar-plus fs-4" href="#"></a>Consulta Turnos</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-hand-holding-medical fs-4" href="#"></a>Cirugías</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-person-chalkboard fs-4" href="#"></a>Talleres</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-clipboard-question fs-4" href="#"></a>Asistente de Informes
-                                </div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-list-check fs-4" href="#"></a>Auditorias de atenciones</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-signature fs-4" href="#"></a>Firma Digital</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-search fs-4" href="#"></a>Búsquedas</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-calendar-days fs-4" href="#"></a>Turnos</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-circle-info fs-4" href="#"></a>Protocolos</div>
-                                <div class="dropdown-item text-center d-flex flex-column"><a
-                                        class="fa-solid fa-hospital fs-4" href="#"></a>Mapa<br>Htal de día</div>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <!-- --------dropdown app---------- -->
+                   
 
                     <button type="button" class="btn position-relative fa fa-clipboard" data-bs-toggle="tooltip"
                         data-bs-placement="bottom" title="Historial"></button>
@@ -733,52 +750,57 @@
 
 
                             </div>
-                            <div class="col-md-7 bg-info p-2 position-relative">
-                                <div class="anulado"></div>
+                            <div class="col-md-7 bg-light p-2 position-relative">
+                                <!-- <div class="anulado"></div> -->
                                 <div>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque in
-                                    laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla vero
-                                    blanditiis, reiciendis sit saepe a ad. Fuga.
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                    <div class="grilla">
 
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas eaque
-                                        in laboriosam velit dolore ab, quam quibusdam alias, tenetur dolorem nulla
-                                        vero blanditiis, reiciendis sit saepe a ad. Fuga.</p>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-book-medical fs-4  text-primary"
+                                                href="#"></a>Historia Clínica</div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-laptop-medical fs-4 text-info"
+                                                href="#"></a>Recetas
+                                            Web</div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-info-circle fs-4 text-secondary"
+                                                href="#"></a>Información
+                                        </div>
+                                        <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
+                                                class="fa-duotone fa-solid  fa-chalkboard-teacher fs-4 text-danger"
+                                                href="#"></a>Sala
+                                            de Espera</div>
+
+                                      
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-calendar-days fs-4 text-danger"
+                                                href="#"></a>Consulta
+                                            Turnos</div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-calendar-xmark fs-4 text-danger"
+                                                href="#"></a>Bloqueos</div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid fa-calendar fs-4 text-danger"
+                                                href="#"></a>Calendario</div>
+                                        
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-calendar-check fs-4 text-danger"
+                                                href="#"></a>Dar Turnos
+                                        </div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-circle-nodes fs-4 text-warning"
+                                                href="#"></a>Flujo de
+                                            Atenciones</div>
+                                        <div class="dropdown-item text-center d-flex flex-column text-wrap"><a
+                                                class="fa-duotone fa-solid  fa-hospitals fs-4 text-warning"
+                                                href="#"></a>Protocolos Hospital de Día
+                                        </div>
+                                        <div class="dropdown-item text-center d-flex flex-column"><a
+                                                class="fa-duotone fa-solid  fa-hospital fs-4  text-warning"
+                                                href="#"></a>Mapa<br>Htal
+                                            de día</div>
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -1440,21 +1462,21 @@
     <script>
         const noTif = document.getElementById('noti_Fica')
         const noti_Box = document.getElementById('notiBox')
-      
+
         noti_Box.classList.toggle('mostrar')
 
         function mostrarNotif() {
             noti_Box.classList.toggle('mostrar')
-         }
-      
-        
+        }
+
+
 
 
 
 
         const salaEspera = document.getElementById('sala_Espera')
-      
-        
+
+
         console.log(salaEspera)
         //Abrir SalaEspera
         function salaEsp() {

@@ -1,0 +1,258 @@
+body {
+    font-family: var(--body-text);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --header-gradient: linear-gradient(90deg, var(--main-bg-color) 60%, var(--main-bg-secondary-color) 100%) !important;
+}
+
+
+.nav-markey {
+    min-height: 60px;
+    font-size: 0.98em !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .nav-markey * {
+        font-size: 0.98em !important;
+    }
+
+
+    .nav-markey .cen_vert .dropdown-menu {
+        background-color: var(--main-text-color) !important;
+    }
+
+
+
+    .nav-markey .cen_vert .dropdown-item {
+        color: #000 !important;
+    }
+
+.cen_vert {
+    font-family: var(--body-text) !important;
+    font-size: 0.97em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+   /* .cen_vert * {
+        font-size: 0.98em !important;
+    }*/
+
+    .cen_vert .fa-clipboard {
+        color: var(--main-text-color) !important;
+    }
+
+    .cen_vert .dropdown button.dropdown-toggle, .cen_vert button.btn-salaEspera {
+        background: transparent !important;
+    }
+
+.btnAdministrar {
+    background: transparent !important;
+    color: #eef3f6;
+}
+
+.cen_vert .badge-alert {
+    position: absolute;
+    top: -3px !important;
+    right: 22px !important;
+}
+
+.notificaciones-alert {
+    position: absolute;
+    top: -.5em !important;
+    height:1.3em;
+    right: .75em !important;
+    padding: .2em .4em 0 .4em;
+    border:none!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px !important;
+}
+
+.perfil_circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    padding-right: 18px;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+span.nombreMedico {
+    color: white;
+    margin-left: 12px;
+}
+
+.dropdown-espec .btn {
+    padding: 0 10px !important
+}
+.dropdown-espec .modal .btn {
+    padding: .25em 1em!important;
+}
+
+.btnLogout {
+    color: white;
+    border: none;
+    display: grid;
+    place-items: center;
+    border-radius: 0;
+    text-decoration: none;
+    height: 50px !important;
+    i
+{
+    font-size: 1.3em !important;
+}
+
+i:hover {
+    text-shadow: 0 0 5px white;
+}
+
+}
+
+.foto-paciente {
+    height: 4.5em;
+    width: 4.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 0 2px 0;
+    overflow: hidden;
+}
+
+.foto-prof {
+    border: 2px solid #fff;
+}
+
+.image-paciente-default {
+    height: 4.5em;
+    width: 4.5em;
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.salaFull .image-paciente-default {
+    height: 3em;
+    width: 3em;
+}
+    .image-paciente-iniciales {
+    font-size: 20px !important;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.image-profesional-default {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+    .image-profesional-default .image-profesional-iniciales {
+        color: var(--main-bg-color);
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+    }
+
+.foto-paciente-colapsed {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.nav-markey.fixed-top {
+    z-index: 1050 !important;
+}
+
+.nav-markey .bg-white .dropdown-item {
+    color: inherit !important;
+}
+
+.dropdown-user {
+    position: relative;
+}
+
+    .dropdown-user::before, .dropdown-espec::before {
+        content: '';
+        width: 2px;
+        height: 35px;
+        background: var(--main-text-color);
+        position: absolute;
+        left: -2px;
+        top: 0;
+    }
+
+    .dropdown-user::before {
+        top: 1em;
+    }
+
+.dropdown-borradores {
+    font-family: var(--body-text);
+    font-size: .8em!important;
+}
+
+    .dropdown-borradores h6 {
+        font-size: 10pt !important;
+    }
+
+button.markey-btn-close-icon {
+    font-size: 1rem !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+    button.markey-btn-close-icon i, button.markey-btn-close-icon svg {
+        color: #7e7e7e !important;
+    }
+
+.dropdown-menu.notificaciones .user-icon {
+    font-size: calc(1.375rem + 1.5vw) !important;
+}
+
+.dropdown-menu-espec.dropdown-menu.show {
+    z-index: 1100 !important;
+    position: absolute !important;
+    inset: 0px 0px auto auto !important;
+    margin: 0px !important;
+    transform: translate(0px, 30px) !important;
+}
+
+.dropdown-menu.dropdown-menu-espec.show, .dropdown-menu.dropdown-menu-user.show {
+    background: #fff !important;
+}

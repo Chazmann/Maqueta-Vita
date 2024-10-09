@@ -3,5 +3,6 @@
     "window.autoDetectColorScheme": false,
     "window.density.editorTabHeight": "compact",
     "explorer.fileNesting.expand": true,
-    "sftp.downloadWhenOpenInRemoteExplorer": false
+    "sftp.downloadWhenOpenInRemoteExplorer": false,
+    "liveServer.settings.port": 5501
 }

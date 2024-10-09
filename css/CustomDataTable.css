@@ -1,0 +1,51 @@
+
+/* CUSTOM SORTING TABLE */
+table.table-custom-sort.dataTable > thead > tr > th:not(.sorting_disabled)::before,
+table.table-custom-sort.dataTable > thead > tr > th:not(.sorting_disabled)::after {
+    display: none;
+}
+
+table.table-custom-sort.dataTable > thead > tr > th > .sort-icon {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    position: relative;
+}
+
+    table.table-custom-sort.dataTable > thead > tr > th > .sort-icon::before,
+    table.table-custom-sort.dataTable > thead > tr > th > .sort-icon::after {
+        display: block;
+        font-size: 8px;
+        color: #656565;
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    table.table-custom-sort.dataTable > thead > tr > th > .sort-icon::before {
+        content: "\25B2";
+        top: 2px;
+    }
+
+    table.table-custom-sort.dataTable > thead > tr > th > .sort-icon::after {
+        content: "\25BC";
+        bottom: -5px;
+    }
+
+table.table-custom-sort.dataTable > thead > tr > th.sorting_asc > .sort-icon::before,
+table.table-custom-sort.dataTable > thead > tr > th.sorting_desc > .sort-icon::after {
+    opacity: 1;
+}
+
+/*cell expand*/
+.ellipsis {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.ellipsis.expanded {
+    white-space: normal;
+}
