@@ -11,7 +11,7 @@
     text-decoration: none!important;
 }
 html {
-    font-size: 14px !important;
+    font-size: 16px !important;
 }
 :root {
     /*1st Pair*/
@@ -31,6 +31,7 @@ body {
     -webkit-font-smoothing: antialiased;
     text-transform: initial !important;
     overflow:hidden!important;
+    background-color: rgb(234, 241, 251);
    
 }
 
@@ -329,9 +330,6 @@ img.alerta-imagen-popup {
 
 .menulateral .nav-item :hover {
     background-color: #ffffff !important;
-}
-
-.menulateral .nav-child-link {
 }
 
 .form-group {
@@ -842,9 +840,6 @@ h2.accordion-header {
 
 
 /* AUTOCOMPLETE */
-
-.form-control-autocomplete {
-}
 .ui-helper-hidden-accessible~.ck-body-wrapper {
     display: none;
 }
@@ -1201,7 +1196,7 @@ h2.accordion-header {
 @media screen and (max-width: 1024px) {
 
     html {
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 
     :root {
@@ -1402,4 +1397,19 @@ h2.accordion-header {
 #tableOrdenes th:nth-child(6), #tableOrdenes td:nth-child(6) {
     max-width: 6em !important;
    
+}
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#stepsContainer .nav-link{
+    border: solid 1px rgba(128, 128, 128, 0.42);
+    border-radius: 1.25em;
+}
+#stepsContainer .nav-link.active {
+    background-color: var(--primarioAustral)!important;
+    color: white!important;
+    font-weight: 700;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=.9">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fawesome-all.css">
     <link rel="stylesheet" href="css/vita.css">
     <link rel="stylesheet" href="css/colores.css">
@@ -13,78 +13,67 @@
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/actionbutton.css">
     <link rel="stylesheet" href="css/botonesmenulateral.css">
-   
+
 
     <link rel="stylesheet" href="css/AppAccion.css">
-    <link rel="stylesheet" href="css/SiteNew.css"> 
-    <title>VITA</title>
+    <link rel="stylesheet" href="css/SiteNew.css">
+    <title>Admin Turnos</title>
 </head>
 
 
 
-<body class="cuerpo">
+<body>
     <header class="mbot justify-content-between azulinsti">
         <div class="d-flex align-items-center gap-2">
-             <!-- --------dropdown app---------- -->
-             <div class="dropdown">
+            <!-- --------dropdown app---------- -->
+            <div class="dropdown">
                 <button type="button" class="btn btn-primary dropdown-toggle fa-solid fa-bars" id="menuApps"
                     data-bs-toggle="dropdown"> </button>
                 <div class="dropdown-menu menuAppDropdown shadow" aria-labelledby="menuApps">
                     <div class="grilla">
 
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-book-medical fs-4  text-primary"
-                                href="#"></a>
-                                Historia Clínica</div>
+                                class="fa-duotone fa-solid  fa-book-medical fs-4  text-primary" href="#"></a>
+                            Historia Clínica</div>
 
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-laptop-medical fs-4 text-success"
-                                href="#"></a>
-                                Recetas Web</div>
+                                class="fa-duotone fa-solid  fa-laptop-medical fs-4 text-success" href="#"></a>
+                            Recetas Web</div>
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-info-circle fs-4 text-secondary"
-                                href="#"></a>
-                                Información
+                                class="fa-duotone fa-solid  fa-info-circle fs-4 text-secondary" href="#"></a>
+                            Información
                         </div>
                         <div class="dropdown-item text-center d-flex flex-column" onclick="salaEsp()"><a
-                                class="fa-duotone fa-solid  fa-chalkboard-teacher fs-4 text-danger"
-                                href="#"></a>
-                                Sala de Espera</div>
+                                class="fa-duotone fa-solid  fa-chalkboard-teacher fs-4 text-danger" href="#"></a>
+                            Sala de Espera</div>
 
-                      
+
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-calendar-days fs-4 text-danger"
-                                href="#"></a>
-                                Consulta Turnos</div>
-                                
+                                class="fa-duotone fa-solid  fa-calendar-days fs-4 text-danger" href="#"></a>
+                            Consulta Turnos</div>
+
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-calendar-xmark fs-4 text-danger"
-                                href="#"></a>
-                                Bloqueos</div>
+                                class="fa-duotone fa-solid  fa-calendar-xmark fs-4 text-danger" href="#"></a>
+                            Bloqueos</div>
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid fa-calendar fs-4 text-danger"
-                                href="#"></a>
-                                Calendario</div>
-                        
+                                class="fa-duotone fa-solid fa-calendar fs-4 text-danger" href="#"></a>
+                            Calendario</div>
+
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-calendar-check fs-4 text-danger"
-                                href="#"></a>
-                                Dar Turnos
+                                class="fa-duotone fa-solid  fa-calendar-check fs-4 text-danger" href="#"></a>
+                            Dar Turnos
                         </div><br>
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-circle-nodes fs-4 text-warning"
-                                href="#"></a>
-                                Flujo de <br>
+                                class="fa-duotone fa-solid  fa-circle-nodes fs-4 text-warning" href="#"></a>
+                            Flujo de <br>
                             Atenciones</div>
                         <div class="dropdown-item text-center d-flex flex-column "><a
-                                class="fa-duotone fa-solid  fa-hospitals fs-4 text-warning"
-                                href="#"></a>
-                                Protocolos <br>Hospital de Día
+                                class="fa-duotone fa-solid  fa-hospitals fs-4 text-warning" href="#"></a>
+                            Protocolos <br>Hospital de Día
                         </div>
                         <div class="dropdown-item text-center d-flex flex-column"><a
-                                class="fa-duotone fa-solid  fa-hospital fs-4  text-warning"
-                                href="#"></a>
-                                Mapa<br>Htal de día</div>
+                                class="fa-duotone fa-solid  fa-hospital fs-4  text-warning" href="#"></a>
+                            Mapa<br>Htal de día</div>
 
                     </div>
 
@@ -94,11 +83,142 @@
 
             <!-- --------dropdown app---------- -->
             <div class="logo m-1"><img src="img/logo_white.png" height="40"></div>
-            
+
         </div>
-        
+
     </header>
 
+
+    <div class="d-flex col-12">
+        <div class="nav flex-column expand  p-3 ">
+            <h3 class="hidden">Titulo</h3>
+            <article>
+                <span class="fs-5 fw-bolder">Paciente:</span>
+                <h5>Leandro Chazarreta</h5>
+                <div class="mb-2 spbt gap-4">
+                    <span>DNI 31698157</span> <span>Edad: 39 años</span> <span>Sexo: Masc.</span>
+                </div>
+                <div class="mb-2 spbt gap-4">
+                    <span>Cobertura: Espacio Prestige</span> <span>HC: 245439</span>
+                </div>
+            </article>
+            <hr>
+        </div>
+
+
+
+        <!-- ----------CONTENIDO PPAL-------- -->
+        <div class="flex-grow-1 p-3 rounded-3 shadow-sm bg-light">
+            <h3>Buscador de turnos</h3>
+            <hr class="mt-0">
+
+            <section id="stepsContainer">
+                
+
+
+                <divs class="flex-grow-1 gap-2 mb-2 flexCenter nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <button class="nav-link active rounded-5" id="nav-home-tab" data-bs-toggle="pill" data-bs-target="#buscadorPaciente" type="button" role="tab" aria-controls="nav-home" aria-selected="true">1. Buscar paciente</button>
+                    <i class="fa fa-arrow-right text-secondary"></i>
+                    <button class="nav-link "  id="nav-profile-tab" data-bs-toggle="pill" data-bs-target="#buscarEspecialista" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">2. Buscar
+                        especialidad</button>
+                    <i class="fa fa-arrow-right text-secondary"></i>
+                    <button class="nav-link " id="seleccionarTurno-tab" data-bs-toggle="pill" data-bs-target="#seleccionarTurno" type="button" role="tab" aria-controls="seleccionarTurno" aria-selected="false">3. Seleccionar
+                        Turno</button>
+
+                </divs>
+
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="buscadorPaciente" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <article class="step-1 border border-1 p-4">
+                            <h4>Buscar Paciente</h4>
+                            <div class="form-group">
+                                <label for="patientId">ID de Paciente:</label>
+                                <input type="text" class="form-control" id="patientId"
+                                    placeholder="Ingresa ID del Paciente">
+                            </div>
+                            <button type="button" class="btn btn-primary">Buscar</button>
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="buscarEspecialista" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0">
+                        <article class="step-2 border border-1 p-4"> <h4>Buscar Especialidad</h4>
+                            <div class="form-group">
+                                <label for="specialty">Especialidad:</label>
+                                <select class="form-select" id="specialty">
+                                    <option value="">Selecciona Especialidad</option>
+                                    <option value="cardiology">Cardiología</option>
+                                    <option value="dermatology">Dermatología</option>
+                                    <!-- Agrega más opciones según sea necesario -->
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary">Buscar Turnos Disponibles</button>
+
+                            <h4>Resultados de Turnos Disponibles</h4>
+                            <div id="availableAppointments">
+                                <!-- Aquí se mostrarán los turnos disponibles -->
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tab-pane fade" id="seleccionarTurno" role="tabpanel" aria-labelledby="seleccionarTurno-tab"
+                        tabindex="0">
+                        <article class="step-3 border border-1 p-4"><h4>Aplicar Filtros y Seleccionar Turno</h4>
+                            <div class="form-group">
+                                
+                                <div class="form-group d-flex flex-grow-1 gap-5 align-items-center" id="filters">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="morningShift">
+                                        <label class="form-check-label" for="morningShift">Turno Mañana</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="afternoonShift">
+                                        <label class="form-check-label" for="afternoonShift">Turno Tarde</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="combineShift">
+                                        <label class="form-check-label" for="combineShift">Combinar turno</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="noCopay">
+                                        <label class="form-check-label" for="noCopay">Sin Copago</label>
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        <select class="form-select" id="location">
+                                            <option value="Sede:" >Sede:</option>
+                                            <option value="hospitalAustral">Hospital Austral</option>
+                                            <option value="champagnat">Champagnat</option>
+                                            <option value="officia">Officia</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-primary"><i class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
+                                </div>
+                                
+                            </div>
+                           
+
+                            <h4>Turnos Filtrados</h4>
+                            <div id="filteredAppointments">
+                                <!-- Aquí se mostrarán los turnos filtrados -->
+                            </div>
+
+                            <button type="button" class="btn btn-success">Seleccionar Turno</button>
+                        </article>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </section>
+        </div>
+
+    </div>
 
 
 
