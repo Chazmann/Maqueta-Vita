@@ -215,3 +215,8 @@
 .se-retira {
     color: #ebc315;
 }
+
+.complete {
+    background-color: #2b60dca9!important;
+    color: white!important;
+}

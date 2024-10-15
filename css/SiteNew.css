@@ -1412,4 +1412,5 @@ h2.accordion-header {
     background-color: var(--primarioAustral)!important;
     color: white!important;
     font-weight: 700;
+    box-shadow: 0 0 15px #083869;
 }

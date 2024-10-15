@@ -21,7 +21,6 @@
 </head>
 
 
-
 <body>
     <header class="mbot justify-content-between azulinsti">
         <div class="d-flex align-items-center gap-2">
@@ -116,16 +115,16 @@
                 
 
 
-                <divs class="flex-grow-1 gap-2 mb-2 flexCenter nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <button class="nav-link active rounded-5" id="nav-home-tab" data-bs-toggle="pill" data-bs-target="#buscadorPaciente" type="button" role="tab" aria-controls="nav-home" aria-selected="true">1. Buscar paciente</button>
-                    <i class="fa fa-arrow-right text-secondary"></i>
+                <div class="flex-grow-1 gap-2 mb-2 flexCenter nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <button class="nav-link active rounded-5 p-0" id="nav-home-tab" data-bs-toggle="pill" data-bs-target="#buscadorPaciente" type="button" role="tab" aria-controls="nav-home" aria-selected="true">1. Buscar paciente</button>
+                    <i class="fa fa-arrow-right text-secondary p-0"></i>
                     <button class="nav-link "  id="nav-profile-tab" data-bs-toggle="pill" data-bs-target="#buscarEspecialista" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">2. Buscar
                         especialidad</button>
-                    <i class="fa fa-arrow-right text-secondary"></i>
+                    <i class="fa fa-arrow-right text-secondary p-0"></i>
                     <button class="nav-link " id="seleccionarTurno-tab" data-bs-toggle="pill" data-bs-target="#seleccionarTurno" type="button" role="tab" aria-controls="seleccionarTurno" aria-selected="false">3. Seleccionar
                         Turno</button>
 
-                </divs>
+                </div>
 
 
                 <div class="tab-content" id="pills-tabContent">
@@ -138,7 +137,7 @@
                                 <input type="text" class="form-control" id="patientId"
                                     placeholder="Ingresa ID del Paciente">
                             </div>
-                            <button type="button" class="btn btn-primary">Buscar</button>
+                            <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar</button>
                         </article>
                     </div>
                     <div class="tab-pane fade" id="buscarEspecialista" role="tabpanel" aria-labelledby="pills-profile-tab"
@@ -153,7 +152,7 @@
                                     <!-- Agrega más opciones según sea necesario -->
                                 </select>
                             </div>
-                            <button type="button" class="btn btn-primary">Buscar Turnos Disponibles</button>
+                            <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar Turnos Disponibles</button>
 
                             <h4>Resultados de Turnos Disponibles</h4>
                             <div id="availableAppointments">
@@ -166,7 +165,7 @@
                         <article class="step-3 border border-1 p-4"><h4>Aplicar Filtros y Seleccionar Turno</h4>
                             <div class="form-group">
                                 
-                                <div class="form-group d-flex flex-grow-1 gap-5 align-items-center" id="filters">
+                                <div class="form-group d-flex flex-grow-1 gap-5 align-items-center ps-2" id="filters">
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="morningShift">
                                         <label class="form-check-label" for="morningShift">Turno Mañana</label>
@@ -192,7 +191,7 @@
                                             <option value="officia">Officia</option>
                                         </select>
                                     </div>
-                                    <button type="button" class="btn btn-primary"><i class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
+                                    <button type="button" class="btn btn-primary mt-2 rounded-5"><i class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
                                 </div>
                                 
                             </div>
@@ -203,7 +202,7 @@
                                 <!-- Aquí se mostrarán los turnos filtrados -->
                             </div>
 
-                            <button type="button" class="btn btn-success">Seleccionar Turno</button>
+                            <button type="button" class="btn btn-success mt-2 rounded-5">Seleccionar Turno</button>
                         </article>
                     </div>
 
@@ -223,6 +222,27 @@
 
 
 
-
-    <script src="js/actions-vita.js"></script>
+    <!-- <script src="js/actions-vita.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('#pills-tab .nav-link');
+            
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', function () {
+                    // Asignar clase .complete al botón anterior
+                    if (index > 0) {
+                        buttons[index - 1].classList.add('complete');
+                    }
+                    
+                    // Remover clase .complete de los botones posteriores
+                    for (let i = index + 1; i < buttons.length; i++) {
+                        buttons[i - 1].classList.remove('complete');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
