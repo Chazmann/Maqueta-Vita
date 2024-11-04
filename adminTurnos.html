@@ -88,135 +88,167 @@
     </header>
 
 
-    <div class="d-flex col-12">
-        <div class="nav flex-column expand  p-3 ">
-            <h3 class="hidden">Titulo</h3>
-            <article>
-                <span class="fs-5 fw-bolder">Paciente:</span>
-                <h5>Leandro Chazarreta</h5>
-                <div class="mb-2 spbt gap-4">
-                    <span>DNI 31698157</span> <span>Edad: 39 años</span> <span>Sexo: Masc.</span>
-                </div>
-                <div class="mb-2 spbt gap-4">
-                    <span>Cobertura: Espacio Prestige</span> <span>HC: 245439</span>
-                </div>
-            </article>
-            <hr>
-        </div>
-
-
-
-        <!-- ----------CONTENIDO PPAL-------- -->
-        <div class="flex-grow-1 p-3 rounded-3 shadow-sm bg-light">
-            <h3>Buscador de turnos</h3>
-            <hr class="mt-0">
-
-            <section id="stepsContainer">
-                
-
-
-                <div class="flex-grow-1 gap-2 mb-2 flexCenter nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <button class="nav-link active rounded-5 p-0" id="nav-home-tab" data-bs-toggle="pill" data-bs-target="#buscadorPaciente" type="button" role="tab" aria-controls="nav-home" aria-selected="true">1. Buscar paciente</button>
-                    <i class="fa fa-arrow-right text-secondary p-0"></i>
-                    <button class="nav-link "  id="nav-profile-tab" data-bs-toggle="pill" data-bs-target="#buscarEspecialista" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">2. Buscar
-                        especialidad</button>
-                    <i class="fa fa-arrow-right text-secondary p-0"></i>
-                    <button class="nav-link " id="seleccionarTurno-tab" data-bs-toggle="pill" data-bs-target="#seleccionarTurno" type="button" role="tab" aria-controls="seleccionarTurno" aria-selected="false">3. Seleccionar
-                        Turno</button>
-
-                </div>
-
-
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="buscadorPaciente" role="tabpanel"
-                        aria-labelledby="pills-home-tab" tabindex="0">
-                        <article class="step-1 border border-1 p-4">
-                            <h4>Buscar Paciente</h4>
-                            <div class="form-group">
-                                <label for="patientId">ID de Paciente:</label>
-                                <input type="text" class="form-control" id="patientId"
-                                    placeholder="Ingresa ID del Paciente">
-                            </div>
-                            <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar</button>
-                        </article>
+    <div class="container-fluid p-2">
+        <div class="row">
+            <div class="nav flex-column expand p-3 col-lg-3 col-md-4 hide" id="pacienteDatos">
+                <h3 class="hidden">Titulo</h3>
+                <article>
+                    <div class="spbt">
+                        <span class="fs-5 fw-bolder">Paciente:</span>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-pen-to-square me-1"></i>Modificar</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-recycle me-1"></i>SISA</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-hospital-user me-1"></i>Cobertura médica</a></li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-info-circle me-1"></i>¿Editar?</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bell-on me-1"></i>Alertas
+                                        <span class="badge bg-info">2</span></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="buscarEspecialista" role="tabpanel" aria-labelledby="pills-profile-tab"
-                        tabindex="0">
-                        <article class="step-2 border border-1 p-4"> <h4>Buscar Especialidad</h4>
-                            <div class="form-group">
-                                <label for="specialty">Especialidad:</label>
-                                <select class="form-select" id="specialty">
-                                    <option value="">Selecciona Especialidad</option>
-                                    <option value="cardiology">Cardiología</option>
-                                    <option value="dermatology">Dermatología</option>
-                                    <!-- Agrega más opciones según sea necesario -->
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar Turnos Disponibles</button>
-
-                            <h4>Resultados de Turnos Disponibles</h4>
-                            <div id="availableAppointments">
-                                <!-- Aquí se mostrarán los turnos disponibles -->
-                            </div>
-                        </article>
+                    <h5>Leandro Chazarreta</h5>
+                    <div class="mb-2 spbt gap-4">
+                        <span>DNI 31698157</span> <span>Edad: 39 años</span> <span>Sexo: Masc.</span>
                     </div>
-                    <div class="tab-pane fade" id="seleccionarTurno" role="tabpanel" aria-labelledby="seleccionarTurno-tab"
-                        tabindex="0">
-                        <article class="step-3 border border-1 p-4"><h4>Aplicar Filtros y Seleccionar Turno</h4>
-                            <div class="form-group">
-                                
-                                <div class="form-group d-flex flex-grow-1 gap-5 align-items-center ps-2" id="filters">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="morningShift">
-                                        <label class="form-check-label" for="morningShift">Turno Mañana</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="afternoonShift">
-                                        <label class="form-check-label" for="afternoonShift">Turno Tarde</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="combineShift">
-                                        <label class="form-check-label" for="combineShift">Combinar turno</label>
-                                    </div>
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="noCopay">
-                                        <label class="form-check-label" for="noCopay">Sin Copago</label>
-                                    </div>
-                                    <div class="form-group">
-                                        
-                                        <select class="form-select" id="location">
-                                            <option value="Sede:" >Sede:</option>
-                                            <option value="hospitalAustral">Hospital Austral</option>
-                                            <option value="champagnat">Champagnat</option>
-                                            <option value="officia">Officia</option>
-                                        </select>
-                                    </div>
-                                    <button type="button" class="btn btn-primary mt-2 rounded-5"><i class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
+                    <div class="mb-2 spbt gap-4">
+                        <span>Cobertura: Espacio Prestige</span> <span>HC: 245439</span>
+                    </div>
+                </article>
+
+
+                <hr>
+            </div>
+
+            <!-- ----------CONTENIDO PPAL-------- -->
+            <div class="col-lg-9 col-md-8 p-3 rounded-3 shadow-sm bg-light">
+                <h3>Buscador de turnos</h3>
+                <hr class="mt-0">
+
+                <section id="stepsContainer">
+
+
+
+                    <div class="flex-grow-1 gap-2 mb-2 flexCenter nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <button class="nav-link active rounded-5 p-0" id="nav-paciente" data-bs-toggle="pill"
+                            data-bs-target="#buscadorPaciente" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">1. Buscar paciente</button>
+                        <i class="fa fa-arrow-right text-secondary p-0"></i>
+                        <button class="nav-link " id="nav-Especialista" data-bs-toggle="pill"
+                            data-bs-target="#buscarEspecialista" type="button" role="tab" aria-controls="nav-profile"
+                            aria-selected="false">2. Buscar
+                            especialidad</button>
+                        <i class="fa fa-arrow-right text-secondary p-0"></i>
+                        <button class="nav-link " id="seleccionarTurno-tab" data-bs-toggle="pill"
+                            data-bs-target="#seleccionarTurno" type="button" role="tab" aria-controls="seleccionarTurno"
+                            aria-selected="false">3. Seleccionar
+                            Turno</button>
+
+                    </div>
+
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="buscadorPaciente" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <article class="step-1 border border-1 p-4">
+                                <h4>Buscar Paciente</h4>
+                                <div class="form-group">
+                                    <label for="patientId">ID de Paciente:</label>
+                                    <input type="text" class="form-control" id="patientId"
+                                        placeholder="Ingresa ID del Paciente">
                                 </div>
-                                
-                            </div>
-                           
+                                <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar</button>
+                            </article>
+                        </div>
+                        <div class="tab-pane fade" id="buscarEspecialista" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+                            <article class="step-2 border border-1 p-4">
+                                <h4>Buscar Especialidad</h4>
+                                <div class="form-group">
+                                    <label for="specialty">Especialidad:</label>
+                                    <select class="form-select" id="specialty">
+                                        <option value="">Selecciona Especialidad</option>
+                                        <option value="cardiology">Cardiología</option>
+                                        <option value="dermatology">Dermatología</option>
+                                        <!-- Agrega más opciones según sea necesario -->
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar Turnos
+                                    Disponibles</button>
 
-                            <h4>Turnos Filtrados</h4>
-                            <div id="filteredAppointments">
-                                <!-- Aquí se mostrarán los turnos filtrados -->
-                            </div>
+                                <h4>Resultados de Turnos Disponibles</h4>
+                                <div id="availableAppointments">
+                                    <!-- Aquí se mostrarán los turnos disponibles -->
+                                </div>
+                            </article>
+                        </div>
+                        <div class="tab-pane fade" id="seleccionarTurno" role="tabpanel"
+                            aria-labelledby="seleccionarTurno-tab" tabindex="0">
+                            <article class="step-3 border border-1 p-4">
+                                <h4>Aplicar Filtros y Seleccionar Turno</h4>
+                                <div class="form-group">
 
-                            <button type="button" class="btn btn-success mt-2 rounded-5">Seleccionar Turno</button>
-                        </article>
+                                    <div class="form-group d-flex flex-grow-1 gap-5 align-items-center ps-2"
+                                        id="filters">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="morningShift">
+                                            <label class="form-check-label" for="morningShift">Turno Mañana</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="afternoonShift">
+                                            <label class="form-check-label" for="afternoonShift">Turno Tarde</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="combineShift">
+                                            <label class="form-check-label" for="combineShift">Combinar turno</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="noCopay">
+                                            <label class="form-check-label" for="noCopay">Sin Copago</label>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <select class="form-select" id="location">
+                                                <option value="Sede:">Sede:</option>
+                                                <option value="hospitalAustral">Hospital Austral</option>
+                                                <option value="champagnat">Champagnat</option>
+                                                <option value="officia">Officia</option>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-primary mt-2 rounded-5"><i
+                                                class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
+                                    </div>
+
+                                </div>
+
+
+                                <h4>Turnos Filtrados</h4>
+                                <div id="filteredAppointments">
+                                    <!-- Aquí se mostrarán los turnos filtrados -->
+                                </div>
+
+                                <button type="button" class="btn btn-success mt-2 rounded-5">Seleccionar Turno</button>
+                            </article>
+                        </div>
+
                     </div>
 
-                </div>
 
 
 
 
 
 
-
-            </section>
+                </section>
+            </div>
         </div>
-
     </div>
 
 
@@ -224,18 +256,20 @@
 
     <!-- <script src="js/actions-vita.js"></script> -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('#pills-tab .nav-link');
-            
+
             buttons.forEach((button, index) => {
                 button.addEventListener('click', function () {
                     // Asignar clase .complete al botón anterior
                     if (index > 0) {
                         buttons[index - 1].classList.add('complete');
                     }
-                    
+
                     // Remover clase .complete de los botones posteriores
                     for (let i = index + 1; i < buttons.length; i++) {
                         buttons[i - 1].classList.remove('complete');
@@ -243,6 +277,16 @@
                 });
             });
         });
+
+        $('#nav-Especialista').on('click', function () {
+            $("#pacienteDatos").removeClass('hide');
+        });
+        $('#nav-paciente').on('click', function () {
+            $("#pacienteDatos").addClass('hide');
+        });
+
+
     </script>
 </body>
+
 </html>
