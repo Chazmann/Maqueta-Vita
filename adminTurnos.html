@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="css/AppAccion.css">
     <link rel="stylesheet" href="css/SiteNew.css">
+
     <title>Admin Turnos</title>
 </head>
 
@@ -110,7 +111,7 @@
                                 <li><a class="dropdown-item" href="#"><i
                                             class="fa-solid fa-info-circle me-1"></i>¿Editar?</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bell-on me-1"></i>Alertas
-                                        <span class="badge bg-info">2</span></a></li>
+                                        <span class="badge bg-warning text-secondary">2</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -155,7 +156,7 @@
 
 
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="buscadorPaciente" role="tabpanel"
+                         <div class="tab-pane fade show active" id="buscadorPaciente" role="tabpanel"
                             aria-labelledby="pills-home-tab" tabindex="0">
                             <article class="step-1 border border-1 p-4">
                                 <h4>Buscar Paciente</h4>
@@ -175,18 +176,16 @@
                                 <h4>Buscar Especialidad</h4>
                                 <div class="form-group">
                                     <label for="specialty">Especialidad:</label>
-                                    <select class="form-select" id="specialty">
-                                        <option value="">Selecciona Especialidad</option>
-                                        <option value="cardiology">Cardiología</option>
-                                        <option value="dermatology">Dermatología</option>
-                                        <!-- Agrega más opciones según sea necesario -->
-                                    </select>
+                                    <input type="text" class="form-control" id="specialty" list="specialtiesList" placeholder="Selecciona Especialidad">
+                                    <datalist id="specialtiesList" style="display: none;">
+                                     
+                                    </datalist>
                                 </div>
-                                <button type="button" class="btn btn-primary mt-2 rounded-5">Buscar Turnos
-                                    Disponibles</button>
-
+                                
+                                <button type="button" class="btn btn-primary mt-2 rounded-5 mb-4" id="searchEsp">Buscar Turnos Disponibles</button>
+<br/>
                                 <h4>Resultados de Turnos Disponibles</h4>
-                                <div id="availableAppointments">
+                                <div id="availableAppointments" class="row" style="max-height: 60vh; overflow-y: auto;">
                                     <!-- Aquí se mostrarán los turnos disponibles -->
                                 </div>
                             </article>
@@ -291,13 +290,39 @@
         // Cambia la pestaña activa de #buscadorPaciente a #buscarEspecialista
         $('#nav-Especialista').tab('show');  // Activa la pestaña del especialista
         
-        // Si es necesario realizar alguna acción adicional, puedes agregarla aquí
-        // por ejemplo, mostrar o ocultar elementos relacionados con los resultados del paciente.
+        $('#nav-paciente').addClass('complete')
         $("#pacienteDatos").removeClass('hide');
     });
 
 
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const specialties = [
+            'Cardiología', 'Dermatología', 'Neurología', 'Pediatría', 'Gastroenterología',
+            'Ortopedia', 'Oncología', 'Urología', 'Psiquiatría', 'Endocrinología',
+            'Neumología', 'Reumatología'
+        ];
+
+        const dataList = document.getElementById('specialtiesList');
+        
+        // Limpiamos el datalist (si hay opciones previas)
+        dataList.innerHTML = '';
+
+        // Agregamos dinámicamente las opciones al datalist
+        specialties.forEach(function(specialty) {
+            const option = document.createElement('option');
+            option.value = specialty;
+            dataList.appendChild(option);
+        });
+       
+    });
+
+    
+
+</script>
+<script src="js/cards_turnos.js"></script>
 </body>
 
 </html>
