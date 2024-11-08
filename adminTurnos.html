@@ -187,7 +187,41 @@
                                 
                                 <div id="availableAppointments" class="row fs-5" style="max-height: 60vh; overflow-y: auto;">
 
-                                    <!-- Aquí se mostrarán los turnos disponibles -->
+                                    <div class="form-group">
+
+                                        <div class="form-group d-flex flex-grow-1 gap-5 align-items-center ps-2"
+                                            id="filters">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="morningShift">
+                                                <label class="form-check-label" for="morningShift">Turno Mañana</label>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="afternoonShift">
+                                                <label class="form-check-label" for="afternoonShift">Turno Tarde</label>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="combineShift">
+                                                <label class="form-check-label" for="combineShift">Combinar turno</label>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="noCopay">
+                                                <label class="form-check-label" for="noCopay">Sin Copago</label>
+                                            </div>
+                                            <div class="form-group">
+    
+                                                <select class="form-select" id="location">
+                                                    <option value="Sede:">Sede:</option>
+                                                    <option value="hospitalAustral">Hospital Austral</option>
+                                                    <option value="champagnat">Champagnat</option>
+                                                    <option value="officia">Officia</option>
+                                                </select>
+                                            </div>
+                                            <button type="button" class="btn btn-primary mt-2 rounded-5"><i
+                                                    class="fa fa-check-circle me-2"></i>Aplicar Filtros</button>
+                                        </div>
+    
+                                    </div>
+                                    <hr>
                                 </div>
                             </article>
                         </div>
