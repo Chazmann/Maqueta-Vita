@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.9">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fawesome-all.css">
+    <!-- <link rel="stylesheet" href="css/actionbutton.css"> -->
+    <link rel="stylesheet" href="css/AppAccion.css">
+    <link rel="stylesheet" href="css/colores.css">
+    <link rel="stylesheet" href="css/vita.css">
+    <title>VITA</title>
+
+
+</head>
+
+<body class="cuerpo">
+
+    <div class="fab-container position-fixed end-0 bottom-0 m-4">
+        <div class="fab shadow">
+            <div class="fab-content">
+                <span class="fa-solid fa-plus text-white fs-4" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Generar nueva acción"></span>
+            </div>
+        </div>
+        <div class="sub-button shadow out-menu">
+            <a href=#"><span> Nuevo Evolución</span>
+
+                <span class="fa-solid fa-file-circle-plus text-white fs-5 shadow " data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA ORDEN"></span>
+            </a>
+        </div>
+        <div class="sub-button shadow  out-menu">
+            <a href="#"><span> Nueva Orden</span>
+
+                <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA RECETA"></span>
+            </a>
+        </div>
+        <div class="sub-button shadow">
+            <a href="#"><span>Nueva Receta</span>
+
+                <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA RECETA"></span>
+            </a>
+        </div>
+        <div class="sub-button shadow">
+            <a href="#">
+                <span>Nuevo Certificado</span>
+                <span class="fa-solid fa-prescription-bottle-medical text-white fs-4" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="NUEVA RECETA"></span>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const fabContainer = document.querySelector('.fab-container');
+            const subButtons = document.querySelectorAll('.sub-button');
+            fabContainer.addEventListener('mouseover', function () {
+                fabContainer.style.width = '11em';
+                let visibleIndex = 0;
+                subButtons.forEach(button => {
+                    if (!button.classList.contains('out-menu')) {
+                        let translateYValue = -(55 * (visibleIndex + 1));
+                        button.style.transform = `translateY(${translateYValue}px)`;
+                        visibleIndex++;
+                    }
+                });
+            });
+            fabContainer.addEventListener('mouseout', function () {
+                fabContainer.style.width = '50px';
+                subButtons.forEach(button => {
+                    if (!button.classList.contains('out-menu')) {
+                        button.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

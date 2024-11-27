@@ -1,68 +1,117 @@
+:root {
+    --bg_azul_insti: rgb(61, 76, 190);
+    --cuerpo: rgb(234, 234, 234);
+    --nav: red;
+    --ancho90: 100% !important;
+    --main-bg-color: #3a73cb;
+    --main-text-color: white;
+}
+
 .fab-container .sub-button a {
     display: flex;
-    align-items:center;
-    justify-content:flex-end;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: inherit;
-    padding-left:.5em!important;
-    
+    padding-left: .5em !important;
+    gap: .5em;
+    text-wrap: nowrap;
 }
+
 .fab-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     user-select: none;
-    position: absolute;
     bottom: 0px !important;
-    right: 35px;
+    right: 20px;
     opacity: .9;
-    z-index: 1000
+    z-index: 1000;
+
 }
 
-    .fab-container:hover {
-        height: 100%;
-        opacity: 1;
-    }
+.fab-container:hover {
+    height: 100%;
+    opacity: 1;
+}
 
-        .fab-container:hover .sub-button {
-            width: 13em!important;
-        }
-        .fab-container:hover .sub-button:nth-child(2) {
-            transform: translateY(-60px);
-        }
+.fab-container .sub-button {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    width: 3em;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    right: .2em;
+    bottom: .5em;
+    padding: 0 1em;
+    overflow: hidden;
+    gap: .5em;
+    opacity: 0;
+}
 
-        .fab-container:hover .sub-button:nth-child(3) {
-            transform: translateY(-110px);
-            padding-right: .25em;
-        }
+.fab-container .sub-button:hover {
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 0 10px 10px rgba(41, 41, 41, 0.2) !important;
+}
 
-        .fab-container:hover .sub-button:nth-child(4) {
-            transform: translateY(-160px);
-        }
+.fab-container .fa {
+    color: var(--main-text-color);
+}
 
-        .fab-container:hover .sub-button:nth-child(5) {
-            transform: translateY(-210px);
-        }
+.fab-container:hover .sub-button {
+    max-width: 13em !important;
+    min-width: 8em !important;
+    width: auto;
+    opacity: 1;
+}
 
-        .fab-container:hover .sub-button:nth-child(6) {
-            transform: translateY(-260px);
-        }
+/* .fab-container:hover .sub-button:not(.out-menu):nth-child(2) {
+    transform: translateY(-60px);
+}
 
-    .fab-container .fab {
-        position: relative;
-        height: 50px;
-        width: 50px;
-        background-color: var(--main-bg-color);
-        color: var(--main-text-color) !important;
-        border-radius: 50%;
-        z-index: 2;
-        /*box-shadow: 0 0 15px var(--main-text-color) !important;*/
-    }
+.fab-container:hover .sub-button:not(.out-menu):nth-child(3) {
+    transform: translateY(-110px);
+    padding-right: .25em;
+}
 
-        /*.fab-container .fab::before {
+.fab-container:hover .sub-button:not(.out-menu):nth-child(4) {
+    transform: translateY(-160px);
+}
+
+.fab-container:hover .sub-button:not(.out-menu):nth-child(5) {
+    transform: translateY(-210px);
+}
+
+.fab-container:hover .sub-button:not(.out-menu):nth-child(6) {
+    transform: translateY(-260px);
+} */
+
+.fab-container:hover .sub-button.out-menu {
+    font-style: italic ;
+}
+
+.fab-container .fab {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color) !important;
+    border-radius: 50%;
+    z-index: 2;
+    /*box-shadow: 0 0 15px var(--main-text-color) !important;*/
+}
+
+/*.fab-container .fab::before {
             content: " ";
             position: absolute;
             bottom: 0;
@@ -74,49 +123,29 @@
             z-index: -1;
         }*/
 
-        .fab-container .fab .fab-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            border-radius: 50%;
-            cursor: pointer;
-        }
+.fab-container .fab .fab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.out-menu {
+    /* display: none !important; */
+    opacity: .3 !important; float: right!important;
+    background-color: blueviolet !important;
+}
 
 
-    .fab-container .sub-button {
-        position: absolute;
-        display: flex;
-        flex-direction:row-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        height: 40px;
-        width: 3em;
-        background-color: var(--main-bg-color);
-        color: var(--main-text-color);
-        border-radius: 20px;
-        transition: all 0.2s ease;
-        right: .2em;
-        bottom: .5em;
-        overflow:hidden;
-    }
 
-        .fab-container .sub-button:hover {
-            cursor: pointer;
-            opacity: 1;
-            transform: scale(1.1);
-            box-shadow: 0 0 10px 10px rgba(41, 41, 41, 0.383);
-        }
-
-    .fab-container .fa {
-        color: var(--main-text-color);
-    }
 
 
 .sign-container {
     display: flex;
-  /*  justify-content: flex-end;*/
+    /*  justify-content: flex-end;*/
     align-items: center;
     user-select: none;
     position: absolute;
@@ -126,49 +155,48 @@
     gap: .6em;
 }
 
-    .sign-container .sign {
-        position: relative;
-        height: auto;
-        width: auto;
-        z-index: 2;
-        margin-right: 5px;
-        padding: 0px
-    }
+.sign-container .sign {
+    position: relative;
+    height: auto;
+    width: auto;
+    z-index: 2;
+    margin-right: 5px;
+    padding: 0px
+}
 
-        .sign-container .sign .fab-content {
-            transition: all .15s ease-in;
-            border-radius: 1.3em;
-            opacity: 1;
-            padding: 5px 1.2em;
-            /*  color: var(--main-text-color) !important;
+.sign-container .sign .fab-content {
+    transition: all .15s ease-in;
+    border-radius: 1.3em;
+    opacity: 1;
+    padding: 5px 1.2em;
+    /*  color: var(--main-text-color) !important;
             background-color: var(--main-bg-color) !important;*/
-        }
+}
 
-        /*----color verde boton firmar-----*/
-        .sign-container .sign:last-child .fab-content {
-            border: solid 2px #5bb57b !important;
-            background-color: white !important;
-            color: #5bb57b !important;
-        }
+.sign-container .sign a {
+    text-decoration: none;
+    color: var(--main-text-color) !important;
+}
 
-            .sign-container .sign:last-child .fab-content:hover {
-                border: solid 2px #599579 !important;
-                background-color: #5bb57b !important;
-                color: white !important;
-            }
-        /*----color verde boton firmar-----*/
+.sign-container .sign:hover .fab-content {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.02);
+    box-shadow: 0 0 30px 0px rgba(41, 41, 41, 0.383);
+    border: solid 2px #dc3545 !important;
+    background-color: #dc3545 !important;
+    color: white !important;
+}
 
-        .sign-container .sign a {
-            text-decoration: none;
-            color: var(--main-text-color) !important;
-        }
+/*----color verde boton firmar-----*/
+.sign-container .sign .firmAdenda {
+    border: solid 2px #5bb57b !important;
+    background-color: white !important;
+    color: #5bb57b !important;
+}
 
-        .sign-container .sign:hover .fab-content {
-            cursor: pointer;
-            opacity: 1;
-            transform: scale(1.02);
-            box-shadow: 0 0 30px 0px rgba(41, 41, 41, 0.383);
-            border: solid 2px #dc3545 !important;
-            background-color: #dc3545 !important;
-            color: white !important;
-        }
+.sign-container .sign .firmAdenda:hover {
+    border: solid 2px #599579 !important;
+    background-color: #5bb57b !important;
+    color: white !important;
+}
