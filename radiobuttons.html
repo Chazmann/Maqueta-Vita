@@ -15,7 +15,7 @@
         <!-- Primer contenedor con radio buttons -->
         <div class="comboRadiobuttons mb-4">
             <h4>Contenedor 1: Opciones</h4>
-            <div class="d-flex gap-5 justify-content-center mt-4">
+            <div class="d-flex gap-5 mt-4">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="opciones1" id="opcion1" value="1">
                     <label class="form-check-label" for="opcion1">Opción 1</label>
@@ -24,31 +24,31 @@
                     <input class="form-check-input" type="radio" name="opciones1" id="opcion2" value="2">
                     <label class="form-check-label" for="opcion2">Opción 2</label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="opciones1" id="desmarcar" value="none" checked>
-                    <label class="form-check-label" for="desmarcar">
-                        Ninguno
-                    </label>
-                </div>
             </div>
+            <a class="text-danger mt-0" id="resetR-label" style="cursor: pointer!important; text-decoration: none; display: none; font-size: .8em;">Borrar
+                selecciones</a>
         </div>
-<hr>
-        <!-- Segundo contenedor con radio buttons y botón de reset -->
-        <div class="comboRadiobuttons">
-            <h4>Contenedor 2: Opciones con reset</h4>
-            <div class="d-flex gap-5 justify-content-center mt-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="opciones2" id="opcion3" value="3">
-                    <label class="form-check-label" for="opcion3">Opción A</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="opciones2" id="opcion4" value="4">
-                    <label class="form-check-label" for="opcion4">Opción B</label>
-                </div>
-                <!-- Botón para resetear radio buttons -->
-                <button id="resetR-button" class="btn btn-warning py-0 rounded-5">Resetear</button>
+    
+    <hr>
+
+    AGREGAR LINK ENLACE A DESMARCAR RADIO BUTTONS
+
+    <!-- Segundo contenedor con radio buttons y botón de reset -->
+    <div class="comboRadiobuttons">
+        <h4>Contenedor 2: Opciones con reset</h4>
+        <div class="d-flex gap-5 mt-4">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="opciones2" id="opcion3" value="3">
+                <label class="form-check-label" for="opcion3">Opción A</label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="opciones2" id="opcion4" value="4">
+                <label class="form-check-label" for="opcion4">Opción B</label>
+            </div>
+            <!-- Botón para resetear radio buttons -->
+            <button id="resetR-button" class="btn btn-warning py-0 rounded-5">Resetear</button>
         </div>
+    </div>
     </div>
 
     <!-- Cargar jQuery y Bootstrap JS -->
@@ -64,11 +64,32 @@
                 $(this).prop('checked', false);
             });
         }
-
         // Evento para aplicar la función de reset al hacer clic en el botón
         $('.comboRadiobuttons #resetR-button').on('click', function () {
             resetRadioButtonsOnError(this);
         });
+
+        $('.comboRadiobuttons input[type="radio"]').on('change', function () {
+        let comboContainer = $(this).closest('.comboRadiobuttons');
+        let resetLabel = comboContainer.find('#resetR-label');
+        
+        // Mostrar el enlace de borrar selecciones
+        resetLabel.show();
+    });
+
+    // Función para restablecer los radio buttons y ocultar el enlace
+    function resetRadioButtons(button) {
+        let comboContainer = $(button).closest('.comboRadiobuttons');
+        comboContainer.find('input[type="radio"]').each(function () {
+            $(this).prop('checked', false);  // Desmarcar todos los radio buttons
+        });
+        $(button).hide();  // Ocultar el enlace de reset
+    }
+
+    // Evento para el clic en el enlace de reset
+    $('.comboRadiobuttons #resetR-label').on('click', function () {
+        resetRadioButtons(this);
+    });
     </script>
 
 </body>
