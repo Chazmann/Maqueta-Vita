@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con Radio Buttons y Reset</title>
+    <!-- Cargar la última versión de Bootstrap desde el CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Cargar jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <!-- Primer contenedor con radio buttons -->
+        <div class="comboRadiobuttons mb-4">
+            <h4>Contenedor 1: Opciones</h4>
+            <div class="d-flex gap-5 mt-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="opciones1" id="opcion1" value="1">
+                    <label class="form-check-label" for="opcion1">Opción 1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="opciones1" id="opcion2" value="2">
+                    <label class="form-check-label" for="opcion2">Opción 2</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // Función para manejar el radio button seleccionado
+            function manejarRadioSeleccionado() {
+                // Buscamos los radio buttons seleccionados (checked)
+                $('input[type="radio"]:checked').each(function () {
+                    // Añadimos la clase .position-relative al contenedor del radio button
+                    let $container = $(this).closest('.form-check.form-check-inline');
+                    $container.addClass('position-relative');  // Agrega la clase .position-relative
+
+                    // Si aún no se ha añadido el enlace con el ID #resetR-label, lo insertamos
+                    if ($container.find('#resetR-label').length === 0) {
+                        // Crear el enlace con los estilos proporcionados
+                        let enlace = $('<a>', {
+                            class: 'position-absolute text-danger mt-0 d-inline-block',
+                            id: 'resetR-label',
+                            style: 'bottom: -1.5em; left: 1.25em; cursor: pointer; text-decoration: none; font-size: 1em; text-wrap:nowrap',
+                            text: 'Borrar selección',
+                            href: 'javascript:void(0);'
+                        });
+                        // Insertar el enlace dentro del contenedor
+                        $container.append(enlace);
+
+                        // Agregar el evento para borrar el checked
+                        enlace.on('click', function () {
+                            borrarRadioButton($(this));  // Llamar a la función para desmarcar el radio button
+                        });
+                    }
+                });
+            }
+
+            // Función para manejar cuando se cambia la selección de un radio button
+            function manejarRadioDeseleccionado() {
+                // Buscamos los radio buttons no seleccionados (no checked)
+                $('input[type="radio"]:not(:checked)').each(function () {
+                    // Removemos la clase .position-relative del contenedor del radio button
+                    let $container = $(this).closest('.form-check.form-check-inline');
+                    $container.removeClass('position-relative');  // Eliminar la clase .position-relative
+
+                    // Ocultamos el enlace si existe
+                    let enlace = $container.find('#resetR-label');
+                    if (enlace.length > 0) {
+                        enlace.remove();  // Ocultar el enlace
+                    } 
+                });
+            }
+
+            function borrarRadioButton(enlace) {
+                // Encontramos el radio button asociado con el enlace
+                let $radioButton = enlace.closest('.form-check.form-check-inline').find('input[type="radio"]');
+                // Desmarcamos el radio button
+                $radioButton.prop('checked', false);  // Remover el checked del radio button
+                // Llamamos a manejarRadioDeseleccionado() para ocultar el enlace
+                manejarRadioDeseleccionado();
+            }
+
+            // Intervalo para obserlet los radio buttons cada 50ms
+            setInterval(function () {
+                manejarRadioSeleccionado();
+                manejarRadioDeseleccionado();
+            }, 50);  // Ejecutar cada 50ms
+
+            // // Llamamos a las funciones iniciales para verificar los elementos existentes
+            manejarRadioSeleccionado();
+            manejarRadioDeseleccionado();
+        });
+    </script>
+
+
+
+</body>
+
+</html>
